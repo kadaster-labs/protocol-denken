@@ -66,7 +66,7 @@ organisaties**.
 De technologische staat van die tijd is een rijke en grote database met veel functionaliteiten en
 een kleine applicatie laag daar omheen voor de gebruikersinteractie.
 
-// TODO plaatje van grote database en kleine applicatie
+![App + Database zijn 1](images/1960-app-database-are-one.png)
 
 ## 2000 Automatisering Applicaties
 
@@ -85,7 +85,7 @@ duidelijke taken en technische performance-eisen. De applicatie had andere veran
 ook andere schalingsvereisten. In deze scheiding werd het duidelijker wat 'de data' was en wat 'de
 logica' was. En wat hun verhouding was.
 
-// TODO plaatje van gescheiden applicatie en database
+![App en database gescheiden](images/1980-app-database-separate.png)
 
 ## 2020 Automatisering API's
 
@@ -105,7 +105,7 @@ muterende applicaties en wordt het steeds meer van belang om te weten wat die da
 welke context deze ontstaan is. De roep om semantiek en de opkomst van technologieën (zoals Linked
 Data) die daar invulling aan geven, is duidelijk zichtbaar.
 
-// TODO plaatje van data(base) met API en gebruik daarvan
+![App en database met API](images/2000-app-database-with-api.png)
 
 ## 2040 Digitalisering
 
@@ -117,17 +117,27 @@ Er komen echter technologieën die _digitaal ondertekenen_ mogelijk maken en _sm
 Hiervoor is het noodzakelijk dat processen echt _digitaal_ ontworpen zijn en is het nog meer van
 belang dat data goed voorzien is van metadata.
 
-Het is vandaag nog niet mogelijk om precies te weten hoe die digitalisering eruit ziet in 2040. We kunnen niet in de toekomst kijken. Maar we kunnen wél kijken wat er 'rijmt op het verleden'!
+![Digitale processen](images/2040-digital-processes.png)
 
-De metadata van de data beschrijft niet alleen wat de data betekent. Het moet ook antwoord kunnen geven op waar de data vandaan komt. Waar is deze ontstaan? Onder welke voorwaarden / situatie? En met het aantal devices dat - via het internet - verbonden is aan elkaar, worden _decentrale netwerken_ steeds meer van belang. Op welke manier is het mogelijk om autonoom te handelen en transacties uit te voeren die toch in het grote geheel integer zijn en blijven en impact daarin hebben?
+Het is vandaag nog niet mogelijk om precies te weten hoe die digitalisering eruit ziet in 2040. We
+kunnen niet in de toekomst kijken. Maar we kunnen wél kijken wat er 'rijmt op het verleden'!
+
+De metadata van de data beschrijft niet alleen wat de data betekent. Het moet ook antwoord kunnen
+geven op waar de data vandaan komt. Waar is deze ontstaan? Onder welke voorwaarden / situatie? En
+met het aantal devices dat - via het internet - verbonden is aan elkaar, worden _decentrale
+netwerken_ steeds meer van belang. Op welke manier is het mogelijk om autonoom te handelen en
+transacties uit te voeren die toch in het grote geheel integer zijn en blijven en impact daarin
+hebben?
+
+![Events Semantiek Linked Data API's](images/2040-event-sourcing-linked-data-apis.png)
 
 ## Transitie naar digitalisering
 
 Onze gooi naar de toekomst is een aantal concepten die we gezamenlijk **protocol-denken** noemen.
-Waarom? Omdat digitale processen een door computers (machines) uitvoerbare contracten gaat uitvoeren
+Waarom? Omdat digitale processen een door computers (machines) uitvoerbare contracten gaan uitvoeren
 waarin data-uitwisseling is meegenomen en de interactie met gebruikers, de mens, duidelijk en
 effectief is. Dat betekent dat de internetprotocollen die 'slechts' de verbinding tussen apparaten
-realiseerd, uitgebreid moeten worden met smart contracts of iets wat daarop lijkt. Is het
+realiseert, uitgebreid moeten worden met smart contracts of iets wat daarop lijkt. Is het
 blockchain? Nee. Ja. Mischien. Blockchain regelt digitale processen wel op een nieuwe manier. Daar
 moeten we zeker lering van trekken. In ieder geval wel iets met transacties ... of gebeurtenissen,
 events. Maar er is meer. Het is ook Linked Data. Het is ook Open Standaarden, Open Source, open

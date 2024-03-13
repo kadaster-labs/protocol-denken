@@ -3,12 +3,12 @@ title: Start
 ---
 > Protocol-denken is ontstaan in het team <a
 > href="https://www.kadaster.nl/zakelijk/over-ons/innovatie" target="_blank">Emerging Technology
-> Center</a> van het <a href="https://kadaster.nl" target="_blank">Kadaster</a>.  Daarom eer en dank
+> Center</a> van het <a href="https://kadaster.nl" target="_blank">Kadaster</a>.  Daarom dank en eer
 > aan <a href="https://www.linkedin.com/in/btazrouti/" target="_blank">Badreddine Tazrouti</a>, <a
 > href="https://www.linkedin.com/in/koenhuisstede/" target="_blank">Koen Huisstede</a>, <a
 > href="https://www.linkedin.com/in/nickvapeldoorn/" target="_blank">Nick van Apeldoorn</a> en <a
 > href="https://marcvanandel.nl" target="_blank">Marc van Andel</a> voor de ontwikkeling van deze
-> ideeën en het 'bestuiven' van dit concept en de ideeën! :heart:
+> ideeën en het 'bestuiven' van dit concept! :heart:
 
 **Protocol-denken** is een eigen term. Het is een toekomstvisie en perspectief gebaseerd op de
 geschiedenis en evolutie van technologie, internet en het digitale tijdperk. Als we naar deze

@@ -24,14 +24,15 @@ beschrijven en daarmee moeten we _ontwerpen_ hoe en dat we correcties gaan toepa
 
 Een ander aspect van [Event Sourcing](./achtergrond/event-sourcing.md) is dat de evolutie van een
 register, een grootboek, beschreven in de stroom van events (data-gebeurtenissen), leidt tot een
-_projectie_. Ons bekende register, grootboek, boek met resultaten is een projectie van de events,
-welke wordt opgebouwd door alle events 'af te spelen' volgens regels. Dit maakt het mogelijk om
-_meerdere_ projecties te maken op basis van dezelfde stroom van events. Er is hierin zeer zeker een
-_primaire projectie_ wat de reden van het register of grootboek is. Tegelijk zijn er eerdere
-meerdere en vele projecties die secundair zijn aan de primaire reden van bestaan en zeer relevant
-zijn. Zeker in het geval dat de data, het register, het grootboek, ergens anders gebruikt wordt. Het
-is zeer waarschijnlijk dat dit gebruik van de data een aangepaste projectie nodig heeft die
-specifiek past bij die behorende [context](./context.md) waarin de data gebruikt wordt.
+_projectie_. Ons bekende register, grootboek, boek met resultaten is _dé_ projectie van de events,
+welke wordt opgebouwd door alle events 'af te spelen' volgens regels. Het is onze _énige_ projectie,
+maar ... Met Event Souring wordt het mogelijk om _meerdere_ projecties te maken op basis van
+dezelfde stroom van events. Er is hierin zeer zeker een _primaire projectie_ wat de reden van het
+register of grootboek is. Tegelijk zijn er eerdere meerdere en vele projecties die secundair zijn
+aan de primaire reden van bestaan en zeer relevant zijn. Zeker in het geval dat de data, het
+register, het grootboek, ergens anders gebruikt wordt. Het is zeer waarschijnlijk dat dit gebruik
+van de data een aangepaste projectie nodig heeft die specifiek past bij die behorende
+[context](./context.md) waarin de data gebruikt wordt.
 
 ![Multiple projections](images/event-sourcing-multiple-projections.png)
 
