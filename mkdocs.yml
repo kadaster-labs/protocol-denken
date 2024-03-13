@@ -4,6 +4,15 @@ site_dir: site
 site_url: https://kadaster-labs.github.io/protocol-denken/
 repo_url: https://github.com/kadaster-labs/protocol-denken
 edit_uri: edit/main/docs/
+nav:
+  - index.md
+  - papier-naar-digitaal.md
+  - ontstaan-van-data.md
+  - context.md
+  - Achtergrond:
+    - achtergrond/index.md
+    - achtergrond/open-source.md
+    - achtergrond/event-sourcing.md
 theme:
   name: material
   palette:
