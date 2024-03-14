@@ -142,7 +142,7 @@ blockchain? Nee. Ja. Mischien. Blockchain regelt digitale processen wel op een n
 moeten we zeker lering van trekken. In ieder geval wel iets met transacties ... of gebeurtenissen,
 events. Maar er is meer. Het is ook Linked Data. Het is ook Open Standaarden, Open Source, open
 samenwerken. Het gaat namelijk over de uitwisseling in ketens. Dat betreft altijd meerdere partijen
-die gezamenlijk moeten werken en zorgdragen voor de smart contracts. Het betekent automatisering nog
-veel verder doorvoeren.
+die gezamenlijk moeten werken en zorgdragen voor de smart contracts. Het betekent
+[automatisering](./automatisering.md) nog veel verder doorvoeren.
 
 Lees verder ... :smiley:

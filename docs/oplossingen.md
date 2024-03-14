@@ -39,3 +39,45 @@ ook verantwoordelijk voor de primaire projectie én alle secundaire projecties d
 context worden geleverd aan alle contextovergangen. De bronhouder dient dan ook voorzieningen te
 leveren en te onderhouden voor het beheer en synchroniseren van alle projecties. Daarover later
 meer.
+
+Deze inrichting is nodig om te kunnen beantwoorden aan echt digitale processen. Daarin worden
+contract, processen, afspraken geautomatiseerd uitgevoerd. Dat betekent niet dat er geen menselijke
+beslissingen meer in zitten, maar die geven alleen richting in de verder geautomatiseerde
+uitvoering. Deze uitvoering dient duidelijk, traceerbaar en controleerbaar te zijn.
+
+Met events is het mogelijk om de traceerbaarheid tussen formele beslissingen, bij voorkeur door
+mensen gemaakte beslissingen, en de verschillende projecties. Doordat events als een 'stroom van
+events' worden opgeslagen en gepubliceerd, is het ook direct mogelijk om bij elke projectie te laten
+zien tot hoever deze projectie is bijgewerkt. Het geeft daarmee niet alleen mogelijkheden voor de
+traceerbaarheid maar ook voor een expliciete actualiteit!
+
+Als de events als kern van de beslissingen en wijzigingen gezien worden, wat in [Event
+Sourcing](./achtergrond/event-sourcing.md) het geval is, dan is ook de historie waterdicht
+vastgelegd. Vanuit de stroom van events kan elk historiemodel gevuld worden en kan maximaal herleid
+worden hoe 'het is gegaan en geweest'.
+
+Van events is expliciet wat de bron is. Van elk event is bekend wie de actor is die het heeft doen
+ontstaan, op welk tijdstip, locatie en intentie. Door projecties en de traceerbaarheid inclusief
+actualiteit is het mogelijk om per gebruik te bepalen in welke vorm een projectie het meest passend
+is. Als een bronhouder een API aanbiedt op de projectie en dat voorziet in de behoefte vanuit de
+vraag, dan is dat een gemakkelijk beheersbare en betrouwbare manier. Echter, het is met _dezelfde
+kwaliteit_ mogelijk om een projectie op een andere locatie, dichter bij de vraag te realiseren. Dat
+is onder dezelfde kwaliteit want projectie, traceerbaarheid en actualiteit worden op exact dezelfde
+manier gerealiseerd als dat die projectie bij de bronhouder zou staan. Dat betekent wel dat de
+bronhouder verantwoordelijk is voor die projectie, ook als die niet in zijn data center staat. Daar
+zijn aanvullende afspraken voor nodig ... maar dat is goed mogelijk.
+
+Dus gebeurtenisgedreven registers bieden:
+
+- :white_check_mark: traceerbaarheid van het register, de primaire projectie 
+- :white_check_mark: mogelijkheden voor secundaire projecties (en daarmee)
+- :white_check_mark: ondersteuning voor [context](./context.md) overgangen (transformaties, service voorwaarden, data minimalisatie, etc)
+- :white_check_mark: ondersteuning voor actualiteit _per_ projectie 
+- :white_check_mark: ondersteuning projecties op 'afstand' (in het data center van een andere partij)
+- :white_check_mark: absolute duidelijkheid over oorsprong (actor, locatie, tijdstip, intentie)
+- :white_check_mark: volledige ondersteuning voor historisch begrip (onderzoek, reconstructie, historiemodellen, etc)
+- :white_check_mark: mogelijkheden voor vergaande [automatisering](./automatisering.md)
+
+> In bovenstaande worden _events_, _data-gebeurtenissen_ en _wijzigingen_ door elkaar gebruikt. Elke
+> keer wordt hetzelfde bedoeld: _data-gebeurtenissen_ zíjn _events_ wat de _wijzigingen_ ín een
+> register zijn.
