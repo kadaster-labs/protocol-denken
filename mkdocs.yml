@@ -11,6 +11,9 @@ nav:
   - context.md
   - automatisering.md
   - oplossingen.md
+  - Voorbeelden:
+    - voorbeelden/index.md
+    - voorbeelden/sensrnet.md
   - Achtergrond:
     - achtergrond/index.md
     - achtergrond/open-source.md

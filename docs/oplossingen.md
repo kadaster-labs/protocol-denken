@@ -105,8 +105,8 @@ van leren in hoe dat werkt. Open samenwerken zou daarom ook 'open source werken'
 worden. 'source' is in deze vaak software, maar zou ook heel goed 'documenten' of iets dergelijks
 kunnen zijn. Zie ook [Achtergrond: Open Source](./achtergrond/open-source.md).
 
-[Gebeurtenisgedreven registers](#gebeurtenisgedreven-registers) kunnen niet bestaan _zonder_ open
-samenwerken!
+- :white_check_mark: [Gebeurtenisgedreven registers](#gebeurtenisgedreven-registers) kunnen niet
+bestaan _zonder_ open samenwerken!
 
 ## Netwerken & Datastromen
 
@@ -123,19 +123,24 @@ richting welke data stroomt en hoe deze getransformeerd wordt in de overgangen v
 kunnen we ontwerpen. We kunnen actief sturen op de netwerken en de datastromen om richting te geven
 aan hoe deze de maatschappij kunnen dienen.
 
+- :white_check_mark: ontwerpen en inzichtelijk maken van netwerken ondersteunt het inzicht en
+  overzicht van [gebeurtenisgedreven registers](#gebeurtenisgedreven-registers)
+- :white_check_mark: datastromen maken inzichtelijk hoe data van waar naar waar stroomt ... en hoe
+  daarop de sturen is
+
 ## Droombeeld
 
-In de transitie van [papier naar digitaal](./papier-naar-digitaal.md) nemen we onszelf en de
-maatschappij serieus door niet door te gaan zoals we al lang gedaan hebben. Nee, we durven de stap
-te maken om digitale processen te ontwerpen en in te richten. Uiteraard hebben we dezelfde
-zekerheden nodig als in de huidige situatie ... maar dat kunnen we wél _anders_ doen!
+In de transitie van [papier naar digitaal](./papier-naar-digitaal.md) nemen we onszelf door een
+andere richting te nemen dan zoals we al lang gedaan hebben. Nee, we durven de stap te maken om
+digitale processen te ontwerpen en in te richten. Uiteraard hebben we dezelfde zekerheden nodig als
+in de huidige situatie ... maar dat kunnen we wél _anders_ doen!
 
 Daarvoor ontwerpen we een [netwerk](#netwerken--datastromen) van [gebeurtenisgedreven
 registers](#gebeurtenisgedreven-registers) waarin expliciet is gemaakt hoe
 [datastromen](#netwerken--datastromen) gaan en hoe die overgangen van [context](./context.md) zijn.
 Er verschijnt een netwerk van elkaar beïnvloedende deelnemers, partijen, nodes die samenwerken in
-een organisme. Autonome onderdelen die zelf beslissingen maken, zelf gebeurtenissen produceren én
-traceerbaarheid wat de impact daarvan is. Vergaand [geautomatiseerd](./automatisering.md) dmv van
+een **organisme**. Autonome onderdelen die zelf beslissingen maken, zelf gebeurtenissen produceren
+én traceerbaarheid wat de impact daarvan is. Vergaand [geautomatiseerd](./automatisering.md) dmv van
 [open samenwerking](#open-samenwerken).
 
 Dat biedt de mogelijkheid om expliciet vast te leggen welke data is gebruikt bij een beslissing.
@@ -151,7 +156,7 @@ gevalideerd worden door toezichthouders. Er kunnen allerlei controlemechanismen 
 het kan vooral _gebruikt_ worden.
 
 Het gevolg van een subliem werkende _digitale_ overheid is dat er ruimte komt om de mens meer
-centraal te stellen ipv de computer systemen. We kunnen ontwerpen waar mensen een beslissing kunnen
+centraal te stellen ipv computer systemen. We kunnen ontwerpen waar mensen een beslissing kunnen
 sturen en beïnvloeden, zodat de juiste effecten bereikt worden. Het is mogelijk om te ontwerpen dat
 er ambtenaren zijn die burgers kunnen ondersteunen en helpen bij hun aanvragen, verwerkingen,
 verantwoordelijkheden en rechten. Een subliem werkende _digitale_ overheid brengt een meer
