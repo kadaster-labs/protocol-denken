@@ -1,7 +1,7 @@
 ---
 title: Oplossingen
 ---
-OK. Genoeg beschrijving van de in- en aanleiding voor het **protocol-denken**. Wetende dat we in een
+OK. Genoeg beschrijving van de in- en aanleiding voor het **denken in protocollen**. Wetende dat we in een
 transitie zijn van [papier naar digitaal](./papier-naar-digitaal.md), dat het [ontstaan van
 data](./ontstaan-van-data.md) van belang is en gerespecteerd moet worden én rekening houdend met de
 [context](./context.md) waarin data _ontstaat_ en meervoudige wordt _gebruikt_ en vergaand

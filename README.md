@@ -1,6 +1,7 @@
 # Protocol-denken
 
-Protocol-denken is een verzameling concepten die de toekomst tekenen van de Digitale Overheid.
+**Protocol-denken** of **denken in protocollen** is een verzameling concepten die de toekomst
+tekenen van de Digitale Overheid.
 
 ## Local development
 

@@ -133,7 +133,7 @@ hebben?
 
 ## Transitie naar digitalisering
 
-Onze gooi naar de toekomst is een aantal concepten die we gezamenlijk **protocol-denken** noemen.
+Onze gooi naar de toekomst is een aantal concepten die we gezamenlijk **denken in protocollen** noemen.
 Waarom? Omdat digitale processen een door computers (machines) uitvoerbare contracten gaan uitvoeren
 waarin data-uitwisseling is meegenomen en de interactie met gebruikers, de mens, duidelijk en
 effectief is. Dat betekent dat de internetprotocollen die 'slechts' de verbinding tussen apparaten

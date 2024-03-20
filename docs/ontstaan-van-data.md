@@ -2,7 +2,7 @@
 title: Ontstaan van data
 weight: 20
 ---
-Een belangrijk onderdeel van het protocol-denken en ook een relevant onderwerp van vandaag, is de
+Een belangrijk onderdeel van het denken in protocollen en ook een relevant onderwerp van vandaag, is de
 herkomst en het ontstaan van data. In de geschiedenis van registers, grootboeken op papier, de
 standaardisatie daarvan, de mechanisatie daarvan en vervolgens de automatisering daarvan, staan we
 op het punt om onze processen opnieuw te gaan ontwerpen voor een echte _digitalisering_ (zie [papier

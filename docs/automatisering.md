@@ -25,7 +25,7 @@ blijven doen' ondertussen al standaard geautomatiseerd? JA! Kleren wassen we met
 Afwas doen we met de vaatwasser. Teksten op borden in het buitenland vertalen we met Google Lens.
 Communiceren met mensen in een voor ons onbekende taal, doen we mbv onze devices.
 
-Onderdeel van het **protocol-denken** is dat we gericht zijn op de mogelijkheden van automatisering.
+Onderdeel van het **denken in protocollen** is dat we gericht zijn op de mogelijkheden van automatisering.
 Software, code, scripting zouden niet als 'eng' moeten worden beschouwd, maar als normaal onderdeel
 van _ieders_ werk (en privéleven). Er zijn al tools beschikbaar, die dit ook toegankelijk maken voor
 iedereen. AI gaat daar nog eens een versnelling in teweeg brengen.
