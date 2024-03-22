@@ -7,7 +7,7 @@ geschiedenis te kijken. In het digitale tijdperk en zeker vandaag de dag, anno 2
 veelbesproken onderwerp. Maar waar komt de data van vandaag eigenlijk vandaan? Hoe is die data
 ontstaan?
 
-> History doesn't repeat itself, but it often rhymes -
+> _History doesn't repeat itself, but it often rhymes_ -
 > ([arguably](https://quoteinvestigator.com/2014/01/12/history-rhymes/)) Mark Twain
 
 ## Kort overzicht
