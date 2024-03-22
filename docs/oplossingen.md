@@ -1,13 +1,49 @@
 ---
 title: Oplossingen
 ---
-OK. Genoeg beschrijving van de in- en aanleiding voor het **denken in protocollen**. Wetende dat we in een
-transitie zijn van [papier naar digitaal](./papier-naar-digitaal.md), dat het [ontstaan van
-data](./ontstaan-van-data.md) van belang is en gerespecteerd moet worden én rekening houdend met de
-[context](./context.md) waarin data _ontstaat_ en meervoudige wordt _gebruikt_ en vergaand
-[geautomatiseerd](./automatisering.md), wat zijn dan oplossingen? Of misschien wel
-oplossingsrichtingen? Want een complete oplossing is ... misschien nog wel verder weg. Hoewel een
-[droombeeld](#droombeeld) wellicht wel mogelijk mis?
+OK. De probleemstelling is (dus) deze. We zijn in een transitie van [papier naar
+digitaal](./papier-naar-digitaal.md). In die transitie is het [ontstaan van
+data](./ontstaan-van-data.md), de [context](./context.md) waarin die _ontstaat_ en waarin die
+_gebruikt_ wordt relevant en daarmee worden [taal en semantiek](./taal-en-semantiek.md) van belang
+om in acht te nemen. En dat allemaal in een steeds verdergaande
+[automatisering](./automatisering.md).
+
+Tot welke oplossingen komen we dan? Zijn er wel oplossingen? Of zijn het meer oplossingsrichtingen
+en een [droombeeld](#droombeeld)?
+
+## Droombeeld
+
+In de transitie van [papier naar digitaal](./papier-naar-digitaal.md) nemen we onszelf serieus door
+een andere richting te nemen dan zoals we al lang gedaan hebben. We durven de stap te maken om
+digitale processen te ontwerpen en in te richten. Uiteraard hebben we dezelfde zekerheden nodig als
+in de huidige situatie ... maar dat kunnen we wél _anders_ doen!
+
+Daarvoor ontwerpen we een [netwerk](#netwerken--datastromen) van [gebeurtenisgedreven
+registers](#gebeurtenisgedreven-registers) waarin expliciet is gemaakt hoe
+[datastromen](#netwerken--datastromen) gaan en hoe die overgangen van [context](./context.md) zijn.
+Er verschijnt een netwerk van elkaar beïnvloedende deelnemers, partijen, nodes die samenwerken in
+een **organisme**. Autonome onderdelen die zelf beslissingen maken, zelf gebeurtenissen produceren
+én zorgen voor de traceerbaarheid wat de impact daarvan is. Vergaand
+[geautomatiseerd](./automatisering.md) dmv van [open samenwerking](#open-samenwerken).
+
+Dat biedt de mogelijkheid om expliciet vast te leggen welke data is gebruikt bij een beslissing.
+Daaruit kan ook worden geanalyseerd welke impact een mogelijk nieuw inzicht heeft op een genomen
+beslissing. Daarmee worden correcties mogelijk. Daarmee wordt het mogelijk om simulaties te doen van
+nieuwe regelingen en wetgeving. We kunnen regelingen ontwerpen die _exact_ bereiken wat we voor ogen
+hebben!
+
+Hoewel deze gehele infrastructuur in [open samenwerking](#open-samenwerken) tot stand gebracht moet
+worden, is het vooral het 'onzichtbare deel van de digitale overheid' dat 'gewoon werkt'. Het is er
+gewoon. Het werkt. En het werkt top! Daar kunnen burgers en bedrijven op rekenen. Het kan
+gevalideerd worden door toezichthouders. Er kunnen allerlei controlemechanismen ingebouwd worden. En
+het kan vooral _gebruikt_ worden.
+
+Het gevolg van een subliem werkende _digitale_ overheid is dat er ruimte komt om de mens meer
+centraal te stellen ipv computer systemen. We kunnen ontwerpen waar mensen een beslissing kunnen
+sturen en beïnvloeden, zodat de juiste effecten bereikt worden. Het is mogelijk om te ontwerpen dat
+er ambtenaren zijn die burgers kunnen ondersteunen en helpen bij hun aanvragen, verwerkingen,
+verantwoordelijkheden en rechten. Een subliem werkende _digitale_ overheid brengt een meer
+menselijke en persoonlijke overheid! :heart:
 
 ## Gebeurtenisgedreven registers
 
@@ -19,13 +55,13 @@ En als dat gebeurd is, dan is dat gebeurd. Punt.
 
 Dat betekent om te beginnen dat van _elk register_ moet worden ontworpen wat de
 _data-gebeurtenissen/events_ zijn. Welke wijzigingen zijn er? En als er verschillende aanleidingen
-zijn, dan zijn dat zeer waarschijnlijk ook verschillende wijzigingen. Alleen al in intentie die
+zijn, dan zijn dat zeer waarschijnlijk ook verschillende wijzigingen. Alleen al de intentie die
 daarin ligt.
 
 Vervolgens moet ook ontworpen worden hoe deze wijzigingen tot een projectie leiden. De primaire
-projectie is hier leidend en het meest belangrijk in. Dit behoudt immers dezelfde waarde als de
-huidige registers. Met de events hebben we vooral beter vastgelegd hoe het register is geworden tot
-wat het geworden is.
+projectie is hier leidend en het meest belangrijk. Dit behoudt immers dezelfde waarde als de huidige
+registers. Met de events hebben we vooral beter vastgelegd hoe het register is geworden tot wat het
+geworden is.
 
 Vervolgens dient _per context overgang_ ontworpen te worden welke projectie daar passend is. Zeer
 waarschijnlijk zijn dit projecties die afgeleid kunnen worden van de primaire projectie ... maar
@@ -36,7 +72,7 @@ ook niet meer data beschikbaar dan in de eigen context en dus primaire projectie
 Uiteraard kan er uniformiteit aangebracht worden in de secundaire projecties om het aantal
 transformaties en contextovergangen beperkt te houden. Dat is ook in het voordeel van de bronhouder.
 Dat is de actor, de organisatie die de wijzigingen doet en dus events produceert. Zij zijn namelijk
-ook verantwoordelijk voor de primaire projectie én alle secundaire projecties die formeel vanuit die
+verantwoordelijk voor de primaire projectie én alle secundaire projecties die formeel vanuit die
 context worden geleverd aan alle contextovergangen. De bronhouder dient dan ook voorzieningen te
 leveren en te onderhouden voor het beheer en synchroniseren van alle projecties. Daarover later
 meer.
@@ -46,11 +82,11 @@ contract, processen, afspraken geautomatiseerd uitgevoerd. Dat betekent niet dat
 beslissingen meer in zitten, maar die geven alleen richting in de verder geautomatiseerde
 uitvoering. Deze uitvoering dient duidelijk, traceerbaar en controleerbaar te zijn.
 
-Met events is het mogelijk om de traceerbaarheid tussen formele beslissingen, bij voorkeur door
-mensen gemaakte beslissingen, en de verschillende projecties. Doordat events als een 'stroom van
-events' worden opgeslagen en gepubliceerd, is het ook direct mogelijk om bij elke projectie te laten
-zien tot hoever deze projectie is bijgewerkt. Het geeft daarmee niet alleen mogelijkheden voor de
-traceerbaarheid maar ook voor een expliciete actualiteit!
+Met events is het mogelijk om de traceerbaarheid te borgen tussen formele beslissingen, bij voorkeur
+door mensen gemaakte beslissingen, en de verschillende projecties. Doordat events als een 'stroom
+van events' worden opgeslagen en gepubliceerd, is het ook direct mogelijk om bij elke projectie te
+laten zien tot hoever deze projectie is bijgewerkt. Het geeft daarmee niet alleen mogelijkheden voor
+de traceerbaarheid maar ook voor een expliciete actualiteit!
 
 Als de events als kern van de beslissingen en wijzigingen gezien worden, wat in [Event
 Sourcing](./achtergrond/event-sourcing.md) het geval is, dan is ook de historie waterdicht
@@ -102,11 +138,13 @@ kwaliteit tussen de partijen haalbaar.
 
 Open samenwerken is in Open Source Software al jaren ontwikkeld en toegepast. We kunnen daar veel
 van leren in hoe dat werkt. Open samenwerken zou daarom ook 'open source werken' genoemd kunnen
-worden. 'source' is in deze vaak software, maar zou ook heel goed 'documenten' of iets dergelijks
-kunnen zijn. Zie ook [Achtergrond: Open Source](./achtergrond/open-source.md).
+worden. 'source' is in deze vaak software, maar zou ook heel goed 'documenten', contracten of iets
+dergelijks kunnen zijn. Zie ook [Achtergrond: Open Source](./achtergrond/open-source.md).
 
-- :white_check_mark: [Gebeurtenisgedreven registers](#gebeurtenisgedreven-registers) kunnen niet
-bestaan _zonder_ open samenwerken!
+- :white_check_mark: [gebeurtenisgedreven registers](#gebeurtenisgedreven-registers) kunnen niet
+  bestaan _zonder_ open samenwerken!
+- :white_check_mark: open samenwerken draagt bij aan de controleerbaarheid en daarmee het vertrouwen
+  in de digitale infrastructuur
 
 ## Netwerken & Datastromen
 
@@ -127,38 +165,3 @@ aan hoe deze de maatschappij kunnen dienen.
   overzicht van [gebeurtenisgedreven registers](#gebeurtenisgedreven-registers)
 - :white_check_mark: datastromen maken inzichtelijk hoe data van waar naar waar stroomt ... en hoe
   daarop de sturen is
-
-## Droombeeld
-
-In de transitie van [papier naar digitaal](./papier-naar-digitaal.md) nemen we onszelf door een
-andere richting te nemen dan zoals we al lang gedaan hebben. Nee, we durven de stap te maken om
-digitale processen te ontwerpen en in te richten. Uiteraard hebben we dezelfde zekerheden nodig als
-in de huidige situatie ... maar dat kunnen we wél _anders_ doen!
-
-Daarvoor ontwerpen we een [netwerk](#netwerken--datastromen) van [gebeurtenisgedreven
-registers](#gebeurtenisgedreven-registers) waarin expliciet is gemaakt hoe
-[datastromen](#netwerken--datastromen) gaan en hoe die overgangen van [context](./context.md) zijn.
-Er verschijnt een netwerk van elkaar beïnvloedende deelnemers, partijen, nodes die samenwerken in
-een **organisme**. Autonome onderdelen die zelf beslissingen maken, zelf gebeurtenissen produceren
-én traceerbaarheid wat de impact daarvan is. Vergaand [geautomatiseerd](./automatisering.md) dmv van
-[open samenwerking](#open-samenwerken).
-
-Dat biedt de mogelijkheid om expliciet vast te leggen welke data is gebruikt bij een beslissing.
-Daaruit kan ook worden geanalyseerd welke impact een mogelijk nieuw inzicht heeft op een genomen
-beslissing. Daarmee worden correcties mogelijk. Daarmee wordt het mogelijk om simulaties te doen van
-nieuwe regelingen en wetgeving. We kunnen regelingen ontwerpen die _exact_ bereiken wat we voor ogen
-hebben!
-
-Hoewel deze gehele infrastructuur in [open samenwerking](#open-samenwerken) tot stand gebracht moet
-worden, is het vooral het 'onzichtbare deel van de digitale overheid' dat 'gewoon werkt'. Het is er
-gewoon. Het werkt. En het werkt top! Daar kunnen burgers en bedrijven op rekenen. Het kan
-gevalideerd worden door toezichthouders. Er kunnen allerlei controlemechanismen ingebouwd worden. En
-het kan vooral _gebruikt_ worden.
-
-Het gevolg van een subliem werkende _digitale_ overheid is dat er ruimte komt om de mens meer
-centraal te stellen ipv computer systemen. We kunnen ontwerpen waar mensen een beslissing kunnen
-sturen en beïnvloeden, zodat de juiste effecten bereikt worden. Het is mogelijk om te ontwerpen dat
-er ambtenaren zijn die burgers kunnen ondersteunen en helpen bij hun aanvragen, verwerkingen,
-verantwoordelijkheden en rechten. Een subliem werkende _digitale_ overheid brengt een meer
-menselijke en persoonlijke overheid! :heart:
-
