@@ -25,4 +25,7 @@ bedoelen. Hoe dichter contexten tegen elkaar aan liggen, hoe moeilijker de versc
 onderscheiden. Met de groei van papier naar digitaal, het besef van context en taal, groeit te
 noodzaak voor semantiek.
 
+> <a href="https://labs.kadaster.nl/thema/linked_data" target="_blank">Linked Data</a> is een
+> technologische ontwikkeling waar semantiek een prominente rol heeft
+
 En dan zitten we ook nog in een continue verandering van [automatisering](./automatisering.md)!

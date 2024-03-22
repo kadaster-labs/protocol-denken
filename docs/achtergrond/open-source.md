@@ -11,3 +11,5 @@ title: Open Source
 > processen om samenwerking te faciliteren. Er zijn duidelijke rollen en verantwoordelijkheden.
 > Tegelijk is het extreem open voor bijdragen van en door iedereen! Dat maakt deze methodiek juist
 > zo krachtig. 
+>
+> Meer info en hulp: [opensource.pleio.nl](https://opensource.pleio.nl/)

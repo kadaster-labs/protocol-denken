@@ -2,7 +2,7 @@
 title: Basisregistratie Kadaster
 ---
 In het bijhouden van de <a href="" target="_blank">Basisregistratie Kadaster (BRK)</a> maakt het
-Kadaster gebruik van [Event Sourcing](../../achtergrond/event-sourcing.md). Daarvoor heeft het
+Kadaster gebruik van [Event Sourcing](../achtergrond/event-sourcing.md). Daarvoor heeft het
 Kadaster de paradigma verschuiving doorgemaakt van 'single model' naar 'Commands, Events & Queries'.
 
 ## KOERS
@@ -51,8 +51,15 @@ Hier komen _nieuwe mogelijkheden_ tot onze beschikking! Het is mogelijk om per a
 
 ![BRK Remote Store with Filtering](./koers/brk-remote-store-filtered.jpg)
 
-En in de toekomst wordt ..
+De _reden_ van een afnemende / derde partij voor het _gebruik_ van de BRK informatie is nooit om
+deze te bekijken zoals die is. Er is altijd een doel waarvoor de BRK data gebruikt gaat worden. Stel
+nou dat we met z'n allen [open samenwerken](../oplossingen.md#open-samenwerken) en dat zowel de
+projectie van de BRK als de toepassing waarvoor de BRK data gebruikt wordt als [open
+source](../achtergrond/open-source.md) gepubliceerd zijn. Dan wordt het mogelijk om een aangepaste
+projectie te maken specifiek geschikt voor het doel waarvoor de BRK data gebruikt wordt. En wordt
+het ook mogelijk voor het Kadaster om met een andere partij mee te kijken naar dat gebruik van de
+BRK data. Zo ontstaat er een veel beter begrip en validatie dat de BRK data juist wordt gebruikt en
+dat de toepassing in een ander domein juist is. Dát is pas een (rechts)zekerheid! :rocket:
 
-// TODO
 
 ![BRK Remote Store 3rd Party](./koers/brk-remote-store-3rd-party.jpg)
