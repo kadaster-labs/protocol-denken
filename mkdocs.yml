@@ -15,6 +15,7 @@ nav:
   - Voorbeelden:
     - voorbeelden/index.md
     - voorbeelden/sensrnet.md
+    - voorbeelden/koers.md
   - Achtergrond:
     - achtergrond/index.md
     - achtergrond/open-source.md
