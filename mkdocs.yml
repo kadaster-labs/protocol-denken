@@ -20,6 +20,7 @@ nav:
     - achtergrond/index.md
     - achtergrond/open-source.md
     - achtergrond/event-sourcing.md
+    - achtergrond/agile.md
 theme:
   name: material
   palette:

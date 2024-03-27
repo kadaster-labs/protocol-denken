@@ -24,7 +24,8 @@ registers](#gebeurtenisgedreven-registers) waarin expliciet is gemaakt hoe
 Er verschijnt een netwerk van elkaar beïnvloedende deelnemers, partijen, nodes die samenwerken in
 een **organisme**. Autonome onderdelen die zelf beslissingen maken, zelf gebeurtenissen produceren
 én zorgen voor de traceerbaarheid wat de impact daarvan is. Vergaand
-[geautomatiseerd](./automatisering.md) dmv van [open samenwerking](#open-samenwerken).
+[geautomatiseerd](./automatisering.md) dmv van [open samenwerking](#open-samenwerken) en [design for
+change](#design-for-change).
 
 Dat biedt de mogelijkheid om expliciet vast te leggen welke data is gebruikt bij een beslissing.
 Daaruit kan ook worden geanalyseerd welke impact een mogelijk nieuw inzicht heeft op een genomen
@@ -165,3 +166,23 @@ aan hoe deze de maatschappij kunnen dienen.
   overzicht van [gebeurtenisgedreven registers](#gebeurtenisgedreven-registers)
 - :white_check_mark: datastromen maken inzichtelijk hoe data van waar naar waar stroomt ... en hoe
   daarop de sturen is
+
+## Design for change
+
+> _“The Only Constant in Life Is Change.”_ - Heraclitus
+
+Ook in een wereld van software, zie ook [automatisering](./automatisering.md), is er slechts één
+zekerheid: 'change', verandering. In een digitale overheid dienen we daarom gericht te zijn op het
+ondersteunen van verandering: **Design for Change**.
+
+Dat was wat [agile](./achtergrond/agile.md) destijds ook adresseerde. Mensen en hun interactie zijn
+belangrijker dan procedures en tools. Voor een digitale overheid betekent dit dat we vergaande
+[automatisering](./automatisering.md) doen met volledig digitale processen. En dat we _ín_ die
+processen mogelijkheden ontwerpen om menselijke interventie mogelijk te maken. Dat vraagt een
+mindset van automatiseren. Kennis van automatiseren. De drive om _alles_ te automatiseren. En
+tegelijk, juist functies ontwerpen, inverentie mogelijkheden om bijsturing te kunnen doen als
+menselijk optreden vereist is. Hierin liggen ook mogelijkheden om 'de menselijke maat' en 'publieke
+waarden' toe te kunnen passen op individuele casuïstiek.
+
+- :white_check_mark: geautomatiseerde digitale processen
+- :white_check_mark: publieke waarden en menselijke interventie mogelijkheden ingebouwd
