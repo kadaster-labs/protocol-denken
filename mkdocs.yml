@@ -21,8 +21,11 @@ nav:
     - achtergrond/open-source.md
     - achtergrond/event-sourcing.md
     - achtergrond/agile.md
+extra_css:
+  - css/project.css
 theme:
   name: material
+  custom_dir: overrides
   palette:
     primary: custom
   language: nl
