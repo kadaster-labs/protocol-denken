@@ -14,7 +14,7 @@ Register en de BRK (AKR, Automatisering Kadastrale Registratie). Herkenbaar. Geb
 
 Voor het nieuwe systeem, KOERS, het Kadastraal Objecten en Rechten Systeem, hebben we moeten
 ontwerpen welke gegevens (data) in de notariële aktes staan. Deze noemen we 'Rechtsfeiten'.
-Vervolgens hebben ontworpen, de Kadasterwet in de hand, hoe Rechtsfeiten wijzigingen in de
+Vervolgens hebben wij ontworpen, de Kadasterwet in de hand, hoe Rechtsfeiten wijzigingen in de
 Kadastrale Registratie effectueren. Dat  hebben we beschreven in 'Rechtsgevolgen'. Dit zijn de
 Events uit [Event Sourcing](../achtergrond/event-sourcing.md). En vervolgens hebben we ook de
 verwerking in de (primaire) projectie ontworpen.
