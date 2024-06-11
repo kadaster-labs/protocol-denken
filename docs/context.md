@@ -37,6 +37,14 @@ genoemd wordt. Daar ontstaat tenslotte de data. Het is daarom aan de ontstaansco
 bronhouder om te organiseren dat alle gebruikscontexten goed worden voorzien en geoptimaliseerd
 worden door uniformiteit.
 
+Vandaag de dag zijn we gewend aan één model voor alle contextovergangen. Eén view _for all_, zullen
+we maar zeggen. Maar als we _elke_ contextovergang recht willen doen, zullen we specifieke
+overgangen moeten realiseren in model, semantiek, samenstelling en transformatie. Dat betekent dat
+de eigenaar van de data in de primaire context betrokken moet worden bij elke overgang naar een
+andere context.
+
+![Van één view naar meerdere views](images/context-primary-vs-multiple.png)
+
 In het ontwerpen van contexten en contextovergangen is [taal en semantiek](./taal-en-semantiek.md)
 van groot belang ...
 
