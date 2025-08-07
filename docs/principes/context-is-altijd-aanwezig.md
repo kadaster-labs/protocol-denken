@@ -22,87 +22,6 @@ Context is fundamenteel aanwezig in alle gegevens (data). Er bestaan geen contex
 3. **Contextovergang vereist design** - Data transformatie tussen contexten moet bewust ontworpen worden
 4. **Context moet expliciet** - Maak contexten zichtbaar in informatiemodellen en interfaces
 
-## Voordelen
-
-- **Correcte interpretatie**: Gegevens worden begrepen zoals bedoeld
-- **Betere integraties**: Bewuste transformaties tussen systemen
-- **Minder fouten**: Expliciete context voorkomt misverstanden
-- **Rijkere semantiek**: Betekenis wordt behouden en uitgebreid
-- **Betere traceability**: Context vertelt waar data vandaan komt en waarom
-
-## Mindset shift
-
-Context is altijd aanwezig vereist een fundamentele shift: **van contextvrij denken naar context bewust denken**. Hier is de typische denkevolutie:
-
-### Stap 0: contextvrij denken (traditioneel)
-```
-// Denken: "Gegevens zijn neutraal, kopieer gewoon"
-SELECT naam, adres FROM personen WHERE id = 123
-INSERT INTO andere_tabel (naam, adres) VALUES ('Jan Jansen', 'Hoofdstraat 1')
-```
-**Probleem**:
-- Naam uit BRP heeft andere betekenis dan naam in CRM
-- Adres uit BAG verschilt van adres in logistiek systeem
-- Geen begrip waarom gegevens zo zijn zoals ze zijn
-- Geen validatie of transformatie
-
-### Stap 1: bewustwording van verschillen
-```
-// Denken: "Er zijn wel verschillen, maar we mappen wel"
-BRP_naam -> CRM_naam (met simpele mapping)
-BAG_adres -> Logistiek_adres (met veld conversie)
-```
-**Probleem**: Technische mapping zonder begrip van business context. Werkt soms, faalt onverwacht.
-
-**Verbetering**: Eerste bewustwording dat systemen verschillend zijn.
-
-### Stap 2: context als metadata
-```
-// Denken: "We voegen context toe als extra veld"
-SELECT naam, adres, 'BRP' as bron FROM personen
-SELECT naam, adres, 'CRM' as bron FROM klanten
-```
-**Probleem**: Context wordt als extra informatie behandeld, niet als fundamentele eigenschap.
-
-**Verbetering**: Context wordt zichtbaar, maar nog steeds als bijzaak.
-
-### Stap 3: context bewust denken
-```
-// Denken: "Context bepaalt betekenis - ontwerp transformatie bewust"
-BRP_Context: {
-  naam: JuridischeNaam(voornaam, tussenvoegsel, achternaam),
-  betekenis: "Officiële naam volgens GBA/BRP",
-  geldigheid: "Per registratie moment"
-}
-
-CRM_Context: {
-  naam: ContactNaam(roepnaam, achternaam),
-  betekenis: "Naam voor commerciële communicatie", 
-  geldigheid: "Tot klant dit wijzigt"
-}
-
-Transformatie: BRP_JuridischeNaam -> CRM_ContactNaam (bewuste keuze, gedocumenteerd)
-```
-**Doorbraak**: Context wordt onderdeel van het informatiemodel. Transformaties zijn expliciete designbeslissingen.
-
-### Waarom stap 3 de beste oplossing is
-- **Expliciete semantiek**: Wat betekenen deze gegevens hier?
-- **Bewuste transformaties**: Hoe gaat betekenis van A naar B?
-- **Gedocumenteerde keuzes**: Waarom is dit zo gemodelleerd?
-- **Voorspelbare resultaten**: Principe/focus op veranderingzich gedragen
-
-## Relatie met andere principes
-
-- Versterkt [[Principe/focus-op-verandering]] - events behouden context van veranderingen
-- Ondersteunt [[Principe/meerdere-views-standaard]] - elke view heeft eigen context
-- Basis voor [[Patroon/contextovergang-ontwerp]] - expliciete context transformaties
-
-## Patronen die dit principe toepassen
-
-- [[Patroon/contextovergang-ontwerp]] - bewuste data mapping tussen bounded contexts
-- [[Patroon/command-query-scheiding]] - verschillende contexten voor schrijven vs lezen
-- [[Patroon/complete-events]] - events bevatten volledige context van verandering
-
 ## Voorbeelden
 
 ### Voorbeeld 1: adres in verschillende contexten
@@ -163,7 +82,96 @@ Adres = BezorgAdres {
 - Gescheiden
 - Overleden
 
-> **Let op**: Dit voorbeeld illustreert ook [[Principe/focus-op-verandering]] - dat is geen toeval. Goede principes versterken elkaar en leiden tot dezelfde ontwerpkeuzes.
+> **Let op**: Dit voorbeeld illustreert ook [Focus op verandering](focus-op-verandering.md) - dat is geen toeval. Goede principes versterken elkaar en leiden tot dezelfde ontwerpkeuzes.
+
+## Mindset shift
+
+Context is altijd aanwezig vereist een fundamentele shift: **van contextvrij denken naar context bewust denken**. Hier is de typische denkevolutie:
+
+### Stap 0: contextvrij denken (traditioneel)
+```
+// Denken: "Gegevens zijn neutraal, kopieer gewoon"
+SELECT naam, adres FROM personen WHERE id = 123
+INSERT INTO andere_tabel (naam, adres) VALUES ('Jan Jansen', 'Hoofdstraat 1')
+```
+**Probleem**:
+- Naam uit BRP heeft andere betekenis dan naam in CRM
+- Adres uit BAG verschilt van adres in logistiek systeem
+- Geen begrip waarom gegevens zo zijn zoals ze zijn
+- Geen validatie of transformatie
+
+### Stap 1: bewustwording van verschillen
+```
+// Denken: "Er zijn wel verschillen, maar we mappen wel"
+BRP_naam -> CRM_naam (met simpele mapping)
+BAG_adres -> Logistiek_adres (met veld conversie)
+```
+**Probleem**: Technische mapping zonder begrip van business context. Werkt soms, faalt onverwacht.
+
+**Verbetering**: Eerste bewustwording dat systemen verschillend zijn.
+
+### Stap 2: context als metadata
+```
+// Denken: "We voegen context toe als extra veld"
+SELECT naam, adres, 'BRP' as bron FROM personen
+SELECT naam, adres, 'CRM' als bron FROM klanten
+```
+**Probleem**: Context wordt als extra informatie behandeld, niet als fundamentele eigenschap.
+
+**Verbetering**: Context wordt zichtbaar, maar nog steeds als bijzaak.
+
+### Stap 3: context bewust denken
+```
+// Denken: "Context bepaalt betekenis - ontwerp transformatie bewust"
+BRP_Context: {
+  naam: JuridischeNaam(voornaam, tussenvoegsel, achternaam),
+  betekenis: "Officiële naam volgens GBA/BRP",
+  geldigheid: "Per registratie moment"
+}
+
+CRM_Context: {
+  naam: ContactNaam(roepnaam, achternaam),
+  betekenis: "Naam voor commerciële communicatie", 
+  geldigheid: "Tot klant dit wijzigt"
+}
+
+Transformatie: BRP_JuridischeNaam -> CRM_ContactNaam (bewuste keuze, gedocumenteerd)
+```
+**Doorbraak**: Context wordt onderdeel van het informatiemodel. Transformaties zijn expliciete designbeslissingen.
+
+### Waarom stap 3 de beste oplossing is
+- **Expliciete semantiek**: Wat betekenen deze gegevens hier?
+- **Bewuste transformaties**: Hoe gaat betekenis van A naar B?
+- **Gedocumenteerde keuzes**: Waarom is dit zo gemodelleerd?
+- **Voorspelbare resultaten**: Systemen gedragen zich consistent
+
+## Voordelen
+
+- **Correcte interpretatie**: Gegevens worden begrepen zoals bedoeld
+- **Betere integraties**: Bewuste transformaties tussen systemen
+- **Minder fouten**: Expliciete context voorkomt misverstanden
+- **Rijkere semantiek**: Betekenis wordt behouden en uitgebreid
+- **Betere traceability**: Context vertelt waar data vandaan komt en waarom
+
+## Relatie met protocol-denken
+
+Context is **fundamenteel** voor [protocol-denken](../index.md) omdat:
+
+### Protocollen overschrijden contexten
+- **Inter-organisatorische uitwisseling**: Protocols verbinden verschillende bounded contexts
+- **Context-preserving exchange**: Protocollen moeten context behouden over organisatiegrenzen
+- **Semantic clarity**: Duidelijke afspraken over betekenis van uitgewisselde gegevens
+
+### Context maakt protocollen robuust
+- **Expliciete transformaties**: Protocol specificaties bevatten context-mappings
+- **Validatie mogelijk**: Context bepaalt welke validatieregels gelden
+- **Evolutie ondersteuning**: Nieuwe contexts kunnen worden toegevoegd zonder bestaande te breken
+
+## Relatie met andere principes
+
+- Versterkt [Focus op verandering](focus-op-verandering.md) - events behouden context van veranderingen
+- Ondersteunt [Meerdere views standaard](meerdere-views-standaard.md) - elke view heeft eigen context
+- Basis voor contextovergang-ontwerp - expliciete context transformaties
 
 ## Waarom dit principe altijd geldt
 

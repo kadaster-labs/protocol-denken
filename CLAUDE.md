@@ -69,6 +69,28 @@ Bij het werken met de documentatie:
 - Behoud de academische maar toegankelijke toon uit bestaande inhoud
 - Voorbeelden moeten waar mogelijk betrekking hebben op Nederlandse overheid/Kadaster contexten
 
+## Principe-structuur
+
+Alle principe-documenten volgen deze gestandaardiseerde structuur:
+
+### Verplichte sectievolgorde:
+1. **Het probleem** - Waarom is dit principe nodig?
+2. **Het principe: [naam]** - Wat is het principe? (met Kernprincipes en Praktische implementatie)
+3. **Voorbeelden** - Concrete uitleg helpt begrip van principe
+4. **Mindset shift** - Denkwijze-evolutie (Stap 0→1→2→3 met problemen/verbeteringen)
+5. **Voordelen** - Nu begrijp je waarom deze voordelen kloppen
+6. **Relatie met protocol-denken** - Specifieke connectie met protocol-denken concepten
+7. **Relatie met andere principes** - Cross-referenties naar andere principes
+8. **Waarom dit principe altijd geldt** - Fundamentele argumenten
+9. **Implementatie overwegingen** - Praktische aspecten en uitdagingen
+
+### Stijlrichtlijnen:
+- Gebruik markdown links: `[tekst](bestand.md)` niet `[[wiki-links]]`
+- Voorbeelden eerst, theorie daarna - helpt begrip
+- "Relatie met protocol-denken" moet specifiek zijn voor dat principe
+- Mindset shift altijd met Stap 0→1→2→3 evolutie
+- Implementatie overwegingen onderverdeeld in: protocol-specifiek, technisch, organisatorisch
+
 ## Deployment
 
 De site is geconfigureerd voor GitHub Pages deployment:

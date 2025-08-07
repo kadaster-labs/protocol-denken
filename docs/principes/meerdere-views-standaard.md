@@ -36,75 +36,6 @@ API: /personen/{id}/identificatie -> { naam, geboortedatum, bsn }
 API: /personen/{id}/specialistisch -> complete informatie voor experts
 ```
 
-## Voordelen
-
-- **Data-minimalisatie by design**: Elke view bevat alleen relevante gegevens, privacy en GDPR compliance ingebouwd
-- **Betere beveiliging**: Toegang kan per view worden geregeld
-- **Betere performance**: Elke view bevat precies wat nodig is
-- **Flexibelere evolutie**: Nieuwe behoeften vereisen geen breaking changes
-- **Duidelijkere verantwoordelijkheden**: Elke view heeft een specifiek doel
-- **Eenvoudigere integratie**: Andere systemen kunnen de meest passende view kiezen
-
-## Mindset shift
-
-Meerdere views vereist een fundamentele shift: **van "één waarheid" naar "meerdere perspectieven op één waarheid"**.
-
-### Stap 0: één model denken (traditioneel)
-```
-// Denken: "Ik maak één perfect model voor iedereen"
-class Persoon {
-    naam, adres, telefoon, email, geboortedatum, 
-    burgerlijkeStaat, inkomen, medischeDossier, ...
-}
-```
-**Probleem**:
-- Veel gebruikers krijgen irrelevante informatie
-- Privacy concerns - iedereen ziet alles
-- Performance issues - altijd alle data ophalen
-- Inflexibel - wijzigingen raken alle gebruikers
-
-### Stap 1: filtering denken
-```
-// Denken: "Ik filter het ene model per gebruik"
-API: /personen/{id}?fields=naam,adres
-API: /personen/{id}?view=contact
-```
-**Probleem**: Onderliggende model blijft complex en fragiel.
-
-**Verbetering**: Meer controle over wat wordt getoond, maar geen structurele oplossing.
-
-### Stap 2: multiple views denken
-```
-// Denken: "Ik maak aparte views per gebruikscontext"
-class ContactView { naam, adres, telefoon }
-class JuridischView { naam, burgerlijkeStaat, gezinssamenstelling }
-class VolledigView { alle informatie }
-```
-**Probleem**: Nog steeds geen expliciete synchronisatie tussen views.
-
-**Verbetering**: Context-specifieke structuren, maar synchronisatie is ad-hoc.
-
-### Stap 3: views als projecties denken
-```
-// Denken: "Views zijn bewuste projecties van events naar specifieke doelen"
-ContactView = projectie(PersonenEvents, optimizedFor: "dagelijks contact")
-JuridischView = projectie(PersonenEvents, optimizedFor: "juridische procedures") 
-AnalyseView = projectie(PersonenEvents, optimizedFor: "statistische analyse")
-```
-**Doorbraak**: Expliciete relatie tussen bron (events) en views, met heldere doelen.
-
-## Relatie met andere principes
-
-- Versterkt [[Principe/focus-op-verandering]] - events kunnen naar verschillende views worden geprojecteerd
-- Ondersteunt [[Principe/context-is-altijd-aanwezig]] - elke view heeft een specifieke context en doel
-- Basis voor [[Patroon/contextovergang-ontwerp]] - bewuste mapping tussen verschillende contexten
-
-## Patronen die dit principe toepassen
-
-- [[Patroon/cqrs]] - schrijven en lezen zijn verschillende views
-- [[Patroon/event-sourcing]] - events als bron, views als projecties
-- [[Patroon/gelaagde-register-architectuur]] - verschillende lagen hebben verschillende views
-
 ## Voorbeelden
 
 ### Voorbeeld 1: BAG register - verschillende perspectieven op één adres
@@ -259,18 +190,105 @@ AdresEnergietransitieView {
 ```
 **Voordeel**: Gemeente krijgt precies wat ze nodig heeft, bestaande gebruikers merken niets.
 
-## Wanneer toepassen?
+## Mindset shift
 
-### Altijd toepassen bij:
-- **Meerdere gebruikersgroepen**: Verschillende rollen hebben verschillende informatiebehoeften
-- **Evolutionaire systemen**: Behoeften zullen veranderen over tijd
-- **Privacy-gevoelige data**: Verschillende autorisatieniveaus vereist
-- **Performance-kritische systemen**: Verschillende use cases hebben andere performance-eisen
+Meerdere views vereist een fundamentele shift: **van "één waarheid" naar "meerdere perspectieven op één waarheid"**.
 
-### Voorzichtig toepassen bij:
-- **Zeer eenvoudige systemen**: Soms is één view werkelijk voldoende
-- **Strikte real-time consistentie**: Meerdere views kunnen synchronisatie-uitdagingen geven
-- **Resource-beperkte omgevingen**: Overhead van meerdere views kan te groot zijn
+### Stap 0: één model denken (traditioneel)
+```
+// Denken: "Ik maak één perfect model voor iedereen"
+class Persoon {
+    naam, adres, telefoon, email, geboortedatum, 
+    burgerlijkeStaat, inkomen, medischeDossier, ...
+}
+```
+**Probleem**:
+- Veel gebruikers krijgen irrelevante informatie
+- Privacy concerns - iedereen ziet alles
+- Performance issues - altijd alle data ophalen
+- Inflexibel - wijzigingen raken alle gebruikers
+
+### Stap 1: filtering denken
+```
+// Denken: "Ik filter het ene model per gebruik"
+API: /personen/{id}?fields=naam,adres
+API: /personen/{id}?view=contact
+```
+**Probleem**: Onderliggende model blijft complex en fragiel.
+
+**Verbetering**: Meer controle over wat wordt getoond, maar geen structurele oplossing.
+
+### Stap 2: multiple views denken
+```
+// Denken: "Ik maak aparte views per gebruikscontext"
+class ContactView { naam, adres, telefoon }
+class JuridischView { naam, burgerlijkeStaat, gezinssamenstelling }
+class VolledigView { alle informatie }
+```
+**Probleem**: Nog steeds geen expliciete synchronisatie tussen views.
+
+**Verbetering**: Context-specifieke structuren, maar synchronisatie is ad-hoc.
+
+### Stap 3: views als projecties denken
+```
+// Denken: "Views zijn bewuste projecties van events naar specifieke doelen"
+ContactView = projectie(PersonenEvents, optimizedFor: "dagelijks contact")
+JuridischView = projectie(PersonenEvents, optimizedFor: "juridische procedures") 
+AnalyseView = projectie(PersonenEvents, optimizedFor: "statistische analyse")
+```
+**Doorbraak**: Expliciete relatie tussen bron (events) en views, met heldere doelen.
+
+## Voordelen
+
+- **Data-minimalisatie by design**: Elke view bevat alleen relevante gegevens, privacy en GDPR compliance ingebouwd
+- **Betere beveiliging**: Toegang kan per view worden geregeld
+- **Betere performance**: Elke view bevat precies wat nodig is
+- **Flexibelere evolutie**: Nieuwe behoeften vereisen geen breaking changes
+- **Duidelijkere verantwoordelijkheden**: Elke view heeft een specifiek doel
+- **Eenvoudigere integratie**: Andere systemen kunnen de meest passende view kiezen
+
+## Relatie met protocol-denken
+
+Meerdere views is **essentieel** voor [protocol-denken](../index.md) omdat:
+
+### Protocollen vereisen verschillende perspectieven
+- **Interne verwerking**: Views voor interne systemen en processen
+- **Externe uitwisseling**: Views geoptimaliseerd voor protocollen tussen organisaties
+- **Governance views**: Specifieke views voor controle en compliance
+
+### Views maken protocollen flexibel
+- **Evolutie mogelijk**: Nieuwe protocol-versies door nieuwe views, zonder breaking changes
+- **Context-specifieke uitwisseling**: Protocollen kunnen de juiste view voor elke situatie kiezen
+- **Performance optimalisatie**: Protocollen hoeven alleen relevante data uit te wisselen
+
+## Relatie met andere principes
+
+- Versterkt [Focus op verandering](focus-op-verandering.md) - events kunnen naar verschillende views worden geprojecteerd
+- Ondersteunt [Context is altijd aanwezig](context-is-altijd-aanwezig.md) - elke view heeft een specifieke context en doel
+- Basis voor contextovergang-ontwerp - bewuste mapping tussen verschillende contexten
+
+## Waarom dit principe altijd geldt
+
+### Meerdere gebruikers = meerdere behoeften
+Elk register heeft altijd verschillende stakeholders:
+- **Interne gebruikers**: Verschillende afdelingen, verschillende behoeften
+- **Externe afnemers**: Verschillende organisaties, verschillende use cases
+- **Burgers**: Verschillende informatiebehoefte dan professionals
+- **Applicaties**: API's hebben andere structuren nodig dan gebruikersinterfaces
+
+### Evolutie is onvermijdelijk
+Systemen veranderen altijd:
+- **Nieuwe wetgeving**: Vereist nieuwe informatie-elementen
+- **Technische ontwikkelingen**: Maken nieuwe use cases mogelijk
+- **Organisatieveranderingen**: Leiden tot andere informatiebehoeften
+- **Gebruikersfeedback**: Vraagt om andere structuren
+
+### Performance en privacy vereisen specialisatie
+Eén model kan nooit optimaal zijn voor alles:
+- **Privacy**: Verschillende autorisatieniveaus vereisen verschillende views
+- **Performance**: Verschillende use cases hebben andere snelheidseisen
+- **Cachingstrategie**: Views kunnen individueel geoptimaliseerd worden
+- **Netwerk gebruik**: Alleen relevante data versturen
 
 ## Implementatie overwegingen
 

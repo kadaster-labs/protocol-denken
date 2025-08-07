@@ -10,6 +10,8 @@ Huidige registers zijn 'slechts' gericht op de resulterende _view_ en deze view 
 - **Geen spoor van wijzigingen**: Welke stappen hebben geleid tot de huidige toestand?
 - **Moeilijke correcties**: Hoe corrigeer je iets zonder de historie te verliezen?
 - **Beperkte compliance**: Hoe toon je aan dat processen correct zijn gevolgd?
+- **Protocol fragiliteit**: Systemen kunnen niet reageren op wijzigingen van andere partijen
+- **Synchronisatie problemen**: Geen gedeelde tijdslijn tussen organisaties
 
 ## Het principe: focus op verandering
 
@@ -32,26 +34,6 @@ Focus op verandering aanpak:
 COMMAND: RegistreerHuwelijk(manId: 123, vrouwId: 456, datum: 2024-01-15, gekozenAchternaam: 'Jansen')
 EVENT: HuwelijkGeregistreerdMetNaamkeuze(manId: 123, vrouwId: 456, datum: 2024-01-15, gekozenAchternaam: 'Jansen')
 ```
-
-## Voordelen
-
-- **Volledige traceability**: Elke wijziging is terug te vinden
-- **Betere compliance**: Audit trail is ingebouwd
-- **Flexibelere correcties**: Fouten kunnen worden rechtgezet zonder dataverlies  
-- **Rijkere informatie**: Context en intentie worden bewaard
-- **Betere synchronisatie**: Andere systemen kunnen reageren op wijzigingen
-
-## Relatie met andere principes
-
-- Versterkt [[Principe/context-is-altijd-aanwezig]] - veranderingen behouden context
-- Ondersteunt [[Principe/meerdere-views-standaard]] - wijzigingen kunnen naar verschillende views worden geprojecteerd
-- Basis voor [[Historie]] en [[Correctie]] functionaliteit
-
-## Patronen die dit principe toepassen
-
-- [[Patroon/event-sourcing]] - events als primaire datastructuur
-- [[Patroon/cqrs]] - scheiding tussen wijzigen en bevragen
-- [[Patroon/contextovergang-ontwerp]] - veranderingen expliciet door contexten heen
 
 ## Voorbeelden
 
@@ -101,7 +83,7 @@ Events voor Adres 12345:
 - Gescheiden
 - Overleden
 
-> **Let op**: Dit voorbeeld illustreert ook [[Principe/context-is-altijd-aanwezig]] - dat is geen toeval. Goede principes versterken elkaar en leiden tot dezelfde ontwerpkeuzes.
+> **Let op**: Dit voorbeeld illustreert ook [context is altijd aanwezig](context-is-altijd-aanwezig.md) - dat is geen toeval. Goede principes versterken elkaar en leiden tot dezelfde ontwerpkeuzes.
 
 ## Mindset shift
 
@@ -152,6 +134,42 @@ EVENT: HuwelijkGeregistreerdMetNaamkeuze(manId: 123, vrouwId: 456, datum: 2024-0
 - **Geen afhankelijkheden**: Event handlers zijn eenvoudiger
 - **Business getrouw**: Modelleert werkelijkheid (naamkeuze hoort bij huwelijk)
 
+## Voordelen
+
+- **Volledige traceability**: Elke wijziging is terug te vinden
+- **Betere compliance**: Audit trail is ingebouwd
+- **Flexibelere correcties**: Fouten kunnen worden rechtgezet zonder dataverlies  
+- **Rijkere informatie**: Context en intentie worden bewaard
+- **Betere synchronisatie**: Andere systemen kunnen reageren op wijzigingen
+
+## Relatie met protocol-denken
+
+Focus op verandering is het **hart** van [protocol-denken](../index.md). Zonder gebeurtenissen kunnen organisaties niet effectief samenwerken omdat:
+
+### Protocollen zijn fundamenteel event-driven
+Moderne inter-organisatie protocollen zijn niet gebaseerd op "data delen" maar op "gebeurtenissen delen":
+- **Tijdsvolgorde cruciaal**: Wie deed wat wanneer bepaalt de uitkomst van protocollen
+- **Causaliteit behoud**: Oorzaak-gevolg relaties tussen organisaties blijven bewaard
+- **Asynchrone samenwerking**: Organisaties kunnen reageren op hun eigen tempo zonder real-time synchronisatie
+
+### State-based protocollen falen bij schaal
+Traditionele "snapshot sharing" protocollen breken bij meerdere organisaties:
+- **Race conditions**: Verschillende organisaties wijzigen dezelfde data tegelijk
+- **Inconsistente views**: Elk systeem heeft andere "huidige toestand"
+- **Geen conflict resolution**: Hoe bepaal je welke wijziging leidend is?
+
+### Events maken dikke protocollen mogelijk  
+[Protocol-denken](../index.md) gaat naar protocollen die business regels afdwingen:
+- **Event validation**: Protocollen kunnen gebeurtenissen valideren voordat ze geaccepteerd worden
+- **Governance via events**: Alle besluiten en wijzigingen zijn traceerbaar
+- **Distributed consensus**: Gebeurtenissen creëren overeenstemming tussen organisaties
+
+## Relatie met andere principes
+
+- **Versterkt**: [Context is altijd aanwezig](context-is-altijd-aanwezig.md) - veranderingen behouden context
+- **Ondersteunt**: [Meerdere views standaard](meerdere-views-standaard.md) - wijzigingen kunnen naar verschillende views worden geprojecteerd
+- **Vereist**: [Digitaal als fundament](digitaal-als-fundament.md) - gebeurtenissen kunnen alleen digitaal goed vastgelegd worden
+
 ## Waarom dit principe altijd geldt
 
 Verandering is de enige constante in overheidsregisters. State denken maskeert deze werkelijkheid:
@@ -177,33 +195,41 @@ Overheidsregisters moeten kunnen verantwoorden:
 - **Controleerbaarheid**: Kan deze wijziging worden getoetst?
 - **Herstelbaarheid**: Kan een fout worden rechtgezet?
 
-### Nuance: vastgestelde gegevens
-Sommige gegevens zijn "immutable by nature":
-- **Luchtfoto's**: Vastgelegd op een specifiek moment, kunnen niet wijzigen
-- **Meetresultaten**: Temperatuur, waterstand, chemische analyses op tijdstip X
-- **Scans en documenten**: Het origineel blijft onveranderlijk
-- **Biometrische data**: Vingerafdruk, iris scan
+### Nuance: vastgestelde gegevens in protocollen
+Sommige gegevens zijn "immutable by nature" maar ook bij deze speelt verandering een rol in protocollen:
 
-Bij deze gegevens geldt:
-- **Immutable by nature** - ze kunnen niet wijzigen, alleen vervangen
-- **Point-in-time capture** - representeren een specifiek moment
-- **Binary relationship** - ze bestaan of bestaan niet
+**Immutable content, dynamic protocol context**:
+- **Luchtfoto's**: Inhoud wijzigt niet, maar publicatie, validatie, en gebruik via protocollen wel
+- **Meetresultaten**: Waarde is vast, maar certificering, kwaliteit, en geaccepteerdheid evolueren
+- **Juridische documenten**: Tekst is vast, maar status (concept→definitief→ingetrokken) wijzigt via protocollen
 
-Maar ook hier geldt focus op verandering:
-- **Metadata verandert**: Wanneer gemaakt, door wie, met welke apparatuur, kwaliteit
-- **Interpretatie evolueert**: Hoe we de foto analyseren, welke conclusies we trekken  
-- **Status wijzigt**: Concept → goedgekeurd → gearchiveerd → vervangen
-- **Gebruik evolueert**: Voor welke doeleinden, door wie, onder welke voorwaarden
+In protocollen is ook voor "immutable" gegevens de **gebeurtenis van vastleggen** cruciaal:
+- **"Foto gemaakt"**: Wanneer, door wie, met welke apparatuur, voor welk doel?
+- **"Meting uitgevoerd"**: Door welk lab, volgens welke methode, met welke nauwkeurigheid?
+- **"Document ondertekend"**: Door wie, wanneer, onder welke omstandigheden?
 
-**Conclusie**: Focus op verandering geldt niet altijd voor de **inhoud** van gegevens, maar wel voor hun **levenscyclus**, **interpretatie** en **gebruik**. State denken faalt nog steeds bij "Waarom hebben we dit gegeven en hoe gebruiken we het?"
+**Protocol-perspectief**: Ook immutable content heeft een **lifecycle** die via gebeurtenissen wordt gestuurd.
 
 ## Implementatie overwegingen
 
-- **Storage overhead**: Events nemen meer ruimte in dan alleen current state
-- **Complexiteit**: Query's moeten events interpreteren naar huidige toestand
-- **Performance**: Event sourcing vereist goede tooling en patterns
-- **Migratie**: Bestaande registers kunnen incrementeel worden omgebouwd
+### Voor protocol-denken specifiek
+- **Event schemas**: Gebeurtenissen tussen organisaties vereisen gestandaardiseerde formats
+- **Temporal ordering**: Tijdsstempels moeten synchroon zijn tussen organisaties (bijv. NTP)
+- **Event versioning**: Protocollen moeten kunnen evolueren door expliciete versionering en regels voor het oplossen van verschillen
+- **Conflict resolution**: Heldere regels voor wanneer gebeurtenissen conflicteren
+
+### Technische uitdagingen
+- **Storage overhead**: Events nemen meer ruimte in, maar bieden veel meer mogelijkheden
+- **Query complexiteit**: [Meerdere views](meerdere-views-standaard.md) worden gegenereerd uit event streams
+- **Performance**: Event sourcing vereist goede tooling en caching strategieën
+- **Cross-boundary events**: Gebeurtenissen die organisatiegrenzen overschrijden vereisen extra validatie
+
+### Organisatorische aspecten
+- **Event governance**: Wie mag welke gebeurtenissen publiceren?
+- **Schema evolution**: Hoe evolueren event formats zonder systemen te breken?
+- **Migratie**: Bestaande state-based systemen incrementeel naar event-sourcing
+- **Training**: Teams moeten leren denken in gebeurtenissen ipv toestanden
 
 ---
 
-*Dit principe vormt de basis voor verantwoorde overheidsregistratie die kan uitleggen waarom elke wijziging heeft plaatsgevonden.*
+*Dit principe vormt de basis voor verantwoorde overheidsregistratie en robuuste inter-organisatie protocollen waarin organisaties effectief kunnen samenwerken.*
