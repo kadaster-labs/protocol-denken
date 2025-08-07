@@ -22,6 +22,10 @@ De volgende principes vormen de fundamenten voor **denken in protocollen** en be
 
 *Nooit één model of API - altijd meerdere perspectieven*
 
+## [Open samenwerking](open-samenwerking.md)
+
+*Protocollen ontstaan en evolueren alleen in open samenwerking tussen alle deelnemers*
+
 ---
 
 Deze principes ondersteunen de visie van protocol-denken door concrete richtlijnen te bieden voor het ontwerpen van betrouwbare, schaalbare en transparante systemen voor gegevensuitwisseling tussen overheidsorganisaties.
