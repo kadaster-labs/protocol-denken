@@ -12,15 +12,22 @@ nav:
   - taal-en-semantiek.md
   - automatisering.md
   - oplossingen.md
+  - Principes:
+    - principes/index.md
+    - principes/digitaal-als-fundament.md
+    - principes/context-is-altijd-aanwezig.md
+    - principes/focus-op-verandering.md
+    - principes/meerdere-views-standaard.md
+    - principes/open-samenwerking.md
   - Voorbeelden:
     - voorbeelden/index.md
     - voorbeelden/sensrnet.md
     - voorbeelden/koers.md
   - Achtergrond:
     - achtergrond/index.md
-    - achtergrond/open-source.md
-    - achtergrond/event-sourcing.md
     - achtergrond/agile.md
+    - achtergrond/event-sourcing.md
+    - achtergrond/open-source.md
 extra_css:
   - css/project.css
 theme:
@@ -40,6 +47,7 @@ theme:
     logo: material/play-network
 markdown_extensions:
   - attr_list
+  - footnotes
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
