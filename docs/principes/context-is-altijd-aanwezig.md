@@ -10,6 +10,8 @@ We doen vaak alsof gegevens (data) "neutraal" en "contextvrij" zijn. Dit leidt t
 - **Verkeerde interpretaties**: Dezelfde waarde betekent iets anders in verschillende systemen  
 - **Integratiefouten**: Gegevens worden "zomaar" gekopieerd zonder begrip van context
 - **Synchronisatieproblemen**: Wijzigingen in bronnen bereiken een gebruiksdoel met verkeerde betekenis
+- **Protocol failures**: Inter-organisatie protocollen falen omdat context niet wordt overgedragen
+- **Semantische chaos**: Organisaties praten langs elkaar heen over "dezelfde" gegevens
 
 ## Het principe: context is altijd aanwezig
 
@@ -155,17 +157,25 @@ Transformatie: BRP_JuridischeNaam -> CRM_ContactNaam (bewuste keuze, gedocumente
 
 ## Relatie met protocol-denken
 
-Context is **fundamenteel** voor [protocol-denken](../index.md) omdat:
+Context is **essentieel** voor [protocol-denken](../index.md) omdat protocollen fundamenteel gaan over het overbruggen van verschillende contexten:
 
-### Protocollen overschrijden contexten
-- **Inter-organisatorische uitwisseling**: Protocols verbinden verschillende bounded contexts
-- **Context-preserving exchange**: Protocollen moeten context behouden over organisatiegrenzen
-- **Semantic clarity**: Duidelijke afspraken over betekenis van uitgewisselde gegevens
+### Protocollen zijn context-overbrugging
+Moderne inter-organisatie protocollen zijn niet alleen dataformaten, maar **context-vertalers**:
+- **Semantische mapping**: Protocol definieert hoe betekenis van organisatie A wordt vertaald naar organisatie B
+- **Context preservation**: Rijke context informatie blijft behouden tijdens uitwisseling
+- **Bounded context integration**: [Dikke protocollen](../index.md) bevatten expliciete regels voor context-overgangen
 
-### Context maakt protocollen robuust
-- **Expliciete transformaties**: Protocol specificaties bevatten context-mappings
-- **Validatie mogelijk**: Context bepaalt welke validatieregels gelden
-- **Evolutie ondersteuning**: Nieuwe contexts kunnen worden toegevoegd zonder bestaande te breken
+### Context maakt dikke protocollen mogelijk
+[Protocol-denken](../index.md) evolueert naar protocollen die meer dan transport regelen:
+- **Business rule validation**: Context bepaalt welke validaties gelden in welke situaties
+- **Semantic consistency**: Protocollen garanderen dat betekenis consistent blijft
+- **Context-aware workflows**: Verschillende organisaties kunnen verschillende contexten hanteren binnen hetzelfde protocol
+
+### Context is de basis voor netwerken van datastromen
+[Netwerken van datastromen](../oplossingen.md#netwerken--datastromen) werken alleen met expliciete context:
+- **Multi-organizational views**: Elke organisatie heeft zijn eigen context, maar kan deelnemen aan gedeelde protocollen
+- **Context evolution**: Nieuwe organisaties kunnen toetreden door hun context te mappen op bestaande protocollen
+- **Federated semantics**: Verschillende definities van "hetzelfde" concept kunnen naast elkaar bestaan
 
 ## Relatie met andere principes
 
@@ -208,12 +218,26 @@ Elk proces heeft eigen betekenis voor dezelfde gegevens:
 - **Duidelijkere communicatie** tussen teams over data betekenis
 - **Flexibelere systemen** die kunnen evolueren met context
 
-**Uitdagingen:**
+### Protocol-specifieke uitdagingen:
+- **Context governance**: Wie bepaalt de "officiële" betekenis van concepten in protocollen?
+- **Semantic versioning**: Hoe evolueren contexten zonder protocollen te breken?
+- **Multi-party consensus**: Hoe bereik je overeenstemming over betekenis tussen organisaties?
+- **Context conflict resolution**: Wat gebeurt er als organisaties verschillende definities hebben?
+
+### Technische uitdagingen:
 - **Meer complexiteit** in informatiemodellen en transformaties
 - **Performance overhead** door context validatie en transformatie
+- **Cross-boundary validation**: Context validatie over organisatiegrenzen heen
+- **Semantic drift detection**: Herkennen wanneer context-betekenis onbedoeld verandert
+
+### Organisatorische uitdagingen:
 - **Team alignment** vereist begrip van business contexten
-- **Documentatie** van context en transformaties is essentieel
+- **Protocol governance**: Wie beheert gedeelde context-definities?
+- **Change management**: Context wijzigingen hebben impact op alle deelnemers
+- **Documentatie** van context en transformaties is essentieel voor protocol-werking
+- **Protocol als context-contract**: Protocollen documenteren exact wat elk veld betekent in elke context
+- **Context evolution management**: Backwards compatibility en gradual migration tussen context-versies
 
 ---
 
-*Dit principe vormt de basis voor betrouwbare gegevensuitwisseling tussen systemen en contexten.*
+*Dit principe vormt de basis voor betrouwbare gegevensuitwisseling tussen organisaties met verschillende contexten via robuuste protocollen.*
