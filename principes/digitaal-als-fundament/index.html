@@ -1,0 +1,1752 @@
+
+<!doctype html>
+<html lang="nl" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://kadaster-labs.github.io/protocol-denken/principes/digitaal-als-fundament/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../context-is-altijd-aanwezig/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.50">
+    
+    
+      
+        <title>Digitaal als fundament - Denken in protocollen</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.a40c8224.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/project.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#principe-digitaal-als-fundament" class="md-skip">
+          Ga naar inhoud
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+<div class="container labsbar">
+    <span class="item"><img src="assets/kadaster-logo-white.png"/><a href="https://labs.kadaster.nl/" target="_blank">labs.kadaster.nl</a></span>
+    <!-- <span class="item delimeter">|</span>
+    <a class="item" href="https://federatief.datastelsel.nl/" target="_blank">federatief.datastelsel.nl</a> -->
+</div>
+
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Denken in protocollen" class="md-header__button md-logo" aria-label="Denken in protocollen" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 20a1 1 0 0 0-1-1h-1v-2h4a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h4v2h-1a1 1 0 0 0-1 1H2v2h7a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1h7v-2zm-5-6V6l5 4z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Denken in protocollen
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Digitaal als fundament
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Zoeken" placeholder="Zoeken" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Zoeken">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Leegmaken" aria-label="Leegmaken" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Zoeken initialiseren
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/kadaster-labs/protocol-denken" title="Ga naar repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigatie" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Denken in protocollen" class="md-nav__button md-logo" aria-label="Denken in protocollen" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 20a1 1 0 0 0-1-1h-1v-2h4a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h4v2h-1a1 1 0 0 0-1 1H2v2h7a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1h7v-2zm-5-6V6l5 4z"/></svg>
+
+    </a>
+    Denken in protocollen
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/kadaster-labs/protocol-denken" title="Ga naar repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Start
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../papier-naar-digitaal/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Papier naar digitaal
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ontstaan-van-data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ontstaan van data
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../context/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Context
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../taal-en-semantiek/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Taal en semantiek
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../automatisering/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Automatisering
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../oplossingen/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Oplossingen
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Principes
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_8" id="__nav_8_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Principes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Digitaal als fundament
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Digitaal als fundament
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhoudsopgave">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhoudsopgave
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#het-probleem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Het probleem
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#het-principe-digitaal-als-fundament" class="md-nav__link">
+    <span class="md-ellipsis">
+      Het principe: digitaal als fundament
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Het principe: digitaal als fundament">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#kernprincipes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kernprincipes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#praktische-betekenis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Praktische betekenis
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#voorbeelden" class="md-nav__link">
+    <span class="md-ellipsis">
+      Voorbeelden
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Voorbeelden">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#voorbeeld-1-huwelijksregistratie" class="md-nav__link">
+    <span class="md-ellipsis">
+      Voorbeeld 1: Huwelijksregistratie
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#voorbeeld-2-bouwvergunning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Voorbeeld 2: Bouwvergunning
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#voorbeeld-3-omgaan-met-wettelijke-papier-vereisten" class="md-nav__link">
+    <span class="md-ellipsis">
+      Voorbeeld 3: Omgaan met wettelijke papier-vereisten
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mindset-shift" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mindset shift
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mindset shift">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stap-0-papierdenken-traditioneel-nog-steeds-herkenbaar" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stap 0: papierdenken (traditioneel, nog steeds herkenbaar)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stap-1-digitale-optimalisatie-bekende-situatie-anno-2025" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stap 1: digitale optimalisatie (bekende situatie anno 2025)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stap-2-digitaal-fundament-denken" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stap 2: digitaal fundament denken
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#waarom-stap-2-de-oplossing-is" class="md-nav__link">
+    <span class="md-ellipsis">
+      Waarom stap 2 de oplossing is
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#voordelen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Voordelen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#relatie-met-protocol-denken" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relatie met protocol-denken
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Relatie met protocol-denken">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#protocollen-vereisen-digitale-infrastructuur" class="md-nav__link">
+    <span class="md-ellipsis">
+      Protocollen vereisen digitale infrastructuur
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gebeurtenissen-maken-protocollen-mogelijk-over-organisaties" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gebeurtenissen maken protocollen mogelijk over organisaties
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#digitale-context-maakt-rijke-protocollen-mogelijk" class="md-nav__link">
+    <span class="md-ellipsis">
+      Digitale context maakt rijke protocollen mogelijk
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#relatie-met-andere-principes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relatie met andere principes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#waarom-dit-principe-altijd-geldt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Waarom dit principe altijd geldt
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Waarom dit principe altijd geldt">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#maatschappelijke-realiteit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Maatschappelijke realiteit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#schaalvoordelen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Schaalvoordelen
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#publieke-waarden" class="md-nav__link">
+    <span class="md-ellipsis">
+      Publieke waarden
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#van-dunne-naar-dikke-protocollen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Van dunne naar dikke protocollen
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementatie-overwegingen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementatie overwegingen
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Implementatie overwegingen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#technische-aspecten" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technische aspecten
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#organisatorische-aspecten" class="md-nav__link">
+    <span class="md-ellipsis">
+      Organisatorische aspecten
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maatschappelijke-aspecten" class="md-nav__link">
+    <span class="md-ellipsis">
+      Maatschappelijke aspecten
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../context-is-altijd-aanwezig/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Context is altijd aanwezig
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../focus-op-verandering/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Focus op verandering
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../meerdere-views-standaard/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Meerdere views standaard
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../open-samenwerking/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Open samenwerking
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../voorbeelden/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Voorbeelden
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_9" id="__nav_9_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Voorbeelden
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../voorbeelden/sensrnet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SensRNet
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../voorbeelden/koers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Basisregistratie Kadaster
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../achtergrond/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Achtergrond
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_10" id="__nav_10_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            Achtergrond
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../achtergrond/agile/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Agile werken
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../achtergrond/event-sourcing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Event Sourcing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../achtergrond/open-source/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Open Source
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhoudsopgave">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhoudsopgave
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#het-probleem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Het probleem
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#het-principe-digitaal-als-fundament" class="md-nav__link">
+    <span class="md-ellipsis">
+      Het principe: digitaal als fundament
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Het principe: digitaal als fundament">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#kernprincipes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kernprincipes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#praktische-betekenis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Praktische betekenis
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#voorbeelden" class="md-nav__link">
+    <span class="md-ellipsis">
+      Voorbeelden
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Voorbeelden">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#voorbeeld-1-huwelijksregistratie" class="md-nav__link">
+    <span class="md-ellipsis">
+      Voorbeeld 1: Huwelijksregistratie
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#voorbeeld-2-bouwvergunning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Voorbeeld 2: Bouwvergunning
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#voorbeeld-3-omgaan-met-wettelijke-papier-vereisten" class="md-nav__link">
+    <span class="md-ellipsis">
+      Voorbeeld 3: Omgaan met wettelijke papier-vereisten
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mindset-shift" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mindset shift
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mindset shift">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stap-0-papierdenken-traditioneel-nog-steeds-herkenbaar" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stap 0: papierdenken (traditioneel, nog steeds herkenbaar)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stap-1-digitale-optimalisatie-bekende-situatie-anno-2025" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stap 1: digitale optimalisatie (bekende situatie anno 2025)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stap-2-digitaal-fundament-denken" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stap 2: digitaal fundament denken
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#waarom-stap-2-de-oplossing-is" class="md-nav__link">
+    <span class="md-ellipsis">
+      Waarom stap 2 de oplossing is
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#voordelen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Voordelen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#relatie-met-protocol-denken" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relatie met protocol-denken
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Relatie met protocol-denken">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#protocollen-vereisen-digitale-infrastructuur" class="md-nav__link">
+    <span class="md-ellipsis">
+      Protocollen vereisen digitale infrastructuur
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gebeurtenissen-maken-protocollen-mogelijk-over-organisaties" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gebeurtenissen maken protocollen mogelijk over organisaties
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#digitale-context-maakt-rijke-protocollen-mogelijk" class="md-nav__link">
+    <span class="md-ellipsis">
+      Digitale context maakt rijke protocollen mogelijk
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#relatie-met-andere-principes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relatie met andere principes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#waarom-dit-principe-altijd-geldt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Waarom dit principe altijd geldt
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Waarom dit principe altijd geldt">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#maatschappelijke-realiteit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Maatschappelijke realiteit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#schaalvoordelen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Schaalvoordelen
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#publieke-waarden" class="md-nav__link">
+    <span class="md-ellipsis">
+      Publieke waarden
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#van-dunne-naar-dikke-protocollen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Van dunne naar dikke protocollen
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementatie-overwegingen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementatie overwegingen
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Implementatie overwegingen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#technische-aspecten" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technische aspecten
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#organisatorische-aspecten" class="md-nav__link">
+    <span class="md-ellipsis">
+      Organisatorische aspecten
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maatschappelijke-aspecten" class="md-nav__link">
+    <span class="md-ellipsis">
+      Maatschappelijke aspecten
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="principe-digitaal-als-fundament">Principe: digitaal als fundament<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></h1>
+<p><em>De samenleving digitaliseert - de overheid sluit daar bewust op aan door digitaal als uitgangspunt te nemen</em></p>
+<h2 id="het-probleem">Het probleem</h2>
+<p>De overheid blijft vasthouden aan processen die ontworpen zijn voor papieren uitvoering, terwijl de samenleving fundamentaal digitaal is geworden. Dit leidt tot verschillende problemen:</p>
+<ul>
+<li><strong>Beperkte mogelijkheden</strong>: Papier kan slechts één view vastleggen en geen <a href="../meerdere-views-standaard/">meerdere perspectieven</a> bieden</li>
+<li><strong>Statische vastlegging</strong>: Focus ligt op eindtoestand in plaats van op <a href="../focus-op-verandering/">veranderingen</a></li>
+<li><strong>Contextverlies</strong>: Alleen wat fysiek op papier past kan worden vastgelegd, <a href="../context-is-altijd-aanwezig/">context</a> gaat verloren</li>
+<li><strong>Moeilijke aanpassingen</strong>: Correcties betekenen doorhalingen, geschiedenis verdwijnt</li>
+<li><strong>Maatschappelijke aansluiting</strong>: Burgers en bedrijven werken digitaal, overheid blijft achter</li>
+<li><strong>Protocol rigiditeit</strong>: Papieren protocollen zijn statisch en moeilijk aan te passen aan nieuwe situaties</li>
+</ul>
+<p>De achtergrond en ontstaan is begrijpelijk als je de historie van <a href="../../papier-naar-digitaal/">papier naar digitaal</a>. Maar daar moeten we dus een verandering in teweegbrengen.</p>
+<h2 id="het-principe-digitaal-als-fundament">Het principe: digitaal als fundament</h2>
+<p>Digitaal wordt het primaire domein van overheidsdienstverlening. Papier wordt een afdruk of uitzondering, niet het uitgangspunt.</p>
+<h3 id="kernprincipes">Kernprincipes</h3>
+<ol>
+<li><strong>Digitaal eerst</strong>: Alle processen worden primair digitaal ontworpen</li>
+<li><strong>Papier als afdruk</strong>: Fysieke documenten zijn kopieën of afschriften van digitale bronnen</li>
+<li><strong>Schaal als fundament</strong>: Digitaal maakt analyses, wijzigingen en processen mogelijk op een schaal die met papier ondenkbaar was</li>
+<li><strong>Menselijke tussenkomst mogelijk</strong>: Op elk punt kan handmatig worden ingegrepen of bijgestuurd</li>
+<li><strong>Publieke waarden centraal</strong>: Digitalisering dient democratie en transparantie</li>
+</ol>
+<h3 id="praktische-betekenis">Praktische betekenis</h3>
+<pre><code>Traditionele aanpak:
+1. Papieren formulier invullen
+2. Handmatig invoeren in systeem  
+3. Papier archiveren als 'bron van waarheid'
+
+Digitaal fundament en protocol-denken aanpak:
+1. Digitale proces als primaire interactie
+2. Automatische verwerking en validatie
+3. Papier is afdruk indien nodig (niet als bron, wel als bewijs)
+</code></pre>
+<h2 id="voorbeelden">Voorbeelden</h2>
+<h3 id="voorbeeld-1-huwelijksregistratie">Voorbeeld 1: Huwelijksregistratie</h3>
+<p><strong>Traditioneel (papier fundament):</strong></p>
+<pre><code>1. Papieren formulier &quot;aangifte huwelijk&quot;
+2. Ambtenaar neemt gegevens over naar computersysteem
+3. Papieren akte wordt ondertekend
+4. Papieren formulier wordt gearchiveerd
+5. Bij opvragen: Computer print &quot;huwelijksakte&quot; (afschrift) of kopie maken van papieren akte
+</code></pre>
+<p><strong>Problemen</strong>: Dubbele vastlegging, papier als bron betekent verlies bij brand/verlies.</p>
+<p><strong>Digitaal fundament:</strong></p>
+<pre><code>1. Digitaal proces &quot;registreer huwelijk&quot;
+2. Directe validatie (zijn beide personen ongehuwd? juiste leeftijd?)
+3. Event &quot;HuwelijkGeregistreerd&quot; wordt opgeslagen
+4. (Automatische updates naar BRP, GBA, etc.)
+5. Huwelijksakte = digitale view/document
+6. Papieren afdruk indien gewenst (niet als primaire bron)
+</code></pre>
+<p><strong>Voordelen</strong>: Eén bron, automatische validatie, directe koppelingen, geen verlies mogelijk.</p>
+<h3 id="voorbeeld-2-bouwvergunning">Voorbeeld 2: Bouwvergunning</h3>
+<p><strong>Traditioneel (papier fundament):</strong></p>
+<pre><code>1. Papieren aanvraag met tekeningen
+2. Ambtenaar controleert handmatig tegen bestemmingsplan (ook papier)
+3. Fysieke dossiermap met alle stukken
+4. Papieren beschikking
+5. Bij wijziging: nieuwe papieren in dossier
+</code></pre>
+<p><strong>Digitaal fundament:</strong></p>
+<pre><code>1. Digitale aanvraag met 3D model, BIM en CAD bestanden
+2. Automatische toets tegen digitaal bestemmingsplan
+3. Digitaal dossier met alle historie en wijzigingen
+4. Beschikking als digitaal document (met digitale handtekeningen)
+5. Realtime inzicht voor aanvrager in status en historie
+6. Papieren afdruk voor wie dat prefereert
+</code></pre>
+<h3 id="voorbeeld-3-omgaan-met-wettelijke-papier-vereisten">Voorbeeld 3: Omgaan met wettelijke papier-vereisten</h3>
+<p><strong>Situatie</strong>: Sommige wetten vereisen nog papieren ondertekening.</p>
+<p><strong>Fout (papier leidend maken):</strong></p>
+<pre><code>1. Heel proces op papier vanwege handtekening-vereiste
+2. Digitaal wordt bijzaak
+3. Verlies van alle digitale voordelen
+</code></pre>
+<p><strong>Goed (digitaal fundament behouden):</strong></p>
+<pre><code>1. Heel proces digitaal
+2. Op moment van handtekeningen: papieren view genereren
+3. Handtekening op papier, scan terug naar digitaal dossier  
+4. Papier archiveren als wettelijke vereiste, digitaal blijft leidend
+5. Eventueel: werken naar digitale handtekeningen in toekomstige wetgeving
+</code></pre>
+<h2 id="mindset-shift">Mindset shift</h2>
+<p>Digitaal als fundament vereist een fundamentele shift: <strong>van "digitaal als kopie van papier" naar "papier als afdruk van digitaal"</strong>.</p>
+<h3 id="stap-0-papierdenken-traditioneel-nog-steeds-herkenbaar">Stap 0: papierdenken (traditioneel, nog steeds herkenbaar)</h3>
+<pre><code>// Denken: &quot;We maken een digitale versie van ons papieren proces&quot;
+1. Ontwerp papieren formulier
+2. Bouw website die hetzelfde formulier toont  
+3. Print resultaat uit voor archief
+4. Papier blijft leidend
+</code></pre>
+<p><strong>Probleem</strong>: 
+- Digitaal wordt beperkt door papier mogelijkheden
+- Geen gebruik van digitale voordelen (validatie, berekeningen, links)
+- Dubbele vastlegging en foutgevoeligheid</p>
+<h3 id="stap-1-digitale-optimalisatie-bekende-situatie-anno-2025">Stap 1: digitale optimalisatie (bekende situatie anno 2025)</h3>
+<pre><code>// Denken: &quot;We maken het digitale proces beter dan papier&quot;
+1. Bouw echte digitale workflows
+2. Gebruik validatie, berekeningen, automatisering
+3. Papier alleen voor wettelijke vereisten
+4. Digitaal wordt leidend
+</code></pre>
+<p><strong>Probleem</strong>: Nog steeds hybride - soms leidend digitaal, soms papier.</p>
+<p><strong>Verbetering</strong>: Digitale voordelen worden benut, maar inconsistent.</p>
+<h3 id="stap-2-digitaal-fundament-denken">Stap 2: digitaal fundament denken</h3>
+<pre><code>// Denken: &quot;We ontwerpen voor digitaal, papier is een view&quot;
+1. Alle gegevens zijn primair digitaal
+2. Papier is één van de mogelijke presentaties en kan dienen als bewijs
+3. Menselijke tussenkomst op elk digitaal punt mogelijk
+4. Publieke waarden ingebouwd in digitaal ontwerp
+</code></pre>
+<p><strong>Doorbraak</strong>: Digitaal wordt het natuurlijke domein, papier een hulpmiddel.</p>
+<h3 id="waarom-stap-2-de-oplossing-is">Waarom stap 2 de oplossing is</h3>
+<ul>
+<li><strong>Onbeperkte mogelijkheden</strong>: Geen papier-beperkingen op wat mogelijk is</li>
+<li><strong>Consistentie</strong>: Eén bron van waarheid (digitaal), meerdere presentaties</li>
+<li><strong>Schaalbaarheid</strong>: Nieuwe digitale services zijn eenvoudig toe te voegen</li>
+<li><strong>Toekomstbestendigheid</strong>: Groeit mee met technologische ontwikkelingen</li>
+</ul>
+<h2 id="voordelen">Voordelen</h2>
+<ul>
+<li><strong>Enabler voor andere principes</strong>: Maakt <a href="../meerdere-views-standaard/">meerdere views</a> en <a href="../focus-op-verandering/">focus op verandering</a> mogelijk</li>
+<li><strong>Schaalsprong mogelijk</strong>: Digitaal maakt analyses, wijzigingen en processen mogelijk op een schaal die met papier ondenkbaar was</li>
+<li><strong>Maatschappelijke aansluiting</strong>: Overheid werkt zoals burgers en bedrijven dat gewend zijn of zouden wensen</li>
+<li><strong>Transparantie</strong>: Digitale gegevens kunnen beter toegankelijk worden gemaakt</li>
+<li><strong>Efficiëntie</strong>: Wegvallen van dubbele vastlegging (met problematiek) en handmatige overdracht</li>
+<li><strong>Innovatiemogelijkheden</strong>: Nieuwe services en <a href="../../oplossingen/#netwerken--datastromen">netwerken van datastromen</a> worden mogelijk</li>
+<li><strong>Democratische versterking</strong>: Betere toegang tot overheidsinformatie door digitale infrastructuur</li>
+<li><strong>Interoperabiliteit</strong>: Protocollen maken uitwisseling tussen systemen mogelijk</li>
+</ul>
+<h2 id="relatie-met-protocol-denken">Relatie met protocol-denken</h2>
+<p>Digitaal als fundament is een <strong>voorwaarde</strong> voor <a href="../../">protocol-denken</a>. Zonder digitaal fundament kunnen moderne protocollen niet bestaan omdat:</p>
+<h3 id="protocollen-vereisen-digitale-infrastructuur">Protocollen vereisen digitale infrastructuur</h3>
+<ul>
+<li><strong>Dikke protocollen</strong>: <a href="../../">Protocol-denken</a> gaat naar protocollen die validatie, governance en business logica bevatten - dit kan alleen digitaal</li>
+<li><strong>Netwerk-effecten</strong>: <a href="../../oplossingen/#netwerken--datastromen">Netwerken van datastromen</a> ontstaan alleen als alle deelnemers digitaal werken</li>
+<li><strong>Automatisering</strong>: Protocollen kunnen alleen automatisch afgedwongen worden in digitale omgeving</li>
+</ul>
+<h3 id="gebeurtenissen-maken-protocollen-mogelijk-over-organisaties">Gebeurtenissen maken protocollen mogelijk over organisaties</h3>
+<ul>
+<li><strong>Asynchrone samenwerking</strong>: <a href="../focus-op-verandering/">Focus op verandering</a> zorgt dat organisaties kunnen samenwerken zonder real-time afhankelijkheden</li>
+<li><strong>Causaliteit behoud</strong>: Gebeurtenissen bewaren tijdsorde en context, cruciaal voor inter-organisatie protocollen</li>
+<li><strong>Robuustheid</strong>: Protocollen kunnen werken ondanks netwerkvertragingen en verschillende verwerkingssnelheden</li>
+</ul>
+<h3 id="digitale-context-maakt-rijke-protocollen-mogelijk">Digitale context maakt rijke protocollen mogelijk</h3>
+<ul>
+<li><strong>Contextbehoud</strong>: Digitale systemen kunnen de volledige <a href="../context-is-altijd-aanwezig/">context</a> van gebeurtenissen vastleggen en doorgeven</li>
+<li><strong>Meerdere perspectieven</strong>: <a href="../meerdere-views-standaard/">Meerdere views</a> voor verschillend gebruik, binnen organisatie en over organisatiegrenzen heen, gecoördineerd via protocollen</li>
+<li><strong>Open ontwikkeling</strong>: Alleen in <a href="../open-samenwerking/">open samenwerking</a> kunnen digitale protocollen ontwikkeld worden</li>
+</ul>
+<h2 id="relatie-met-andere-principes">Relatie met andere principes</h2>
+<p>Dit principe is het <strong>fundament</strong> voor alle andere principes:</p>
+<ul>
+<li><strong>Maakt mogelijk</strong>: <a href="../meerdere-views-standaard/">Meerdere views standaard</a> - papier kan slechts één view tonen</li>
+<li><strong>Maakt mogelijk</strong>: <a href="../focus-op-verandering/">Focus op verandering</a> - papier kan moeilijk wijzigingen traceren  </li>
+<li><strong>Maakt mogelijk</strong>: <a href="../context-is-altijd-aanwezig/">Context is altijd aanwezig</a> - papier heeft beperkte ruimte voor context</li>
+</ul>
+<h2 id="waarom-dit-principe-altijd-geldt">Waarom dit principe altijd geldt</h2>
+<h3 id="maatschappelijke-realiteit">Maatschappelijke realiteit</h3>
+<p>De samenleving is al digitaal:
+- <strong>Burgers</strong>: Bankieren, winkelen, communiceren digitaal
+- <strong>Bedrijven</strong>: Administratie, facturering, logistiek digitaal<br />
+- <strong>Internationale handel</strong>: Vereist digitale uitwisseling
+- <strong>Jongere generaties</strong>: Kennen papier-eerst niet meer en verwachten directe beantwoording</p>
+<h3 id="schaalvoordelen">Schaalvoordelen</h3>
+<p>Digitaal fundament maakt mogelijk:
+- <strong>Automatische koppelingen</strong>: Registers kunnen elkaar updaten
+- <strong>Realtime inzicht</strong>: Geen wachten op papieren overdracht
+- <strong>Data-gedreven beleid</strong>: Inzichten uit digitale gegevens
+- <strong>Innovatie</strong>: Nieuwe services op bestaande digitale basis</p>
+<h3 id="publieke-waarden">Publieke waarden</h3>
+<p>Digitaal fundament ondersteunt democratie:
+- <strong>Toegankelijkheid</strong>: Digitale diensten altijd bereikbaar
+- <strong>Transparantie</strong>: Gemakkelijker inzicht in overheidshandelen
+- <strong>Effectiviteit</strong>: Snellere, betere dienstverlening
+- <strong>Gelijkheid</strong>: Zelfde service voor iedereen, onafhankelijk van locatie</p>
+<h3 id="van-dunne-naar-dikke-protocollen">Van dunne naar dikke protocollen</h3>
+<p>Digitaal fundament maakt de evolutie mogelijk van:
+- <strong>Dunne protocollen</strong> (traditioneel internet): Minimale afspraken over transport, business logica in applicaties
+- <strong>Dikke protocollen</strong> (<a href="../../">protocol-denken</a>): Protocollen die validatie, governance en afdwingbare afspraken bevatten</p>
+<p>Deze transitie is alleen mogelijk met digitaal als fundament omdat dikke protocollen automatisering en geautomatiseerde validatie vereisen.</p>
+<h2 id="implementatie-overwegingen">Implementatie overwegingen</h2>
+<h3 id="technische-aspecten">Technische aspecten</h3>
+<ul>
+<li><strong>Beveiliging</strong>: Digitale gegevens vereisen robuuste beveiliging</li>
+<li><strong>Backup en archivering</strong>: Digitale duurzaamheid langer dan papier</li>
+<li><strong>Toegankelijkheid</strong>: Digitale diensten voor iedereen bruikbaar</li>
+<li><strong>Standaarden</strong>: Gebruik open, toekomstbestendige formaten</li>
+</ul>
+<h3 id="organisatorische-aspecten">Organisatorische aspecten</h3>
+<ul>
+<li><strong>Cultuurverandering</strong>: Medewerkers moeten digitaal denken omarmen</li>
+<li><strong>Juridische aanpassingen</strong>: Wetgeving moet digitaal mogelijk maken</li>
+<li><strong>Geleidelijke overgang</strong>: Van hybride naar volledig digitaal fundament</li>
+<li><strong>Gebruikersondersteuning</strong>: Help mensen bij overgang naar digitaal</li>
+</ul>
+<h3 id="maatschappelijke-aspecten">Maatschappelijke aspecten</h3>
+<ul>
+<li><strong>Digitale inclusie</strong>: Niemand mag worden uitgesloten</li>
+<li><strong>Transparantie</strong>: Digitale processen moeten inzichtelijk zijn</li>
+<li><strong>Democratische controle</strong>: Digitale systemen moeten controleerbaar blijven</li>
+<li><strong>Privacy by design</strong>: Bescherming ingebouwd vanaf het begin</li>
+</ul>
+<hr />
+<p><em>Dit principe legt het fundament waarop moderne overheidsregistraties kunnen worden gebouwd.</em></p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>NOTE Oorspronkelijk ontstaan uit en overgenomen vanuit <a href="https://uitbetrouwbarebron.nl">project Uit betrouwbare bron</a> en aangepast naar protocol-denken&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Terug naar boven
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Vorige: Principes">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Vorige
+              </span>
+              <div class="md-ellipsis">
+                Principes
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../context-is-altijd-aanwezig/" class="md-footer__link md-footer__link--next" aria-label="Volgende: Context is altijd aanwezig">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Volgende
+              </span>
+              <div class="md-ellipsis">
+                Context is altijd aanwezig
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.footer", "navigation.indexes", "navigation.instant", "navigation.top", "navigation.tracking", "toc.follow"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Gekopieerd naar klembord", "clipboard.copy": "Kopi\u00ebren naar klembord", "search.result.more.one": "1 extra overeenkomst op deze pagina", "search.result.more.other": "# extra overeenkomsten op deze pagina", "search.result.none": "Geen overeenkomende documenten", "search.result.one": "1 overeenkomende document", "search.result.other": "# overeenkomende documenten", "search.result.placeholder": "Typ om te beginnen met zoeken", "search.result.term.missing": "Ontbreekt", "select.version": "Selecteer versie"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.60a45f97.min.js"></script>
+      
+    
+  </body>
+</html>

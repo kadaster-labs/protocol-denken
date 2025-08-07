@@ -1,0 +1,1757 @@
+
+<!doctype html>
+<html lang="nl" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://kadaster-labs.github.io/protocol-denken/principes/focus-op-verandering/">
+      
+      
+        <link rel="prev" href="../context-is-altijd-aanwezig/">
+      
+      
+        <link rel="next" href="../meerdere-views-standaard/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.50">
+    
+    
+      
+        <title>Focus op verandering - Denken in protocollen</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.a40c8224.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/project.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#principe-focus-op-verandering" class="md-skip">
+          Ga naar inhoud
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+<div class="container labsbar">
+    <span class="item"><img src="assets/kadaster-logo-white.png"/><a href="https://labs.kadaster.nl/" target="_blank">labs.kadaster.nl</a></span>
+    <!-- <span class="item delimeter">|</span>
+    <a class="item" href="https://federatief.datastelsel.nl/" target="_blank">federatief.datastelsel.nl</a> -->
+</div>
+
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Denken in protocollen" class="md-header__button md-logo" aria-label="Denken in protocollen" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 20a1 1 0 0 0-1-1h-1v-2h4a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h4v2h-1a1 1 0 0 0-1 1H2v2h7a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1h7v-2zm-5-6V6l5 4z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Denken in protocollen
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Focus op verandering
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Zoeken" placeholder="Zoeken" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Zoeken">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Leegmaken" aria-label="Leegmaken" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Zoeken initialiseren
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/kadaster-labs/protocol-denken" title="Ga naar repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigatie" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Denken in protocollen" class="md-nav__button md-logo" aria-label="Denken in protocollen" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 20a1 1 0 0 0-1-1h-1v-2h4a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h4v2h-1a1 1 0 0 0-1 1H2v2h7a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1h7v-2zm-5-6V6l5 4z"/></svg>
+
+    </a>
+    Denken in protocollen
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/kadaster-labs/protocol-denken" title="Ga naar repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Start
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../papier-naar-digitaal/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Papier naar digitaal
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ontstaan-van-data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ontstaan van data
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../context/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Context
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../taal-en-semantiek/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Taal en semantiek
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../automatisering/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Automatisering
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../oplossingen/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Oplossingen
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Principes
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_8" id="__nav_8_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Principes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../digitaal-als-fundament/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Digitaal als fundament
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../context-is-altijd-aanwezig/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Context is altijd aanwezig
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Focus op verandering
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Focus op verandering
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhoudsopgave">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhoudsopgave
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#het-probleem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Het probleem
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#het-principe-focus-op-verandering" class="md-nav__link">
+    <span class="md-ellipsis">
+      Het principe: focus op verandering
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Het principe: focus op verandering">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#kernprincipes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kernprincipes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#praktische-implementatie" class="md-nav__link">
+    <span class="md-ellipsis">
+      Praktische implementatie
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#voorbeelden" class="md-nav__link">
+    <span class="md-ellipsis">
+      Voorbeelden
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Voorbeelden">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#voorbeeld-1-traditioneel-vs-verandering-gericht" class="md-nav__link">
+    <span class="md-ellipsis">
+      Voorbeeld 1: Traditioneel vs. Verandering-gericht
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#voorbeeld-2-huwelijk-in-personen-register" class="md-nav__link">
+    <span class="md-ellipsis">
+      Voorbeeld 2: huwelijk in personen register
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#voorbeeld-3-personen-register" class="md-nav__link">
+    <span class="md-ellipsis">
+      Voorbeeld 3: personen register
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mindset-shift" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mindset shift
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mindset shift">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stap-0-state-denken-traditioneel" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stap 0: state denken (traditioneel)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stap-1-object-denken-met-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stap 1: object denken met events
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stap-2-object-denken-met-referenties" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stap 2: object denken met referenties
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stap-3-event-denken" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stap 3: event denken
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#waarom-stap-3-de-beste-oplossing-is" class="md-nav__link">
+    <span class="md-ellipsis">
+      Waarom stap 3 de beste oplossing is
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#voordelen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Voordelen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#relatie-met-protocol-denken" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relatie met protocol-denken
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Relatie met protocol-denken">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#protocollen-zijn-fundamenteel-event-driven" class="md-nav__link">
+    <span class="md-ellipsis">
+      Protocollen zijn fundamenteel event-driven
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#state-based-protocollen-falen-bij-schaal" class="md-nav__link">
+    <span class="md-ellipsis">
+      State-based protocollen falen bij schaal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#events-maken-dikke-protocollen-mogelijk" class="md-nav__link">
+    <span class="md-ellipsis">
+      Events maken dikke protocollen mogelijk
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#relatie-met-andere-principes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relatie met andere principes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#waarom-dit-principe-altijd-geldt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Waarom dit principe altijd geldt
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Waarom dit principe altijd geldt">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#elk-register-verandert-continu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Elk register verandert continu
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#elke-wijziging-heeft-context" class="md-nav__link">
+    <span class="md-ellipsis">
+      Elke wijziging heeft context
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verantwoording-is-wettelijke-verplichting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Verantwoording is wettelijke verplichting
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nuance-vastgestelde-gegevens-in-protocollen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nuance: vastgestelde gegevens in protocollen
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementatie-overwegingen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementatie overwegingen
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Implementatie overwegingen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#voor-protocol-denken-specifiek" class="md-nav__link">
+    <span class="md-ellipsis">
+      Voor protocol-denken specifiek
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technische-uitdagingen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technische uitdagingen
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#organisatorische-aspecten" class="md-nav__link">
+    <span class="md-ellipsis">
+      Organisatorische aspecten
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../meerdere-views-standaard/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Meerdere views standaard
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../open-samenwerking/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Open samenwerking
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../voorbeelden/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Voorbeelden
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_9" id="__nav_9_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Voorbeelden
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../voorbeelden/sensrnet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SensRNet
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../voorbeelden/koers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Basisregistratie Kadaster
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../achtergrond/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Achtergrond
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_10" id="__nav_10_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            Achtergrond
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../achtergrond/agile/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Agile werken
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../achtergrond/event-sourcing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Event Sourcing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../achtergrond/open-source/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Open Source
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhoudsopgave">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhoudsopgave
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#het-probleem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Het probleem
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#het-principe-focus-op-verandering" class="md-nav__link">
+    <span class="md-ellipsis">
+      Het principe: focus op verandering
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Het principe: focus op verandering">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#kernprincipes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kernprincipes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#praktische-implementatie" class="md-nav__link">
+    <span class="md-ellipsis">
+      Praktische implementatie
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#voorbeelden" class="md-nav__link">
+    <span class="md-ellipsis">
+      Voorbeelden
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Voorbeelden">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#voorbeeld-1-traditioneel-vs-verandering-gericht" class="md-nav__link">
+    <span class="md-ellipsis">
+      Voorbeeld 1: Traditioneel vs. Verandering-gericht
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#voorbeeld-2-huwelijk-in-personen-register" class="md-nav__link">
+    <span class="md-ellipsis">
+      Voorbeeld 2: huwelijk in personen register
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#voorbeeld-3-personen-register" class="md-nav__link">
+    <span class="md-ellipsis">
+      Voorbeeld 3: personen register
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mindset-shift" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mindset shift
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mindset shift">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stap-0-state-denken-traditioneel" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stap 0: state denken (traditioneel)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stap-1-object-denken-met-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stap 1: object denken met events
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stap-2-object-denken-met-referenties" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stap 2: object denken met referenties
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stap-3-event-denken" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stap 3: event denken
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#waarom-stap-3-de-beste-oplossing-is" class="md-nav__link">
+    <span class="md-ellipsis">
+      Waarom stap 3 de beste oplossing is
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#voordelen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Voordelen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#relatie-met-protocol-denken" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relatie met protocol-denken
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Relatie met protocol-denken">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#protocollen-zijn-fundamenteel-event-driven" class="md-nav__link">
+    <span class="md-ellipsis">
+      Protocollen zijn fundamenteel event-driven
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#state-based-protocollen-falen-bij-schaal" class="md-nav__link">
+    <span class="md-ellipsis">
+      State-based protocollen falen bij schaal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#events-maken-dikke-protocollen-mogelijk" class="md-nav__link">
+    <span class="md-ellipsis">
+      Events maken dikke protocollen mogelijk
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#relatie-met-andere-principes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relatie met andere principes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#waarom-dit-principe-altijd-geldt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Waarom dit principe altijd geldt
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Waarom dit principe altijd geldt">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#elk-register-verandert-continu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Elk register verandert continu
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#elke-wijziging-heeft-context" class="md-nav__link">
+    <span class="md-ellipsis">
+      Elke wijziging heeft context
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verantwoording-is-wettelijke-verplichting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Verantwoording is wettelijke verplichting
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nuance-vastgestelde-gegevens-in-protocollen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nuance: vastgestelde gegevens in protocollen
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementatie-overwegingen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementatie overwegingen
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Implementatie overwegingen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#voor-protocol-denken-specifiek" class="md-nav__link">
+    <span class="md-ellipsis">
+      Voor protocol-denken specifiek
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technische-uitdagingen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technische uitdagingen
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#organisatorische-aspecten" class="md-nav__link">
+    <span class="md-ellipsis">
+      Organisatorische aspecten
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="principe-focus-op-verandering">Principe: focus op verandering<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></h1>
+<p><em>Change over state als fundamenteel uitgangspunt</em></p>
+<h2 id="het-probleem">Het probleem</h2>
+<p>Huidige registers zijn 'slechts' gericht op de resulterende <em>view</em> en deze view <em>ís</em> het eigenlijke register. Dit leidt tot verschillende problemen:</p>
+<ul>
+<li><strong>Verlies van context</strong>: Waarom is een gegeven zo geworden?</li>
+<li><strong>Geen spoor van wijzigingen</strong>: Welke stappen hebben geleid tot de huidige toestand?</li>
+<li><strong>Moeilijke correcties</strong>: Hoe corrigeer je iets zonder de historie te verliezen?</li>
+<li><strong>Beperkte compliance</strong>: Hoe toon je aan dat processen correct zijn gevolgd?</li>
+<li><strong>Protocol fragiliteit</strong>: Systemen kunnen niet reageren op wijzigingen van andere partijen</li>
+<li><strong>Synchronisatie problemen</strong>: Geen gedeelde tijdslijn tussen organisaties</li>
+</ul>
+<h2 id="het-principe-focus-op-verandering">Het principe: focus op verandering</h2>
+<p>Registers zouden moeten focussen op <em>change</em> (veranderingen) in plaats van alleen op <em>state</em> (toestand). Dit betekent:</p>
+<h3 id="kernprincipes">Kernprincipes</h3>
+<ol>
+<li><strong>Veranderingen zijn eerste klas burgers</strong> - Events en wijzigingen worden expliciet gemodelleerd</li>
+<li><strong>Zorgvuldig omgaan met veranderingen</strong> - Elke wijziging wordt gevalideerd en gedocumenteerd  </li>
+<li><strong>Precisie in acceptatie</strong> - Nieuwe wijzigingen worden zorgvuldig gecontroleerd voordat ze worden geaccepteerd</li>
+<li><strong>Bewaren van intentie</strong> - Niet alleen wat er verandert, maar ook waarom</li>
+</ol>
+<h3 id="praktische-implementatie">Praktische implementatie</h3>
+<pre><code>Traditionele aanpak:
+UPDATE personen SET naam = 'Jansen' WHERE id = 456
+
+Focus op verandering aanpak:
+COMMAND: RegistreerHuwelijk(manId: 123, vrouwId: 456, datum: 2024-01-15, gekozenAchternaam: 'Jansen')
+EVENT: HuwelijkGeregistreerdMetNaamkeuze(manId: 123, vrouwId: 456, datum: 2024-01-15, gekozenAchternaam: 'Jansen')
+</code></pre>
+<h2 id="voorbeelden">Voorbeelden</h2>
+<h3 id="voorbeeld-1-traditioneel-vs-verandering-gericht">Voorbeeld 1: Traditioneel vs. Verandering-gericht</h3>
+<p><strong>Traditioneel BAG register:</strong></p>
+<pre><code>Adres ID: 12345
+Straat: Hoofdstraat 1
+Woonplaats: Amsterdam
+Status: Bestaand
+</code></pre>
+<p><strong>Verandering-gericht BAG register:</strong></p>
+<pre><code>Events voor Adres 12345:
+- AdresGeregistreerd(straat: &quot;Hoofdstraat 1&quot;, woonplaats: &quot;Amsterdam&quot;, datum: 2020-01-01)
+- StatusGewijzigd(van: &quot;In aanbouw&quot;, naar: &quot;Bestaand&quot;, datum: 2020-06-01, reden: &quot;Oplevering&quot;)
+</code></pre>
+<h3 id="voorbeeld-2-huwelijk-in-personen-register">Voorbeeld 2: huwelijk in personen register</h3>
+<p><strong>Probleem scenario:</strong> Jan Jansen en Marie de Wit trouwen. Marie neemt de naam Jansen aan. Later blijkt de huwelijksdatum verkeerd geregistreerd.</p>
+<p><strong>Traditionele aanpak:</strong>
+1. UPDATE naam → 'de Wit' wordt 'Jansen', geen geschiedenis
+2. Correctie → UPDATE huwelijksdatum, oorspronkelijke fout verdwenen</p>
+<p><strong>Verandering-gerichte aanpak:</strong>
+1. <code>RegistreerHuwelijk(manId: 123, vrouwId: 456, datum: 2024-01-15, gekozenAchternaam: 'Jansen')</code> 
+2. Event: <code>HuwelijkGeregistreerdMetNaamkeuze</code> → complete business realiteit in één event
+3. <code>CorrigeerHuwelijksdatum(manId: 123, vrouwId: 456, oorspronkelijkeDatum: 2024-01-15, nieuweDate: 2024-01-20)</code> 
+4. Event: <code>HuwelijksdatumGecorrigeerd</code> → fout blijft zichtbaar, correctie traceerbaar
+5. Huidige view toont: Marie Jansen, huwelijk 20 jan 2024, inclusief correctiehistorie</p>
+<h3 id="voorbeeld-3-personen-register">Voorbeeld 3: personen register</h3>
+<p><strong>Traditioneel personen register</strong>:</p>
+<ul>
+<li>Persoon object</li>
+</ul>
+<p><strong>Verandering-gericht personen register</strong>:</p>
+<ul>
+<li>Geboren</li>
+<li>Verhuisd</li>
+<li>Getrouwd</li>
+<li>Gescheiden</li>
+<li>Overleden</li>
+</ul>
+<blockquote>
+<p><strong>Let op</strong>: Dit voorbeeld illustreert ook <a href="../context-is-altijd-aanwezig/">context is altijd aanwezig</a> - dat is geen toeval. Goede principes versterken elkaar en leiden tot dezelfde ontwerpkeuzes.</p>
+</blockquote>
+<h2 id="mindset-shift">Mindset shift</h2>
+<p>Focus op verandering vereist een fundamentele shift: <strong>van state denken naar event denken</strong>. Hier is de typische denkevolutie:</p>
+<h3 id="stap-0-state-denken-traditioneel">Stap 0: state denken (traditioneel)</h3>
+<pre><code>// Denken: &quot;Ik update de huidige toestand&quot;
+UPDATE personen SET achternaam = 'Jansen' WHERE id = 456
+UPDATE huwelijken SET datum = '2024-01-15' WHERE man_id = 123 AND vrouw_id = 456
+</code></pre>
+<p><strong>Probleem</strong>: 
+- Geen geschiedenis - oude waarden zijn weg
+- Geen context - waarom werd dit gewijzigd?
+- Geen atomiciteit - wat als één UPDATE faalt?
+- Geen causale relatie - huwelijk en naamswijziging lijken onafhankelijk</p>
+<h3 id="stap-1-object-denken-met-events">Stap 1: object denken met events</h3>
+<pre><code>// Denken: &quot;Ik heb een huwelijk object en dan wijzig ik een naam&quot;
+EVENT: HuwelijkGeregistreerd(manId: 123, vrouwId: 456, datum: 2024-01-15)
+EVENT: AchternaamGewijzigd(persoonId: 456, nieuweAchternaam: 'Jansen', oorzaak: 'Huwelijk')
+</code></pre>
+<p><strong>Probleem</strong>: Twee aparte events voor één business actie. Wat als één event faalt?</p>
+<p><strong>Verbetering</strong>: Events bewaren geschiedenis, maar nog steeds object-georiënteerd denken.</p>
+<h3 id="stap-2-object-denken-met-referenties">Stap 2: object denken met referenties</h3>
+<pre><code>// Denken: &quot;Ik verwijs naar het huwelijk object&quot;
+EVENT: HuwelijkGeregistreerd(manId: 123, vrouwId: 456, datum: 2024-01-15)
+EVENT: AchternaamGewijzigdDoorHuwelijk(persoonId: 456, nieuweAchternaam: 'Jansen', huwelijkId: 789)
+</code></pre>
+<p><strong>Probleem</strong>: Nog steeds afhankelijkheid tussen events. Event heeft referentie naar ander event nodig.</p>
+<p><strong>Verbetering</strong>: Expliciete relaties, maar nog steeds geen atomiciteit.</p>
+<h3 id="stap-3-event-denken">Stap 3: event denken</h3>
+<pre><code>// Denken: &quot;Wat gebeurde er werkelijk? Het complete verhaal in één event&quot;
+EVENT: HuwelijkGeregistreerdMetNaamkeuze(manId: 123, vrouwId: 456, datum: 2024-01-15, gekozenAchternaam: 'Jansen')
+</code></pre>
+<p><strong>Doorbraak</strong>: Eén event beschrijft de complete business realiteit. Self-contained en atomisch.</p>
+<h3 id="waarom-stap-3-de-beste-oplossing-is">Waarom stap 3 de beste oplossing is</h3>
+<ul>
+<li><strong>Atomiciteit</strong>: Alles gebeurt samen of helemaal niet</li>
+<li><strong>Self-contained</strong>: Event vertelt het hele verhaal</li>
+<li><strong>Geen afhankelijkheden</strong>: Event handlers zijn eenvoudiger</li>
+<li><strong>Business getrouw</strong>: Modelleert werkelijkheid (naamkeuze hoort bij huwelijk)</li>
+</ul>
+<h2 id="voordelen">Voordelen</h2>
+<ul>
+<li><strong>Volledige traceability</strong>: Elke wijziging is terug te vinden</li>
+<li><strong>Betere compliance</strong>: Audit trail is ingebouwd</li>
+<li><strong>Flexibelere correcties</strong>: Fouten kunnen worden rechtgezet zonder dataverlies  </li>
+<li><strong>Rijkere informatie</strong>: Context en intentie worden bewaard</li>
+<li><strong>Betere synchronisatie</strong>: Andere systemen kunnen reageren op wijzigingen</li>
+</ul>
+<h2 id="relatie-met-protocol-denken">Relatie met protocol-denken</h2>
+<p>Focus op verandering is het <strong>hart</strong> van <a href="../../">protocol-denken</a>. Zonder gebeurtenissen kunnen organisaties niet effectief samenwerken omdat:</p>
+<h3 id="protocollen-zijn-fundamenteel-event-driven">Protocollen zijn fundamenteel event-driven</h3>
+<p>Moderne inter-organisatie protocollen zijn niet gebaseerd op "data delen" maar op "gebeurtenissen delen":
+- <strong>Tijdsvolgorde cruciaal</strong>: Wie deed wat wanneer bepaalt de uitkomst van protocollen
+- <strong>Causaliteit behoud</strong>: Oorzaak-gevolg relaties tussen organisaties blijven bewaard
+- <strong>Asynchrone samenwerking</strong>: Organisaties kunnen reageren op hun eigen tempo zonder real-time synchronisatie</p>
+<h3 id="state-based-protocollen-falen-bij-schaal">State-based protocollen falen bij schaal</h3>
+<p>Traditionele "snapshot sharing" protocollen breken bij meerdere organisaties:
+- <strong>Race conditions</strong>: Verschillende organisaties wijzigen dezelfde data tegelijk
+- <strong>Inconsistente views</strong>: Elk systeem heeft andere "huidige toestand"
+- <strong>Geen conflict resolution</strong>: Hoe bepaal je welke wijziging leidend is?</p>
+<h3 id="events-maken-dikke-protocollen-mogelijk">Events maken dikke protocollen mogelijk</h3>
+<p><a href="../../">Protocol-denken</a> gaat naar protocollen die business regels afdwingen:
+- <strong>Event validation</strong>: Protocollen kunnen gebeurtenissen valideren voordat ze geaccepteerd worden
+- <strong>Governance via events</strong>: Alle besluiten en wijzigingen zijn traceerbaar
+- <strong>Distributed consensus</strong>: Gebeurtenissen creëren overeenstemming tussen organisaties</p>
+<h2 id="relatie-met-andere-principes">Relatie met andere principes</h2>
+<ul>
+<li><strong>Versterkt</strong>: <a href="../context-is-altijd-aanwezig/">Context is altijd aanwezig</a> - veranderingen behouden context</li>
+<li><strong>Ondersteunt</strong>: <a href="../meerdere-views-standaard/">Meerdere views standaard</a> - wijzigingen kunnen naar verschillende views worden geprojecteerd</li>
+<li><strong>Vereist</strong>: <a href="../digitaal-als-fundament/">Digitaal als fundament</a> - gebeurtenissen kunnen alleen digitaal goed vastgelegd worden</li>
+</ul>
+<h2 id="waarom-dit-principe-altijd-geldt">Waarom dit principe altijd geldt</h2>
+<p>Verandering is de enige constante in overheidsregisters. State denken maskeert deze werkelijkheid:</p>
+<h3 id="elk-register-verandert-continu">Elk register verandert continu</h3>
+<p>Registers zijn nooit statisch:
+- <strong>BRP</strong>: Mensen verhuizen, trouwen, overlijden, krijgen kinderen
+- <strong>BAG</strong>: Adressen ontstaan, wijzigen, verdwijnen, worden hernummerd<br />
+- <strong>Handelsregister</strong>: Bedrijven starten, fuseren, wijzigen activiteiten, stoppen
+- <strong>Kadaster</strong>: Eigendom wisselt, percelen worden gesplitst, grenzen wijzigen</p>
+<h3 id="elke-wijziging-heeft-context">Elke wijziging heeft context</h3>
+<p>Iedere verandering gebeurt om een reden:
+- <strong>Wie</strong> heeft de wijziging aangevraagd of vastgesteld?
+- <strong>Waarom</strong> is deze wijziging doorgevoerd?
+- <strong>Wanneer</strong> is deze wijziging van kracht geworden?
+- <strong>Op basis waarvan</strong> is deze beslissing genomen?</p>
+<h3 id="verantwoording-is-wettelijke-verplichting">Verantwoording is wettelijke verplichting</h3>
+<p>Overheidsregisters moeten kunnen verantwoorden:
+- <strong>Rechtmatigheid</strong>: Was deze wijziging toegestaan?
+- <strong>Doelmatigheid</strong>: Was deze wijziging noodzakelijk?
+- <strong>Controleerbaarheid</strong>: Kan deze wijziging worden getoetst?
+- <strong>Herstelbaarheid</strong>: Kan een fout worden rechtgezet?</p>
+<h3 id="nuance-vastgestelde-gegevens-in-protocollen">Nuance: vastgestelde gegevens in protocollen</h3>
+<p>Sommige gegevens zijn "immutable by nature" maar ook bij deze speelt verandering een rol in protocollen:</p>
+<p><strong>Immutable content, dynamic protocol context</strong>:
+- <strong>Luchtfoto's</strong>: Inhoud wijzigt niet, maar publicatie, validatie, en gebruik via protocollen wel
+- <strong>Meetresultaten</strong>: Waarde is vast, maar certificering, kwaliteit, en geaccepteerdheid evolueren
+- <strong>Juridische documenten</strong>: Tekst is vast, maar status (concept→definitief→ingetrokken) wijzigt via protocollen</p>
+<p>In protocollen is ook voor "immutable" gegevens de <strong>gebeurtenis van vastleggen</strong> cruciaal:
+- <strong>"Foto gemaakt"</strong>: Wanneer, door wie, met welke apparatuur, voor welk doel?
+- <strong>"Meting uitgevoerd"</strong>: Door welk lab, volgens welke methode, met welke nauwkeurigheid?
+- <strong>"Document ondertekend"</strong>: Door wie, wanneer, onder welke omstandigheden?</p>
+<p><strong>Protocol-perspectief</strong>: Ook immutable content heeft een <strong>lifecycle</strong> die via gebeurtenissen wordt gestuurd.</p>
+<h2 id="implementatie-overwegingen">Implementatie overwegingen</h2>
+<h3 id="voor-protocol-denken-specifiek">Voor protocol-denken specifiek</h3>
+<ul>
+<li><strong>Event schemas</strong>: Gebeurtenissen tussen organisaties vereisen gestandaardiseerde formats</li>
+<li><strong>Temporal ordering</strong>: Tijdsstempels moeten synchroon zijn tussen organisaties (bijv. NTP)</li>
+<li><strong>Event versioning</strong>: Protocollen moeten kunnen evolueren door expliciete versionering en regels voor het oplossen van verschillen</li>
+<li><strong>Conflict resolution</strong>: Heldere regels voor wanneer gebeurtenissen conflicteren</li>
+</ul>
+<h3 id="technische-uitdagingen">Technische uitdagingen</h3>
+<ul>
+<li><strong>Storage overhead</strong>: Events nemen meer ruimte in, maar bieden veel meer mogelijkheden</li>
+<li><strong>Query complexiteit</strong>: <a href="../meerdere-views-standaard/">Meerdere views</a> worden gegenereerd uit event streams</li>
+<li><strong>Performance</strong>: Event sourcing vereist goede tooling en caching strategieën</li>
+<li><strong>Cross-boundary events</strong>: Gebeurtenissen die organisatiegrenzen overschrijden vereisen extra validatie</li>
+</ul>
+<h3 id="organisatorische-aspecten">Organisatorische aspecten</h3>
+<ul>
+<li><strong>Event governance</strong>: Wie mag welke gebeurtenissen publiceren?</li>
+<li><strong>Schema evolution</strong>: Hoe evolueren event formats zonder systemen te breken?</li>
+<li><strong>Migratie</strong>: Bestaande state-based systemen incrementeel naar event-sourcing</li>
+<li><strong>Training</strong>: Teams moeten leren denken in gebeurtenissen ipv toestanden</li>
+</ul>
+<hr />
+<p><em>Dit principe vormt de basis voor verantwoorde overheidsregistratie en robuuste inter-organisatie protocollen waarin organisaties effectief kunnen samenwerken.</em></p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>NOTE Oorspronkelijk ontstaan uit en overgenomen vanuit <a href="https://uitbetrouwbarebron.nl">project Uit betrouwbare bron</a> en aangepast naar protocol-denken&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Terug naar boven
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../context-is-altijd-aanwezig/" class="md-footer__link md-footer__link--prev" aria-label="Vorige: Context is altijd aanwezig">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Vorige
+              </span>
+              <div class="md-ellipsis">
+                Context is altijd aanwezig
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../meerdere-views-standaard/" class="md-footer__link md-footer__link--next" aria-label="Volgende: Meerdere views standaard">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Volgende
+              </span>
+              <div class="md-ellipsis">
+                Meerdere views standaard
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.footer", "navigation.indexes", "navigation.instant", "navigation.top", "navigation.tracking", "toc.follow"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Gekopieerd naar klembord", "clipboard.copy": "Kopi\u00ebren naar klembord", "search.result.more.one": "1 extra overeenkomst op deze pagina", "search.result.more.other": "# extra overeenkomsten op deze pagina", "search.result.none": "Geen overeenkomende documenten", "search.result.one": "1 overeenkomende document", "search.result.other": "# overeenkomende documenten", "search.result.placeholder": "Typ om te beginnen met zoeken", "search.result.term.missing": "Ontbreekt", "select.version": "Selecteer versie"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.60a45f97.min.js"></script>
+      
+    
+  </body>
+</html>

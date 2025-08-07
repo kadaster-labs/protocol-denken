@@ -1,0 +1,1733 @@
+
+<!doctype html>
+<html lang="nl" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://kadaster-labs.github.io/protocol-denken/principes/context-is-altijd-aanwezig/">
+      
+      
+        <link rel="prev" href="../digitaal-als-fundament/">
+      
+      
+        <link rel="next" href="../focus-op-verandering/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.50">
+    
+    
+      
+        <title>Context is altijd aanwezig - Denken in protocollen</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.a40c8224.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/project.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#principe-context-is-altijd-aanwezig" class="md-skip">
+          Ga naar inhoud
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+<div class="container labsbar">
+    <span class="item"><img src="assets/kadaster-logo-white.png"/><a href="https://labs.kadaster.nl/" target="_blank">labs.kadaster.nl</a></span>
+    <!-- <span class="item delimeter">|</span>
+    <a class="item" href="https://federatief.datastelsel.nl/" target="_blank">federatief.datastelsel.nl</a> -->
+</div>
+
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Denken in protocollen" class="md-header__button md-logo" aria-label="Denken in protocollen" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 20a1 1 0 0 0-1-1h-1v-2h4a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h4v2h-1a1 1 0 0 0-1 1H2v2h7a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1h7v-2zm-5-6V6l5 4z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Denken in protocollen
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Context is altijd aanwezig
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Zoeken" placeholder="Zoeken" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Zoeken">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Leegmaken" aria-label="Leegmaken" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Zoeken initialiseren
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/kadaster-labs/protocol-denken" title="Ga naar repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigatie" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Denken in protocollen" class="md-nav__button md-logo" aria-label="Denken in protocollen" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 20a1 1 0 0 0-1-1h-1v-2h4a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h4v2h-1a1 1 0 0 0-1 1H2v2h7a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1h7v-2zm-5-6V6l5 4z"/></svg>
+
+    </a>
+    Denken in protocollen
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/kadaster-labs/protocol-denken" title="Ga naar repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Start
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../papier-naar-digitaal/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Papier naar digitaal
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ontstaan-van-data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ontstaan van data
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../context/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Context
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../taal-en-semantiek/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Taal en semantiek
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../automatisering/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Automatisering
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../oplossingen/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Oplossingen
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Principes
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_8" id="__nav_8_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Principes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../digitaal-als-fundament/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Digitaal als fundament
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Context is altijd aanwezig
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Context is altijd aanwezig
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhoudsopgave">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhoudsopgave
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#het-probleem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Het probleem
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#het-principe-context-is-altijd-aanwezig" class="md-nav__link">
+    <span class="md-ellipsis">
+      Het principe: context is altijd aanwezig
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Het principe: context is altijd aanwezig">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#kernprincipes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kernprincipes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#voorbeelden" class="md-nav__link">
+    <span class="md-ellipsis">
+      Voorbeelden
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Voorbeelden">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#voorbeeld-1-adres-in-verschillende-contexten" class="md-nav__link">
+    <span class="md-ellipsis">
+      Voorbeeld 1: adres in verschillende contexten
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#voorbeeld-2-naam-in-verschillende-registers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Voorbeeld 2: naam in verschillende registers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#voorbeeld-3-personen-register" class="md-nav__link">
+    <span class="md-ellipsis">
+      Voorbeeld 3: personen register
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mindset-shift" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mindset shift
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mindset shift">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stap-0-contextvrij-denken-traditioneel" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stap 0: contextvrij denken (traditioneel)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stap-1-bewustwording-van-verschillen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stap 1: bewustwording van verschillen
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stap-2-context-als-metadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stap 2: context als metadata
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stap-3-context-bewust-denken" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stap 3: context bewust denken
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#waarom-stap-3-de-beste-oplossing-is" class="md-nav__link">
+    <span class="md-ellipsis">
+      Waarom stap 3 de beste oplossing is
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#voordelen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Voordelen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#relatie-met-protocol-denken" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relatie met protocol-denken
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Relatie met protocol-denken">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#protocollen-zijn-context-overbrugging" class="md-nav__link">
+    <span class="md-ellipsis">
+      Protocollen zijn context-overbrugging
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#context-maakt-dikke-protocollen-mogelijk" class="md-nav__link">
+    <span class="md-ellipsis">
+      Context maakt dikke protocollen mogelijk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#context-is-de-basis-voor-netwerken-van-datastromen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Context is de basis voor netwerken van datastromen
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#relatie-met-andere-principes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relatie met andere principes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#waarom-dit-principe-altijd-geldt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Waarom dit principe altijd geldt
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Waarom dit principe altijd geldt">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#in-elk-register" class="md-nav__link">
+    <span class="md-ellipsis">
+      In elk register
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bij-elke-gegevensuitwisseling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bij elke gegevensuitwisseling
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#in-alle-business-processen" class="md-nav__link">
+    <span class="md-ellipsis">
+      In alle business processen
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementatie-overwegingen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementatie overwegingen
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Implementatie overwegingen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#protocol-specifieke-uitdagingen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Protocol-specifieke uitdagingen:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technische-uitdagingen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technische uitdagingen:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#organisatorische-uitdagingen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Organisatorische uitdagingen:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../focus-op-verandering/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Focus op verandering
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../meerdere-views-standaard/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Meerdere views standaard
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../open-samenwerking/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Open samenwerking
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../voorbeelden/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Voorbeelden
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_9" id="__nav_9_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Voorbeelden
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../voorbeelden/sensrnet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SensRNet
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../voorbeelden/koers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Basisregistratie Kadaster
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../achtergrond/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Achtergrond
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_10" id="__nav_10_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            Achtergrond
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../achtergrond/agile/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Agile werken
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../achtergrond/event-sourcing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Event Sourcing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../achtergrond/open-source/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Open Source
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhoudsopgave">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhoudsopgave
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#het-probleem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Het probleem
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#het-principe-context-is-altijd-aanwezig" class="md-nav__link">
+    <span class="md-ellipsis">
+      Het principe: context is altijd aanwezig
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Het principe: context is altijd aanwezig">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#kernprincipes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kernprincipes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#voorbeelden" class="md-nav__link">
+    <span class="md-ellipsis">
+      Voorbeelden
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Voorbeelden">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#voorbeeld-1-adres-in-verschillende-contexten" class="md-nav__link">
+    <span class="md-ellipsis">
+      Voorbeeld 1: adres in verschillende contexten
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#voorbeeld-2-naam-in-verschillende-registers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Voorbeeld 2: naam in verschillende registers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#voorbeeld-3-personen-register" class="md-nav__link">
+    <span class="md-ellipsis">
+      Voorbeeld 3: personen register
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mindset-shift" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mindset shift
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mindset shift">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stap-0-contextvrij-denken-traditioneel" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stap 0: contextvrij denken (traditioneel)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stap-1-bewustwording-van-verschillen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stap 1: bewustwording van verschillen
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stap-2-context-als-metadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stap 2: context als metadata
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stap-3-context-bewust-denken" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stap 3: context bewust denken
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#waarom-stap-3-de-beste-oplossing-is" class="md-nav__link">
+    <span class="md-ellipsis">
+      Waarom stap 3 de beste oplossing is
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#voordelen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Voordelen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#relatie-met-protocol-denken" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relatie met protocol-denken
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Relatie met protocol-denken">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#protocollen-zijn-context-overbrugging" class="md-nav__link">
+    <span class="md-ellipsis">
+      Protocollen zijn context-overbrugging
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#context-maakt-dikke-protocollen-mogelijk" class="md-nav__link">
+    <span class="md-ellipsis">
+      Context maakt dikke protocollen mogelijk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#context-is-de-basis-voor-netwerken-van-datastromen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Context is de basis voor netwerken van datastromen
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#relatie-met-andere-principes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relatie met andere principes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#waarom-dit-principe-altijd-geldt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Waarom dit principe altijd geldt
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Waarom dit principe altijd geldt">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#in-elk-register" class="md-nav__link">
+    <span class="md-ellipsis">
+      In elk register
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bij-elke-gegevensuitwisseling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bij elke gegevensuitwisseling
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#in-alle-business-processen" class="md-nav__link">
+    <span class="md-ellipsis">
+      In alle business processen
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementatie-overwegingen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementatie overwegingen
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Implementatie overwegingen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#protocol-specifieke-uitdagingen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Protocol-specifieke uitdagingen:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technische-uitdagingen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technische uitdagingen:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#organisatorische-uitdagingen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Organisatorische uitdagingen:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="principe-context-is-altijd-aanwezig">Principe: context is altijd aanwezig<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></h1>
+<p><em>Contextvrije gegevens (data) bestaan niet - elk gegeven heeft betekenis binnen een specifieke context</em></p>
+<h2 id="het-probleem">Het probleem</h2>
+<p>We doen vaak alsof gegevens (data) "neutraal" en "contextvrij" zijn. Dit leidt tot problemen:</p>
+<ul>
+<li><strong>Betekenisverlies</strong>: Gegevens krijgen andere betekenis in nieuwe contexten</li>
+<li><strong>Verkeerde interpretaties</strong>: Dezelfde waarde betekent iets anders in verschillende systemen  </li>
+<li><strong>Integratiefouten</strong>: Gegevens worden "zomaar" gekopieerd zonder begrip van context</li>
+<li><strong>Synchronisatieproblemen</strong>: Wijzigingen in bronnen bereiken een gebruiksdoel met verkeerde betekenis</li>
+<li><strong>Protocol failures</strong>: Inter-organisatie protocollen falen omdat context niet wordt overgedragen</li>
+<li><strong>Semantische chaos</strong>: Organisaties praten langs elkaar heen over "dezelfde" gegevens</li>
+</ul>
+<h2 id="het-principe-context-is-altijd-aanwezig">Het principe: context is altijd aanwezig</h2>
+<p>Context is fundamenteel aanwezig in alle gegevens (data). Er bestaan geen contextvrije gegevens. Dit betekent:</p>
+<h3 id="kernprincipes">Kernprincipes</h3>
+<ol>
+<li><strong>Context is inherent</strong> - Elk gegeven heeft betekenis binnen specifieke bounded contexts</li>
+<li><strong>Context bepaalt interpretatie</strong> - Dezelfde waarde kan verschillende betekenissen hebben</li>
+<li><strong>Contextovergang vereist design</strong> - Data transformatie tussen contexten moet bewust ontworpen worden</li>
+<li><strong>Context moet expliciet</strong> - Maak contexten zichtbaar in informatiemodellen en interfaces</li>
+</ol>
+<h2 id="voorbeelden">Voorbeelden</h2>
+<h3 id="voorbeeld-1-adres-in-verschillende-contexten">Voorbeeld 1: adres in verschillende contexten</h3>
+<p><strong>BRP context</strong>: </p>
+<pre><code>Adres = WoonAdres {
+  straat: &quot;Hoofdstraat 1&quot;,
+  betekenis: &quot;Officieel ingeschreven woonadres&quot;,
+  geldigheid: &quot;Vanaf inschrijfdatum tot uitschrijving&quot;,
+  verificatie: &quot;Door gemeente gevalideerd&quot;
+}
+</code></pre>
+<p><strong>Logistiek context</strong>:</p>
+<pre><code>Adres = BezorgAdres {
+  straat: &quot;Hoofdstraat 1&quot;, 
+  betekenis: &quot;Adres waar pakket afgeleverd kan worden&quot;,
+  geldigheid: &quot;Tot klant andere bezorgadres opgeeft&quot;,
+  verificatie: &quot;Door klant opgegeven, door bezorger bevestigd&quot;
+}
+</code></pre>
+<p><strong>Transformatie</strong>: 
+- BRP WoonAdres kan basis zijn voor BezorgAdres
+- Maar klant kan ander BezorgAdres kiezen
+- Context bepaalt welke regels en validaties gelden</p>
+<h3 id="voorbeeld-2-naam-in-verschillende-registers">Voorbeeld 2: naam in verschillende registers</h3>
+<p><strong>BRP context</strong>: "Marie de Wit-Jansen"
+- Juridische naam na huwelijk<br />
+- Officieel, kan alleen via ambtenaar gewijzigd
+- Gebruikt voor officiële documenten</p>
+<p><strong>Zorgverzekering context</strong>: "Marie Jansen"
+- Naam zoals gebruikt in zorgcommunicatie
+- Kan door klant gewijzigd worden
+- Gebruikt voor correspondentie en declaraties</p>
+<p><strong>Contextovergang</strong>: 
+- BRP naam is uitgangspunt
+- Zorgverzekeraar laat klant "communicatienaam" kiezen
+- Transformatie is bewuste bedrijfsregel, niet technische mapping</p>
+<h3 id="voorbeeld-3-personen-register">Voorbeeld 3: personen register</h3>
+<p><strong>Traditioneel personen register</strong>:</p>
+<ul>
+<li>Persoon object</li>
+</ul>
+<p><strong>Verandering-gericht personen register</strong>:</p>
+<ul>
+<li>Geboren</li>
+<li>Verhuisd</li>
+<li>Getrouwd</li>
+<li>Gescheiden</li>
+<li>Overleden</li>
+</ul>
+<blockquote>
+<p><strong>Let op</strong>: Dit voorbeeld illustreert ook <a href="../focus-op-verandering/">Focus op verandering</a> - dat is geen toeval. Goede principes versterken elkaar en leiden tot dezelfde ontwerpkeuzes.</p>
+</blockquote>
+<h2 id="mindset-shift">Mindset shift</h2>
+<p>Context is altijd aanwezig vereist een fundamentele shift: <strong>van contextvrij denken naar context bewust denken</strong>. Hier is de typische denkevolutie:</p>
+<h3 id="stap-0-contextvrij-denken-traditioneel">Stap 0: contextvrij denken (traditioneel)</h3>
+<pre><code>// Denken: &quot;Gegevens zijn neutraal, kopieer gewoon&quot;
+SELECT naam, adres FROM personen WHERE id = 123
+INSERT INTO andere_tabel (naam, adres) VALUES ('Jan Jansen', 'Hoofdstraat 1')
+</code></pre>
+<p><strong>Probleem</strong>:
+- Naam uit BRP heeft andere betekenis dan naam in CRM
+- Adres uit BAG verschilt van adres in logistiek systeem
+- Geen begrip waarom gegevens zo zijn zoals ze zijn
+- Geen validatie of transformatie</p>
+<h3 id="stap-1-bewustwording-van-verschillen">Stap 1: bewustwording van verschillen</h3>
+<pre><code>// Denken: &quot;Er zijn wel verschillen, maar we mappen wel&quot;
+BRP_naam -&gt; CRM_naam (met simpele mapping)
+BAG_adres -&gt; Logistiek_adres (met veld conversie)
+</code></pre>
+<p><strong>Probleem</strong>: Technische mapping zonder begrip van business context. Werkt soms, faalt onverwacht.</p>
+<p><strong>Verbetering</strong>: Eerste bewustwording dat systemen verschillend zijn.</p>
+<h3 id="stap-2-context-als-metadata">Stap 2: context als metadata</h3>
+<pre><code>// Denken: &quot;We voegen context toe als extra veld&quot;
+SELECT naam, adres, 'BRP' as bron FROM personen
+SELECT naam, adres, 'CRM' als bron FROM klanten
+</code></pre>
+<p><strong>Probleem</strong>: Context wordt als extra informatie behandeld, niet als fundamentele eigenschap.</p>
+<p><strong>Verbetering</strong>: Context wordt zichtbaar, maar nog steeds als bijzaak.</p>
+<h3 id="stap-3-context-bewust-denken">Stap 3: context bewust denken</h3>
+<pre><code>// Denken: &quot;Context bepaalt betekenis - ontwerp transformatie bewust&quot;
+BRP_Context: {
+  naam: JuridischeNaam(voornaam, tussenvoegsel, achternaam),
+  betekenis: &quot;Officiële naam volgens GBA/BRP&quot;,
+  geldigheid: &quot;Per registratie moment&quot;
+}
+
+CRM_Context: {
+  naam: ContactNaam(roepnaam, achternaam),
+  betekenis: &quot;Naam voor commerciële communicatie&quot;, 
+  geldigheid: &quot;Tot klant dit wijzigt&quot;
+}
+
+Transformatie: BRP_JuridischeNaam -&gt; CRM_ContactNaam (bewuste keuze, gedocumenteerd)
+</code></pre>
+<p><strong>Doorbraak</strong>: Context wordt onderdeel van het informatiemodel. Transformaties zijn expliciete designbeslissingen.</p>
+<h3 id="waarom-stap-3-de-beste-oplossing-is">Waarom stap 3 de beste oplossing is</h3>
+<ul>
+<li><strong>Expliciete semantiek</strong>: Wat betekenen deze gegevens hier?</li>
+<li><strong>Bewuste transformaties</strong>: Hoe gaat betekenis van A naar B?</li>
+<li><strong>Gedocumenteerde keuzes</strong>: Waarom is dit zo gemodelleerd?</li>
+<li><strong>Voorspelbare resultaten</strong>: Systemen gedragen zich consistent</li>
+</ul>
+<h2 id="voordelen">Voordelen</h2>
+<ul>
+<li><strong>Correcte interpretatie</strong>: Gegevens worden begrepen zoals bedoeld</li>
+<li><strong>Betere integraties</strong>: Bewuste transformaties tussen systemen</li>
+<li><strong>Minder fouten</strong>: Expliciete context voorkomt misverstanden</li>
+<li><strong>Rijkere semantiek</strong>: Betekenis wordt behouden en uitgebreid</li>
+<li><strong>Betere traceability</strong>: Context vertelt waar data vandaan komt en waarom</li>
+</ul>
+<h2 id="relatie-met-protocol-denken">Relatie met protocol-denken</h2>
+<p>Context is <strong>essentieel</strong> voor <a href="../../">protocol-denken</a> omdat protocollen fundamenteel gaan over het overbruggen van verschillende contexten:</p>
+<h3 id="protocollen-zijn-context-overbrugging">Protocollen zijn context-overbrugging</h3>
+<p>Moderne inter-organisatie protocollen zijn niet alleen dataformaten, maar <strong>context-vertalers</strong>:
+- <strong>Semantische mapping</strong>: Protocol definieert hoe betekenis van organisatie A wordt vertaald naar organisatie B
+- <strong>Context preservation</strong>: Rijke context informatie blijft behouden tijdens uitwisseling
+- <strong>Bounded context integration</strong>: <a href="../../">Dikke protocollen</a> bevatten expliciete regels voor context-overgangen</p>
+<h3 id="context-maakt-dikke-protocollen-mogelijk">Context maakt dikke protocollen mogelijk</h3>
+<p><a href="../../">Protocol-denken</a> evolueert naar protocollen die meer dan transport regelen:
+- <strong>Business rule validation</strong>: Context bepaalt welke validaties gelden in welke situaties
+- <strong>Semantic consistency</strong>: Protocollen garanderen dat betekenis consistent blijft
+- <strong>Context-aware workflows</strong>: Verschillende organisaties kunnen verschillende contexten hanteren binnen hetzelfde protocol</p>
+<h3 id="context-is-de-basis-voor-netwerken-van-datastromen">Context is de basis voor netwerken van datastromen</h3>
+<p><a href="../../oplossingen/#netwerken--datastromen">Netwerken van datastromen</a> werken alleen met expliciete context:
+- <strong>Multi-organizational views</strong>: Elke organisatie heeft zijn eigen context, maar kan deelnemen aan gedeelde protocollen
+- <strong>Context evolution</strong>: Nieuwe organisaties kunnen toetreden door hun context te mappen op bestaande protocollen
+- <strong>Federated semantics</strong>: Verschillende definities van "hetzelfde" concept kunnen naast elkaar bestaan</p>
+<h2 id="relatie-met-andere-principes">Relatie met andere principes</h2>
+<ul>
+<li>Versterkt <a href="../focus-op-verandering/">Focus op verandering</a> - events behouden context van veranderingen</li>
+<li>Ondersteunt <a href="../meerdere-views-standaard/">Meerdere views standaard</a> - elke view heeft eigen context</li>
+<li>Basis voor contextovergang-ontwerp - expliciete context transformaties</li>
+</ul>
+<h2 id="waarom-dit-principe-altijd-geldt">Waarom dit principe altijd geldt</h2>
+<p>Context is niet optioneel - het is fundamenteel aanwezig in alle business processen:</p>
+<h3 id="in-elk-register">In elk register</h3>
+<p>Elk register heeft zijn eigen business context:
+- <strong>BRP</strong>: Juridisch-administratieve context van burgerregistratie
+- <strong>BAG</strong>: Geo-administratieve context van adressen en gebouwen
+- <strong>Handelsregister</strong>: Economische context van bedrijfsvoering
+- <strong>Zorgregisters</strong>: Medische context van zorgverlening</p>
+<h3 id="bij-elke-gegevensuitwisseling">Bij elke gegevensuitwisseling</h3>
+<p>Zodra gegevens een systeemgrens overschrijden, wijzigt de context:
+- Van <strong>interne opslag</strong> naar <strong>externe communicatie</strong>
+- Van <strong>administratief</strong> naar <strong>operationeel</strong> gebruik
+- Van <strong>historisch</strong> naar <strong>actueel</strong> perspectief
+- Van <strong>detail</strong> naar <strong>samenvatting</strong> niveau</p>
+<h3 id="in-alle-business-processen">In alle business processen</h3>
+<p>Elk proces heeft eigen betekenis voor dezelfde gegevens:
+- <strong>Aanvragen</strong>: Context van burger die iets wil
+- <strong>Toetsen</strong>: Context van ambtenaar die valideert<br />
+- <strong>Verstrekken</strong>: Context van afnemer die gebruikt
+- <strong>Archiveren</strong>: Context van juridische bewaring</p>
+<p><strong>Conclusie</strong>: Context negeren is een ontwerpfout, niet een keuze. Dit principe geldt altijd.</p>
+<h2 id="implementatie-overwegingen">Implementatie overwegingen</h2>
+<p><strong>Voordelen van context bewust ontwerp:</strong>
+- <strong>Minder integratiefouten</strong> door expliciete transformaties
+- <strong>Betere gegevenskwaliteit</strong> door context validatie
+- <strong>Duidelijkere communicatie</strong> tussen teams over data betekenis
+- <strong>Flexibelere systemen</strong> die kunnen evolueren met context</p>
+<h3 id="protocol-specifieke-uitdagingen">Protocol-specifieke uitdagingen:</h3>
+<ul>
+<li><strong>Context governance</strong>: Wie bepaalt de "officiële" betekenis van concepten in protocollen?</li>
+<li><strong>Semantic versioning</strong>: Hoe evolueren contexten zonder protocollen te breken?</li>
+<li><strong>Multi-party consensus</strong>: Hoe bereik je overeenstemming over betekenis tussen organisaties?</li>
+<li><strong>Context conflict resolution</strong>: Wat gebeurt er als organisaties verschillende definities hebben?</li>
+</ul>
+<h3 id="technische-uitdagingen">Technische uitdagingen:</h3>
+<ul>
+<li><strong>Meer complexiteit</strong> in informatiemodellen en transformaties</li>
+<li><strong>Performance overhead</strong> door context validatie en transformatie</li>
+<li><strong>Cross-boundary validation</strong>: Context validatie over organisatiegrenzen heen</li>
+<li><strong>Semantic drift detection</strong>: Herkennen wanneer context-betekenis onbedoeld verandert</li>
+</ul>
+<h3 id="organisatorische-uitdagingen">Organisatorische uitdagingen:</h3>
+<ul>
+<li><strong>Team alignment</strong> vereist begrip van business contexten</li>
+<li><strong>Protocol governance</strong>: Wie beheert gedeelde context-definities?</li>
+<li><strong>Change management</strong>: Context wijzigingen hebben impact op alle deelnemers</li>
+<li><strong>Documentatie</strong> van context en transformaties is essentieel voor protocol-werking</li>
+<li><strong>Protocol als context-contract</strong>: Protocollen documenteren exact wat elk veld betekent in elke context</li>
+<li><strong>Context evolution management</strong>: Backwards compatibility en gradual migration tussen context-versies</li>
+</ul>
+<hr />
+<p><em>Dit principe vormt de basis voor betrouwbare gegevensuitwisseling tussen organisaties met verschillende contexten via robuuste protocollen.</em></p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>NOTE Oorspronkelijk ontstaan uit en overgenomen vanuit <a href="https://uitbetrouwbarebron.nl">project Uit betrouwbare bron</a> en aangepast naar protocol-denken&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Terug naar boven
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../digitaal-als-fundament/" class="md-footer__link md-footer__link--prev" aria-label="Vorige: Digitaal als fundament">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Vorige
+              </span>
+              <div class="md-ellipsis">
+                Digitaal als fundament
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../focus-op-verandering/" class="md-footer__link md-footer__link--next" aria-label="Volgende: Focus op verandering">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Volgende
+              </span>
+              <div class="md-ellipsis">
+                Focus op verandering
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.footer", "navigation.indexes", "navigation.instant", "navigation.top", "navigation.tracking", "toc.follow"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Gekopieerd naar klembord", "clipboard.copy": "Kopi\u00ebren naar klembord", "search.result.more.one": "1 extra overeenkomst op deze pagina", "search.result.more.other": "# extra overeenkomsten op deze pagina", "search.result.none": "Geen overeenkomende documenten", "search.result.one": "1 overeenkomende document", "search.result.other": "# overeenkomende documenten", "search.result.placeholder": "Typ om te beginnen met zoeken", "search.result.term.missing": "Ontbreekt", "select.version": "Selecteer versie"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.60a45f97.min.js"></script>
+      
+    
+  </body>
+</html>

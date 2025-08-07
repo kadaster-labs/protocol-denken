@@ -1,0 +1,1209 @@
+
+<!doctype html>
+<html lang="nl" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://kadaster-labs.github.io/protocol-denken/oplossingen/">
+      
+      
+        <link rel="prev" href="../automatisering/">
+      
+      
+        <link rel="next" href="../principes/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.50">
+    
+    
+      
+        <title>Oplossingen - Denken in protocollen</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.a40c8224.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../css/project.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#droombeeld" class="md-skip">
+          Ga naar inhoud
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+<div class="container labsbar">
+    <span class="item"><img src="assets/kadaster-logo-white.png"/><a href="https://labs.kadaster.nl/" target="_blank">labs.kadaster.nl</a></span>
+    <!-- <span class="item delimeter">|</span>
+    <a class="item" href="https://federatief.datastelsel.nl/" target="_blank">federatief.datastelsel.nl</a> -->
+</div>
+
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Denken in protocollen" class="md-header__button md-logo" aria-label="Denken in protocollen" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 20a1 1 0 0 0-1-1h-1v-2h4a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h4v2h-1a1 1 0 0 0-1 1H2v2h7a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1h7v-2zm-5-6V6l5 4z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Denken in protocollen
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Oplossingen
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Zoeken" placeholder="Zoeken" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Zoeken">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Leegmaken" aria-label="Leegmaken" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Zoeken initialiseren
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/kadaster-labs/protocol-denken" title="Ga naar repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigatie" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Denken in protocollen" class="md-nav__button md-logo" aria-label="Denken in protocollen" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 20a1 1 0 0 0-1-1h-1v-2h4a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h4v2h-1a1 1 0 0 0-1 1H2v2h7a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1h7v-2zm-5-6V6l5 4z"/></svg>
+
+    </a>
+    Denken in protocollen
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/kadaster-labs/protocol-denken" title="Ga naar repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Start
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../papier-naar-digitaal/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Papier naar digitaal
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ontstaan-van-data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ontstaan van data
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../context/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Context
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../taal-en-semantiek/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Taal en semantiek
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../automatisering/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Automatisering
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Oplossingen
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Oplossingen
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhoudsopgave">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhoudsopgave
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#droombeeld" class="md-nav__link">
+    <span class="md-ellipsis">
+      Droombeeld
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gebeurtenisgedreven-registers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gebeurtenisgedreven registers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#open-samenwerken" class="md-nav__link">
+    <span class="md-ellipsis">
+      Open samenwerken
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#netwerken-datastromen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Netwerken &amp; Datastromen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#design-for-change" class="md-nav__link">
+    <span class="md-ellipsis">
+      Design for change
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../principes/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Principes
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_8" id="__nav_8_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Principes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../principes/digitaal-als-fundament/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Digitaal als fundament
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../principes/context-is-altijd-aanwezig/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Context is altijd aanwezig
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../principes/focus-op-verandering/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Focus op verandering
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../principes/meerdere-views-standaard/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Meerdere views standaard
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../principes/open-samenwerking/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Open samenwerking
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../voorbeelden/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Voorbeelden
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_9" id="__nav_9_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Voorbeelden
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../voorbeelden/sensrnet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SensRNet
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../voorbeelden/koers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Basisregistratie Kadaster
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../achtergrond/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Achtergrond
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_10" id="__nav_10_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            Achtergrond
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../achtergrond/agile/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Agile werken
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../achtergrond/event-sourcing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Event Sourcing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../achtergrond/open-source/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Open Source
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhoudsopgave">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhoudsopgave
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#droombeeld" class="md-nav__link">
+    <span class="md-ellipsis">
+      Droombeeld
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gebeurtenisgedreven-registers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gebeurtenisgedreven registers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#open-samenwerken" class="md-nav__link">
+    <span class="md-ellipsis">
+      Open samenwerken
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#netwerken-datastromen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Netwerken &amp; Datastromen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#design-for-change" class="md-nav__link">
+    <span class="md-ellipsis">
+      Design for change
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+  <h1>Oplossingen</h1>
+
+<p>OK. De probleemstelling is (dus) deze. We zijn in een transitie van <a href="../papier-naar-digitaal/">papier naar
+digitaal</a>. In die transitie is het <a href="../ontstaan-van-data/">ontstaan van
+data</a>, de <a href="../context/">context</a> waarin die <em>ontstaat</em> en waarin die
+<em>gebruikt</em> wordt relevant en daarmee worden <a href="../taal-en-semantiek/">taal en semantiek</a> van belang
+om in acht te nemen. En dat allemaal in een steeds verdergaande
+<a href="../automatisering/">automatisering</a>.</p>
+<p>Tot welke oplossingen komen we dan? Zijn er wel oplossingen? Of zijn het meer oplossingsrichtingen
+en een <a href="#droombeeld">droombeeld</a>?</p>
+<h2 id="droombeeld">Droombeeld</h2>
+<p>In de transitie van <a href="../papier-naar-digitaal/">papier naar digitaal</a> nemen we onszelf serieus door
+een andere richting te nemen dan zoals we al lang gedaan hebben. We durven de stap te maken om
+digitale processen te ontwerpen en in te richten. Uiteraard hebben we dezelfde zekerheden nodig als
+in de huidige situatie ... maar dat kunnen we wél <em>anders</em> doen!</p>
+<p>Daarvoor ontwerpen we een <a href="#netwerken--datastromen">netwerk</a> van <a href="#gebeurtenisgedreven-registers">gebeurtenisgedreven
+registers</a> waarin expliciet is gemaakt hoe
+<a href="#netwerken--datastromen">datastromen</a> gaan en hoe die overgangen van <a href="../context/">context</a> zijn.
+Er verschijnt een netwerk van elkaar beïnvloedende deelnemers, partijen, nodes die samenwerken in
+een <strong>organisme</strong>. Autonome onderdelen die zelf beslissingen maken, zelf gebeurtenissen produceren
+én zorgen voor de traceerbaarheid wat de impact daarvan is. Vergaand
+<a href="../automatisering/">geautomatiseerd</a> dmv van <a href="#open-samenwerken">open samenwerking</a> en <a href="#design-for-change">design for
+change</a>.</p>
+<p>Dat biedt de mogelijkheid om expliciet vast te leggen welke data is gebruikt bij een beslissing.
+Daaruit kan ook worden geanalyseerd welke impact een mogelijk nieuw inzicht heeft op een genomen
+beslissing. Daarmee worden correcties mogelijk. Daarmee wordt het mogelijk om simulaties te doen van
+nieuwe regelingen en wetgeving. We kunnen regelingen ontwerpen die <em>exact</em> bereiken wat we voor ogen
+hebben!</p>
+<p>Hoewel deze gehele infrastructuur in <a href="#open-samenwerken">open samenwerking</a> tot stand gebracht moet
+worden, is het vooral het 'onzichtbare deel van de digitale overheid' dat 'gewoon werkt'. Het is er
+gewoon. Het werkt. En het werkt top! Daar kunnen burgers en bedrijven op rekenen. Het kan
+gevalideerd worden door toezichthouders. Er kunnen allerlei controlemechanismen ingebouwd worden. En
+het kan vooral <em>gebruikt</em> worden.</p>
+<p>Het gevolg van een subliem werkende <em>digitale</em> overheid is dat er ruimte komt om de mens meer
+centraal te stellen ipv computer systemen. We kunnen ontwerpen waar mensen een beslissing kunnen
+sturen en beïnvloeden, zodat de juiste effecten bereikt worden. Het is mogelijk om te ontwerpen dat
+er ambtenaren zijn die burgers kunnen ondersteunen en helpen bij hun aanvragen, verwerkingen,
+verantwoordelijkheden en rechten. Een subliem werkende <em>digitale</em> overheid brengt een meer
+menselijke en persoonlijke overheid! <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2764.svg" title=":heart:" /></p>
+<h2 id="gebeurtenisgedreven-registers">Gebeurtenisgedreven registers</h2>
+<p>Om te beginnen moeten we <em>alle</em> data als data gaan respecteren. Ook de documenten die aanleiding
+voor wijzigingen in de registraties zijn. En <em>vooral</em> die wijzigingen zelf. De
+<strong>data-gebeurtenissen</strong> of <strong>events</strong>. Deze beschrijven in detail met welke intentie een register
+gewijzigd wordt, wat die wijziging inhoudt, wie dat gedaan heeft, op welk moment, op welke plaats.
+En als dat gebeurd is, dan is dat gebeurd. Punt.</p>
+<p>Dat betekent om te beginnen dat van <em>elk register</em> moet worden ontworpen wat de
+<em>data-gebeurtenissen/events</em> zijn. Welke wijzigingen zijn er? En als er verschillende aanleidingen
+zijn, dan zijn dat zeer waarschijnlijk ook verschillende wijzigingen. Alleen al de intentie die
+daarin ligt.</p>
+<p>Vervolgens moet ook ontworpen worden hoe deze wijzigingen tot een projectie leiden. De primaire
+projectie is hier leidend en het meest belangrijk. Dit behoudt immers dezelfde waarde als de huidige
+registers. Met de events hebben we vooral beter vastgelegd hoe het register is geworden tot wat het
+geworden is.</p>
+<p>Vervolgens dient <em>per context overgang</em> ontworpen te worden welke projectie daar passend is. Zeer
+waarschijnlijk zijn dit projecties die afgeleid kunnen worden van de primaire projectie ... maar
+vaak vereenvoudigd kunnen worden. Onze inschatting is dat primaire projecties voor het domein, de
+context, waarin deze gewijzigd wordt, de meest complexe projectie nodig heeft. Er is namelijk vaak
+ook niet meer data beschikbaar dan in de eigen context en dus primaire projectie nodig is.</p>
+<p>Uiteraard kan er uniformiteit aangebracht worden in de secundaire projecties om het aantal
+transformaties en contextovergangen beperkt te houden. Dat is ook in het voordeel van de bronhouder.
+Dat is de actor, de organisatie die de wijzigingen doet en dus events produceert. Zij zijn namelijk
+verantwoordelijk voor de primaire projectie én alle secundaire projecties die formeel vanuit die
+context worden geleverd aan alle contextovergangen. De bronhouder dient dan ook voorzieningen te
+leveren en te onderhouden voor het beheer en synchroniseren van alle projecties. Daarover later
+meer.</p>
+<p>Deze inrichting is nodig om te kunnen beantwoorden aan echt digitale processen. Daarin worden
+contract, processen, afspraken geautomatiseerd uitgevoerd. Dat betekent niet dat er geen menselijke
+beslissingen meer in zitten, maar die geven alleen richting in de verder geautomatiseerde
+uitvoering. Deze uitvoering dient duidelijk, traceerbaar en controleerbaar te zijn.</p>
+<p>Met events is het mogelijk om de traceerbaarheid te borgen tussen formele beslissingen, bij voorkeur
+door mensen gemaakte beslissingen, en de verschillende projecties. Doordat events als een 'stroom
+van events' worden opgeslagen en gepubliceerd, is het ook direct mogelijk om bij elke projectie te
+laten zien tot hoever deze projectie is bijgewerkt. Het geeft daarmee niet alleen mogelijkheden voor
+de traceerbaarheid maar ook voor een expliciete actualiteit!</p>
+<p>Als de events als kern van de beslissingen en wijzigingen gezien worden, wat in <a href="../achtergrond/event-sourcing/">Event
+Sourcing</a> het geval is, dan is ook de historie waterdicht
+vastgelegd. Vanuit de stroom van events kan elk historiemodel gevuld worden en kan maximaal herleid
+worden hoe 'het is gegaan en geweest'.</p>
+<p>Van events is expliciet wat de bron is. Van elk event is bekend wie de actor is die het heeft doen
+ontstaan, op welk tijdstip, locatie en intentie. Door projecties en de traceerbaarheid inclusief
+actualiteit is het mogelijk om per gebruik te bepalen in welke vorm een projectie het meest passend
+is. Als een bronhouder een API aanbiedt op de projectie en dat voorziet in de behoefte vanuit de
+vraag, dan is dat een gemakkelijk beheersbare en betrouwbare manier. Echter, het is met <em>dezelfde
+kwaliteit</em> mogelijk om een projectie op een andere locatie, dichter bij de vraag te realiseren. Dat
+is onder dezelfde kwaliteit want projectie, traceerbaarheid en actualiteit worden op exact dezelfde
+manier gerealiseerd als dat die projectie bij de bronhouder zou staan. Dat betekent wel dat de
+bronhouder verantwoordelijk is voor die projectie, ook als die niet in zijn data center staat. Daar
+zijn aanvullende afspraken voor nodig ... maar dat is goed mogelijk.</p>
+<p>Dus gebeurtenisgedreven registers bieden:</p>
+<ul>
+<li><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" title=":white_check_mark:" /> traceerbaarheid van het register, de primaire projectie </li>
+<li><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" title=":white_check_mark:" /> mogelijkheden voor secundaire projecties (en daarmee)</li>
+<li><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" title=":white_check_mark:" /> ondersteuning voor <a href="../context/">context</a> overgangen (transformaties, service
+  voorwaarden, data minimalisatie, etc)</li>
+<li><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" title=":white_check_mark:" /> ondersteuning voor actualiteit <em>per</em> projectie </li>
+<li><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" title=":white_check_mark:" /> ondersteuning projecties op 'afstand' (in het data center van een andere
+  partij)</li>
+<li><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" title=":white_check_mark:" /> absolute duidelijkheid over oorsprong (actor, locatie, tijdstip, intentie)</li>
+<li><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" title=":white_check_mark:" /> volledige ondersteuning voor historisch begrip (onderzoek, reconstructie,
+  historiemodellen, etc)</li>
+<li><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" title=":white_check_mark:" /> mogelijkheden voor vergaande <a href="../automatisering/">automatisering</a></li>
+</ul>
+<blockquote>
+<p>In bovenstaande worden <em>events</em>, <em>data-gebeurtenissen</em> en <em>wijzigingen</em> door elkaar gebruikt. Elke
+keer wordt hetzelfde bedoeld: <em>data-gebeurtenissen</em> zíjn <em>events</em> wat de <em>wijzigingen</em> ín een
+register zijn.</p>
+</blockquote>
+<h2 id="open-samenwerken">Open samenwerken</h2>
+<p>In Nederland wordt al langer aan een 'open overheid' gewerkt, maar er is méér nodig. Om vertrouwen
+in projecties te hebben in een <a href="#gebeurtenisgedreven-registers">gebeurtenisgedreven register</a> is het
+noodzakelijk dat anderen kunnen controleren en inzien <em>hoe</em> die projectie tot stand komt. Data en
+open data zijn 'slechts' één deel van de puzzel. Software is ook een puzzelstuk dat in ogenschouw
+genomen moet worden. Dat volgt ook uit de drive van <a href="../automatisering/">automatisering</a>.</p>
+<p>In de overgang van de ene <a href="../context/">context</a> naar de andere betreft dat altijd meerdere
+partijen. Dat kunnen al afdelingen binnen een organisatie zijn, maar nog vaker zijn dat
+verschillende organisaties. Ook en vooral juist dáár is vertrouwen van belang. Door open samen te
+werken aan <em>dezelfde</em> software die voor die overgang verantwoordelijk is, wordt vertrouwen en
+kwaliteit tussen de partijen haalbaar.</p>
+<p>Open samenwerken is in Open Source Software al jaren ontwikkeld en toegepast. We kunnen daar veel
+van leren in hoe dat werkt. Open samenwerken zou daarom ook 'open source werken' genoemd kunnen
+worden. 'source' is in deze vaak software, maar zou ook heel goed 'documenten', contracten of iets
+dergelijks kunnen zijn. Zie ook <a href="../achtergrond/open-source/">Achtergrond: Open Source</a>.</p>
+<ul>
+<li><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" title=":white_check_mark:" /> <a href="#gebeurtenisgedreven-registers">gebeurtenisgedreven registers</a> kunnen niet
+  bestaan <em>zonder</em> open samenwerken!</li>
+<li><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" title=":white_check_mark:" /> open samenwerken draagt bij aan de controleerbaarheid en daarmee het vertrouwen
+  in de digitale infrastructuur</li>
+</ul>
+<h2 id="netwerken-datastromen">Netwerken &amp; Datastromen</h2>
+<p>Geen enkel proces of bedrijf staat nog volledig op zichzelf. De wereld is verbonden en dat groeit
+alleen nog maar verder! Hoe kunnen we daar anders 'antwoord' op geven dan de netwerken recht doen
+die zich aandienen? Welke verbindingen zijn er tussen de punten, nodes, onderdelen van het netwerk?
+Kunnen we dat inzichtelijk maken? Kunnen we de inzicht geven hoe de data stroomt?</p>
+<p>In een netwerk van <a href="#gebeurtenisgedreven-registers">gebeurtenisgedreven registers</a> stromen events
+van het ene proces en organisatie naar het andere. Telkens zijn daar expliciete
+<a href="../context/">contextovergangen</a> die in <a href="#open-samenwerken">open samenwerking</a> worden onderhouden.
+Op deze manier vertoont zich het netwerk van deelnemers dat verbonden is ... maar ook in welke
+richting welke data stroomt en hoe deze getransformeerd wordt in de overgangen van context. En dit
+kunnen we ontwerpen. We kunnen actief sturen op de netwerken en de datastromen om richting te geven
+aan hoe deze de maatschappij kunnen dienen.</p>
+<ul>
+<li><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" title=":white_check_mark:" /> ontwerpen en inzichtelijk maken van netwerken ondersteunt het inzicht en
+  overzicht van <a href="#gebeurtenisgedreven-registers">gebeurtenisgedreven registers</a></li>
+<li><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" title=":white_check_mark:" /> datastromen maken inzichtelijk hoe data van waar naar waar stroomt ... en hoe
+  daarop de sturen is</li>
+</ul>
+<h2 id="design-for-change">Design for change</h2>
+<blockquote>
+<p><em>“The Only Constant in Life Is Change.”</em> - Heraclitus</p>
+</blockquote>
+<p>Ook in een wereld van software, zie ook <a href="../automatisering/">automatisering</a>, is er slechts één
+zekerheid: 'change', verandering. In een digitale overheid dienen we daarom gericht te zijn op het
+ondersteunen van verandering: <strong>Design for Change</strong>.</p>
+<p>Dat was wat <a href="../achtergrond/agile/">agile</a> destijds ook adresseerde. Mensen en hun interactie zijn
+belangrijker dan procedures en tools. Voor een digitale overheid betekent dit dat we vergaande
+<a href="../automatisering/">automatisering</a> doen met volledig digitale processen. En dat we <em>ín</em> die
+processen mogelijkheden ontwerpen om menselijke interventie mogelijk te maken. Dat vraagt een
+mindset van automatiseren. Kennis van automatiseren. De drive om <em>alles</em> te automatiseren. En
+tegelijk, juist functies ontwerpen, inverentie mogelijkheden om bijsturing te kunnen doen als
+menselijk optreden vereist is. Hierin liggen ook mogelijkheden om 'de menselijke maat' en 'publieke
+waarden' toe te kunnen passen op individuele casuïstiek.</p>
+<ul>
+<li><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" title=":white_check_mark:" /> geautomatiseerde digitale processen</li>
+<li><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" title=":white_check_mark:" /> publieke waarden en menselijke interventie mogelijkheden ingebouwd</li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Terug naar boven
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../automatisering/" class="md-footer__link md-footer__link--prev" aria-label="Vorige: Automatisering">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Vorige
+              </span>
+              <div class="md-ellipsis">
+                Automatisering
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../principes/" class="md-footer__link md-footer__link--next" aria-label="Volgende: Principes">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Volgende
+              </span>
+              <div class="md-ellipsis">
+                Principes
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.footer", "navigation.indexes", "navigation.instant", "navigation.top", "navigation.tracking", "toc.follow"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Gekopieerd naar klembord", "clipboard.copy": "Kopi\u00ebren naar klembord", "search.result.more.one": "1 extra overeenkomst op deze pagina", "search.result.more.other": "# extra overeenkomsten op deze pagina", "search.result.none": "Geen overeenkomende documenten", "search.result.one": "1 overeenkomende document", "search.result.other": "# overeenkomende documenten", "search.result.placeholder": "Typ om te beginnen met zoeken", "search.result.term.missing": "Ontbreekt", "select.version": "Selecteer versie"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.60a45f97.min.js"></script>
+      
+    
+  </body>
+</html>

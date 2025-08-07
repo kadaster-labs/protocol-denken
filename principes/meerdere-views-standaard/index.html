@@ -1,0 +1,1807 @@
+
+<!doctype html>
+<html lang="nl" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://kadaster-labs.github.io/protocol-denken/principes/meerdere-views-standaard/">
+      
+      
+        <link rel="prev" href="../focus-op-verandering/">
+      
+      
+        <link rel="next" href="../open-samenwerking/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.50">
+    
+    
+      
+        <title>Meerdere views standaard - Denken in protocollen</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.a40c8224.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/project.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#principe-meerdere-views-standaard" class="md-skip">
+          Ga naar inhoud
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+<div class="container labsbar">
+    <span class="item"><img src="assets/kadaster-logo-white.png"/><a href="https://labs.kadaster.nl/" target="_blank">labs.kadaster.nl</a></span>
+    <!-- <span class="item delimeter">|</span>
+    <a class="item" href="https://federatief.datastelsel.nl/" target="_blank">federatief.datastelsel.nl</a> -->
+</div>
+
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Denken in protocollen" class="md-header__button md-logo" aria-label="Denken in protocollen" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 20a1 1 0 0 0-1-1h-1v-2h4a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h4v2h-1a1 1 0 0 0-1 1H2v2h7a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1h7v-2zm-5-6V6l5 4z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Denken in protocollen
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Meerdere views standaard
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Zoeken" placeholder="Zoeken" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Zoeken">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Leegmaken" aria-label="Leegmaken" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Zoeken initialiseren
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/kadaster-labs/protocol-denken" title="Ga naar repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigatie" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Denken in protocollen" class="md-nav__button md-logo" aria-label="Denken in protocollen" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 20a1 1 0 0 0-1-1h-1v-2h4a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h4v2h-1a1 1 0 0 0-1 1H2v2h7a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1h7v-2zm-5-6V6l5 4z"/></svg>
+
+    </a>
+    Denken in protocollen
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/kadaster-labs/protocol-denken" title="Ga naar repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Start
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../papier-naar-digitaal/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Papier naar digitaal
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ontstaan-van-data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ontstaan van data
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../context/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Context
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../taal-en-semantiek/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Taal en semantiek
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../automatisering/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Automatisering
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../oplossingen/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Oplossingen
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Principes
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_8" id="__nav_8_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Principes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../digitaal-als-fundament/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Digitaal als fundament
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../context-is-altijd-aanwezig/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Context is altijd aanwezig
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../focus-op-verandering/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Focus op verandering
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Meerdere views standaard
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Meerdere views standaard
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhoudsopgave">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhoudsopgave
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#het-probleem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Het probleem
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#het-principe-meerdere-views-standaard" class="md-nav__link">
+    <span class="md-ellipsis">
+      Het principe: meerdere views standaard
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Het principe: meerdere views standaard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#kernprincipes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kernprincipes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#praktische-implementatie" class="md-nav__link">
+    <span class="md-ellipsis">
+      Praktische implementatie
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#voorbeelden" class="md-nav__link">
+    <span class="md-ellipsis">
+      Voorbeelden
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Voorbeelden">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#voorbeeld-1-bag-register-verschillende-perspectieven-op-een-adres" class="md-nav__link">
+    <span class="md-ellipsis">
+      Voorbeeld 1: BAG register - verschillende perspectieven op één adres
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#voorbeeld-2-brp-register-verschillende-perspectieven-op-een-persoon" class="md-nav__link">
+    <span class="md-ellipsis">
+      Voorbeeld 2: BRP register - verschillende perspectieven op één persoon
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#voorbeeld-3-evolutie-zonder-breaking-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Voorbeeld 3: evolutie zonder breaking changes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mindset-shift" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mindset shift
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mindset shift">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stap-0-een-model-denken-traditioneel" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stap 0: één model denken (traditioneel)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stap-1-filtering-denken" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stap 1: filtering denken
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stap-2-multiple-views-denken" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stap 2: multiple views denken
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stap-3-views-als-projecties-denken" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stap 3: views als projecties denken
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#voordelen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Voordelen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#relatie-met-protocol-denken" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relatie met protocol-denken
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Relatie met protocol-denken">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#protocollen-zijn-view-coordinators" class="md-nav__link">
+    <span class="md-ellipsis">
+      Protocollen zijn view-coordinators
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#views-maken-schaalbare-netwerken-mogelijk" class="md-nav__link">
+    <span class="md-ellipsis">
+      Views maken schaalbare netwerken mogelijk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#views-ondersteunen-dikke-protocollen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Views ondersteunen dikke protocollen
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#relatie-met-andere-principes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relatie met andere principes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#waarom-dit-principe-altijd-geldt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Waarom dit principe altijd geldt
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Waarom dit principe altijd geldt">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#meerdere-gebruikers-meerdere-behoeften" class="md-nav__link">
+    <span class="md-ellipsis">
+      Meerdere gebruikers = meerdere behoeften
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evolutie-is-onvermijdelijk" class="md-nav__link">
+    <span class="md-ellipsis">
+      Evolutie is onvermijdelijk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#performance-en-privacy-vereisen-specialisatie" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance en privacy vereisen specialisatie
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementatie-overwegingen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementatie overwegingen
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Implementatie overwegingen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#synchronisatie-strategieen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Synchronisatie strategieën:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#performance-overwegingen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance overwegingen:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#beheer-complexiteit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Beheer complexiteit:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../open-samenwerking/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Open samenwerking
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../voorbeelden/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Voorbeelden
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_9" id="__nav_9_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Voorbeelden
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../voorbeelden/sensrnet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SensRNet
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../voorbeelden/koers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Basisregistratie Kadaster
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../achtergrond/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Achtergrond
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_10" id="__nav_10_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            Achtergrond
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../achtergrond/agile/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Agile werken
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../achtergrond/event-sourcing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Event Sourcing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../achtergrond/open-source/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Open Source
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhoudsopgave">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhoudsopgave
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#het-probleem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Het probleem
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#het-principe-meerdere-views-standaard" class="md-nav__link">
+    <span class="md-ellipsis">
+      Het principe: meerdere views standaard
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Het principe: meerdere views standaard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#kernprincipes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kernprincipes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#praktische-implementatie" class="md-nav__link">
+    <span class="md-ellipsis">
+      Praktische implementatie
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#voorbeelden" class="md-nav__link">
+    <span class="md-ellipsis">
+      Voorbeelden
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Voorbeelden">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#voorbeeld-1-bag-register-verschillende-perspectieven-op-een-adres" class="md-nav__link">
+    <span class="md-ellipsis">
+      Voorbeeld 1: BAG register - verschillende perspectieven op één adres
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#voorbeeld-2-brp-register-verschillende-perspectieven-op-een-persoon" class="md-nav__link">
+    <span class="md-ellipsis">
+      Voorbeeld 2: BRP register - verschillende perspectieven op één persoon
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#voorbeeld-3-evolutie-zonder-breaking-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Voorbeeld 3: evolutie zonder breaking changes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mindset-shift" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mindset shift
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mindset shift">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stap-0-een-model-denken-traditioneel" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stap 0: één model denken (traditioneel)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stap-1-filtering-denken" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stap 1: filtering denken
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stap-2-multiple-views-denken" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stap 2: multiple views denken
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stap-3-views-als-projecties-denken" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stap 3: views als projecties denken
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#voordelen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Voordelen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#relatie-met-protocol-denken" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relatie met protocol-denken
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Relatie met protocol-denken">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#protocollen-zijn-view-coordinators" class="md-nav__link">
+    <span class="md-ellipsis">
+      Protocollen zijn view-coordinators
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#views-maken-schaalbare-netwerken-mogelijk" class="md-nav__link">
+    <span class="md-ellipsis">
+      Views maken schaalbare netwerken mogelijk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#views-ondersteunen-dikke-protocollen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Views ondersteunen dikke protocollen
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#relatie-met-andere-principes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relatie met andere principes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#waarom-dit-principe-altijd-geldt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Waarom dit principe altijd geldt
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Waarom dit principe altijd geldt">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#meerdere-gebruikers-meerdere-behoeften" class="md-nav__link">
+    <span class="md-ellipsis">
+      Meerdere gebruikers = meerdere behoeften
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evolutie-is-onvermijdelijk" class="md-nav__link">
+    <span class="md-ellipsis">
+      Evolutie is onvermijdelijk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#performance-en-privacy-vereisen-specialisatie" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance en privacy vereisen specialisatie
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementatie-overwegingen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementatie overwegingen
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Implementatie overwegingen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#synchronisatie-strategieen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Synchronisatie strategieën:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#performance-overwegingen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance overwegingen:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#beheer-complexiteit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Beheer complexiteit:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="principe-meerdere-views-standaard">Principe: meerdere views standaard<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></h1>
+<p><em>Nooit één model of API - altijd meerdere perspectieven</em></p>
+<h2 id="het-probleem">Het probleem</h2>
+<p>Huidige registers hebben meestal slechts één view, één set gegevens, slechts één <em>model</em>. Dit lijkt efficiënt, maar is eigenlijk nooit voldoende:</p>
+<ul>
+<li><strong>Verschillende gebruikers, verschillende behoeften</strong>: Een gemeente heeft andere informatie nodig dan een notaris</li>
+<li><strong>Verschillende contexten, verschillende structuren</strong>: Wat handig is voor invoer, is niet handig voor elk gebruik. Sterker nog, elk gebruik kent verschillende behoeften en benodigde structuren</li>
+<li><strong>Evolutie wordt belemmerd</strong>: Nieuwe behoeften vereisen wijzigingen aan het ene model, met risico's voor bestaande gebruikers</li>
+<li><strong>Optimalisatie onmogelijk</strong>: Eén model kan niet tegelijk geoptimaliseerd zijn voor invoer én voor complexe analyses</li>
+<li><strong>Protocol rigiditeit</strong>: Inter-organisatie protocollen kunnen niet flexibel reageren op verschillende organisatie-behoeften</li>
+<li><strong>Integratiechaos</strong>: Elke organisatie maakt zijn eigen "view" door data te transformeren, vaak met fouten</li>
+</ul>
+<h2 id="het-principe-meerdere-views-standaard">Het principe: meerdere views standaard</h2>
+<p>Registers moeten vanaf het begin ontworpen worden met meerdere views als uitgangspunt, niet als uitzondering.</p>
+<h3 id="kernprincipes">Kernprincipes</h3>
+<ol>
+<li><strong>Views zijn projecties</strong> - Elke view toont dezelfde werkelijkheid vanuit een specifiek perspectief</li>
+<li><strong>Context bepaalt structuur</strong> - Elke gebruikscontext verdient zijn eigen geoptimaliseerde datastructuur  </li>
+<li><strong>Evolutie door toevoegen</strong> - Nieuwe behoeften betekenen nieuwe views, niet wijzigingen aan bestaande views</li>
+<li><strong>Synchronisatie by design</strong> - Views worden consistent gehouden door expliciete updatestrategieën</li>
+</ol>
+<h3 id="praktische-implementatie">Praktische implementatie</h3>
+<pre><code>Traditionele aanpak - één model:
+API: /personen/{id}
+Response: { naam, adres, geboortedatum, burgerlijkeStaat, ... }
+
+Meerdere views aanpak:
+API: /personen/{id}/contact -&gt; { naam, adres, telefoon, email }  
+API: /personen/{id}/juridisch -&gt; { naam, burgerlijkeStaat, gezinssamenstelling }
+API: /personen/{id}/identificatie -&gt; { naam, geboortedatum, bsn }
+API: /personen/{id}/specialistisch -&gt; complete informatie voor experts
+</code></pre>
+<h2 id="voorbeelden">Voorbeelden</h2>
+<h3 id="voorbeeld-1-bag-register-verschillende-perspectieven-op-een-adres">Voorbeeld 1: BAG register - verschillende perspectieven op één adres</h3>
+<p><strong>Traditioneel BAG - één model:</strong></p>
+<pre><code>Adres {
+  id: &quot;1234AB567&quot;,
+  straat: &quot;Hoofdstraat&quot;,
+  huisnummer: 42,
+  postcode: &quot;1234AB&quot;, 
+  woonplaats: &quot;Amsterdam&quot;,
+  oppervlakte: 85,
+  bouwjaar: 1995,
+  energielabel: &quot;B&quot;,
+  monument: false,
+  eigenaarId: &quot;789&quot;,
+  huurders: [...],
+  wozWaarde: 350000,
+  vastgoedtax: 2100
+}
+</code></pre>
+<p><strong>Meerdere views BAG:</strong></p>
+<pre><code>// Voor postbode (eenvoudig, snel)
+AdresContactView {
+  straat: &quot;Hoofdstraat&quot;,
+  huisnummer: 42,
+  postcode: &quot;1234AB&quot;,
+  woonplaats: &quot;Amsterdam&quot;
+}
+
+// Voor gemeente (administratief)
+AdresAdministratiefView {
+  id: &quot;1234AB567&quot;,
+  straat: &quot;Hoofdstraat&quot;, 
+  huisnummer: 42,
+  status: &quot;Bestaand&quot;,
+  datumIngebruikname: &quot;1995-03-15&quot;,
+  laatsteWijziging: &quot;2024-01-10&quot;
+}
+
+// Voor energieadviseur (technisch)
+AdresTechnischView {
+  id: &quot;1234AB567&quot;, 
+  oppervlakte: 85,
+  bouwjaar: 1995,
+  energielabel: &quot;B&quot;,
+  isolatiegegevens: {...}
+}
+
+// Voor belastingdienst (financieel)
+AdresFinancieelView {
+  id: &quot;1234AB567&quot;,
+  wozWaarde: 350000,
+  vastgoedtax: 2100,
+  eigendomshistorie: [...]
+}
+</code></pre>
+<h3 id="voorbeeld-2-brp-register-verschillende-perspectieven-op-een-persoon">Voorbeeld 2: BRP register - verschillende perspectieven op één persoon</h3>
+<p><strong>Traditioneel BRP - alles in één:</strong></p>
+<pre><code>Persoon {
+  bsn: &quot;123456789&quot;,
+  naam: &quot;Jan Jansen&quot;, 
+  adres: &quot;Hoofdstraat 42&quot;,
+  telefoon: &quot;06-12345678&quot;,
+  geboortedatum: &quot;1985-05-15&quot;,
+  geboorteplaats: &quot;Utrecht&quot;, 
+  nationaliteit: &quot;Nederlandse&quot;,
+  burgerlijkeStaat: &quot;Gehuwd&quot;,
+  partner: &quot;Marie Jansen&quot;,
+  kinderen: [&quot;Anna Jansen&quot;, &quot;Piet Jansen&quot;],
+  inkomen: 45000,
+  zorgverzekering: &quot;VGZ&quot;,
+  rijbewijs: &quot;B&quot;,
+  paspoort: &quot;NL123456&quot;,
+  medischeDossier: {...}
+}
+</code></pre>
+<p><strong>Meerdere views BRP:</strong></p>
+<pre><code>// Voor gemeente (basis contact)  
+PersoonContactView {
+  naam: &quot;Jan Jansen&quot;,
+  adres: &quot;Hoofdstraat 42, 1234AB Amsterdam&quot;, 
+  telefoonnummer: &quot;06-12345678&quot;
+}
+
+// Voor juridische procedures
+PersoonJuridischView {
+  bsn: &quot;123456789&quot;,
+  volledigeNaam: &quot;Johannes Petrus Jansen&quot;,
+  geboortedatum: &quot;1985-05-15&quot;,
+  geboorteplaats: &quot;Utrecht&quot;,
+  nationaliteit: &quot;Nederlandse&quot;, 
+  burgerlijkeStaat: &quot;Gehuwd sinds 2010-06-15&quot;,
+  partner: &quot;Maria Elisabeth Jansen-de Wit&quot;
+}
+
+// Voor onderwijs (privacy-vriendelijk)
+PersoonOnderwijsView {
+  voornaam: &quot;Jan&quot;,
+  achternaam: &quot;Jansen&quot;, 
+  geboortejaar: 1985,
+  woonplaats: &quot;Amsterdam&quot;
+}
+
+// Voor zorgverlening (medisch relevant)
+PersoonZorgView {
+  naam: &quot;Jan Jansen&quot;,
+  geboortedatum: &quot;1985-05-15&quot;, 
+  adres: &quot;Hoofdstraat 42&quot;,
+  contactpersoon: &quot;Marie Jansen (partner)&quot;,
+  zorgverzekering: &quot;VGZ&quot;,
+  // geen BSN voor privacy
+}
+</code></pre>
+<h3 id="voorbeeld-3-evolutie-zonder-breaking-changes">Voorbeeld 3: evolutie zonder breaking changes</h3>
+<p><strong>Situatie</strong>: Gemeente krijgt nieuwe taak - energietransitie ondersteuning. Ze hebben nu adresgegevens nodig gecombineerd met eigendomsinformatie.</p>
+<p><strong>Traditionele aanpak</strong>: </p>
+<pre><code>// Uitbreiding van bestaand model - BREAKING CHANGE
+Adres {
+  id, straat, huisnummer, ..., // bestaande velden
+  eigenaar: {...},              // NIEUW - kan null zijn  
+  energieadvies: {...}          // NIEUW - complex object
+}
+</code></pre>
+<p><strong>Probleem</strong>: Alle bestaande gebruikers krijgen extra data die ze niet willen.</p>
+<p><strong>Meerdere views aanpak</strong>:</p>
+<pre><code>// Nieuwe view toevoegen - NO BREAKING CHANGE
+AdresEnergietransitieView {
+  id: &quot;1234AB567&quot;,
+  straat: &quot;Hoofdstraat&quot;,
+  huisnummer: 42,
+  energielabel: &quot;B&quot;, 
+  eigenaar: &quot;Jan Jansen&quot;,
+  potentieelZonnepanelen: 8.5,
+  isolatiestatus: &quot;Matig&quot;,
+  advies: &quot;Dak isoleren, zonnepanelen overwegen&quot;
+}
+</code></pre>
+<p><strong>Voordeel</strong>: Gemeente krijgt precies wat ze nodig heeft, bestaande gebruikers merken niets.</p>
+<h2 id="mindset-shift">Mindset shift</h2>
+<p>Meerdere views vereist een fundamentele shift: <strong>van "één waarheid" naar "meerdere perspectieven op één waarheid"</strong>.</p>
+<h3 id="stap-0-een-model-denken-traditioneel">Stap 0: één model denken (traditioneel)</h3>
+<pre><code>// Denken: &quot;Ik maak één perfect model voor iedereen&quot;
+class Persoon {
+    naam, adres, telefoon, email, geboortedatum, 
+    burgerlijkeStaat, inkomen, medischeDossier, ...
+}
+</code></pre>
+<p><strong>Probleem</strong>:
+- Veel gebruikers krijgen irrelevante informatie
+- Privacy concerns - iedereen ziet alles
+- Performance issues - altijd alle data ophalen
+- Inflexibel - wijzigingen raken alle gebruikers</p>
+<h3 id="stap-1-filtering-denken">Stap 1: filtering denken</h3>
+<pre><code>// Denken: &quot;Ik filter het ene model per gebruik&quot;
+API: /personen/{id}?fields=naam,adres
+API: /personen/{id}?view=contact
+</code></pre>
+<p><strong>Probleem</strong>: Onderliggende model blijft complex en fragiel.</p>
+<p><strong>Verbetering</strong>: Meer controle over wat wordt getoond, maar geen structurele oplossing.</p>
+<h3 id="stap-2-multiple-views-denken">Stap 2: multiple views denken</h3>
+<pre><code>// Denken: &quot;Ik maak aparte views per gebruikscontext&quot;
+class ContactView { naam, adres, telefoon }
+class JuridischView { naam, burgerlijkeStaat, gezinssamenstelling }
+class VolledigView { alle informatie }
+</code></pre>
+<p><strong>Probleem</strong>: Nog steeds geen expliciete synchronisatie tussen views.</p>
+<p><strong>Verbetering</strong>: Context-specifieke structuren, maar synchronisatie is ad-hoc.</p>
+<h3 id="stap-3-views-als-projecties-denken">Stap 3: views als projecties denken</h3>
+<pre><code>// Denken: &quot;Views zijn bewuste projecties van events naar specifieke doelen&quot;
+ContactView = projectie(PersonenEvents, optimizedFor: &quot;dagelijks contact&quot;)
+JuridischView = projectie(PersonenEvents, optimizedFor: &quot;juridische procedures&quot;) 
+AnalyseView = projectie(PersonenEvents, optimizedFor: &quot;statistische analyse&quot;)
+</code></pre>
+<p><strong>Doorbraak</strong>: Expliciete relatie tussen bron (events) en views, met heldere doelen.</p>
+<h2 id="voordelen">Voordelen</h2>
+<ul>
+<li><strong>Data-minimalisatie by design</strong>: Elke view bevat alleen relevante gegevens, privacy en GDPR compliance ingebouwd</li>
+<li><strong>Betere beveiliging</strong>: Toegang kan per view worden geregeld</li>
+<li><strong>Betere performance</strong>: Elke view bevat precies wat nodig is</li>
+<li><strong>Flexibelere evolutie</strong>: Nieuwe behoeften vereisen geen breaking changes</li>
+<li><strong>Duidelijkere verantwoordelijkheden</strong>: Elke view heeft een specifiek doel</li>
+<li><strong>Eenvoudigere integratie</strong>: Andere systemen kunnen de meest passende view kiezen</li>
+</ul>
+<h2 id="relatie-met-protocol-denken">Relatie met protocol-denken</h2>
+<p>Meerdere views is <strong>essentieel</strong> voor <a href="../../">protocol-denken</a> omdat moderne protocollen fundamenteel gaan over het aanbieden van verschillende perspectieven op dezelfde data:</p>
+<h3 id="protocollen-zijn-view-coordinators">Protocollen zijn view-coordinators</h3>
+<p><a href="../../">Dikke protocollen</a> coördineren niet alleen data-uitwisseling, maar ook welke views gebruikt worden:
+- <strong>Protocol-native views</strong>: Specificaties definiëren welke views beschikbaar zijn voor elk protocol
+- <strong>Organisatie-specifieke views</strong>: Elke organisatie kan zijn eigen optimale view definiëren binnen protocol-afspraken
+- <strong>Evolutionary protocols</strong>: Nieuwe organisaties kunnen deelnemen door nieuwe views toe te voegen zonder bestaande te breken</p>
+<h3 id="views-maken-schaalbare-netwerken-mogelijk">Views maken schaalbare netwerken mogelijk</h3>
+<p><a href="../../oplossingen/#netwerken--datastromen">Netwerken van datastromen</a> werken alleen met meerdere views:
+- <strong>Hub-and-spoke breaking</strong>: Eén centraal model schaalt niet naar vele organisaties met verschillende behoeften
+- <strong>Federated views</strong>: Elke organisatie biedt zijn eigen views aan, gecoordineerd via protocollen
+- <strong>View discovery</strong>: Protocollen maken het mogelijk om te ontdekken welke views beschikbaar zijn</p>
+<h3 id="views-ondersteunen-dikke-protocollen">Views ondersteunen dikke protocollen</h3>
+<p>Meerdere views maken <a href="../../">dikke protocollen</a> praktisch mogelijk:
+- <strong>Business rule distribution</strong>: Verschillende views kunnen verschillende validatieregels hebben
+- <strong>Context preservation</strong>: Views behouden de juiste context voor elke organisatie
+- <strong>Governance distribution</strong>: Verschillende organisaties kunnen verschillende compliance-views hebben</p>
+<h2 id="relatie-met-andere-principes">Relatie met andere principes</h2>
+<ul>
+<li>Versterkt <a href="../focus-op-verandering/">Focus op verandering</a> - events kunnen naar verschillende views worden geprojecteerd</li>
+<li>Ondersteunt <a href="../context-is-altijd-aanwezig/">Context is altijd aanwezig</a> - elke view heeft een specifieke context en doel</li>
+<li>Basis voor contextovergang-ontwerp - bewuste mapping tussen verschillende contexten</li>
+</ul>
+<h2 id="waarom-dit-principe-altijd-geldt">Waarom dit principe altijd geldt</h2>
+<h3 id="meerdere-gebruikers-meerdere-behoeften">Meerdere gebruikers = meerdere behoeften</h3>
+<p>Elk register heeft altijd verschillende stakeholders:
+- <strong>Interne gebruikers</strong>: Verschillende afdelingen, verschillende behoeften
+- <strong>Externe afnemers</strong>: Verschillende organisaties, verschillende use cases
+- <strong>Burgers</strong>: Verschillende informatiebehoefte dan professionals
+- <strong>Applicaties</strong>: API's hebben andere structuren nodig dan gebruikersinterfaces</p>
+<h3 id="evolutie-is-onvermijdelijk">Evolutie is onvermijdelijk</h3>
+<p>Systemen veranderen altijd:
+- <strong>Nieuwe wetgeving</strong>: Vereist nieuwe informatie-elementen
+- <strong>Technische ontwikkelingen</strong>: Maken nieuwe use cases mogelijk
+- <strong>Organisatieveranderingen</strong>: Leiden tot andere informatiebehoeften
+- <strong>Gebruikersfeedback</strong>: Vraagt om andere structuren</p>
+<h3 id="performance-en-privacy-vereisen-specialisatie">Performance en privacy vereisen specialisatie</h3>
+<p>Eén model kan nooit optimaal zijn voor alles:
+- <strong>Privacy</strong>: Verschillende autorisatieniveaus vereisen verschillende views
+- <strong>Performance</strong>: Verschillende use cases hebben andere snelheidseisen
+- <strong>Cachingstrategie</strong>: Views kunnen individueel geoptimaliseerd worden
+- <strong>Netwerk gebruik</strong>: Alleen relevante data versturen</p>
+<h2 id="implementatie-overwegingen">Implementatie overwegingen</h2>
+<h3 id="synchronisatie-strategieen">Synchronisatie strategieën:</h3>
+<ul>
+<li><strong>Event-driven updates</strong>: Views worden bijgewerkt door events</li>
+<li><strong>Eventual consistency</strong>: Views kunnen tijdelijk inconsistent zijn met de bron (events) - in gedistribueerde cloud infrastructuren is eventual consistency inherent een gegeven, niet een keuze</li>
+<li><strong>Transactionele updates</strong>: Alleen mogelijk binnen één database/service boundary - over service grenzen heen is eventual consistency onvermijdelijk  </li>
+</ul>
+<h3 id="performance-overwegingen">Performance overwegingen:</h3>
+<ul>
+<li><strong>Geoptimaliseerde storage</strong>: Elke view kan zijn eigen optimale datastructuur hebben</li>
+<li><strong>Caching strategies</strong>: Views kunnen individueel gecached worden</li>
+<li><strong>Index optimization</strong>: Elke view krijgt de juiste indexes voor zijn use case</li>
+</ul>
+<h3 id="beheer-complexiteit">Beheer complexiteit:</h3>
+<ul>
+<li><strong>View lifecycle</strong>: Duidelijke procedures voor toevoegen, wijzigen, verwijderen van views</li>
+<li><strong>Documentation</strong>: Elke view heeft heldere documentatie over doel en gebruik</li>
+<li><strong>Monitoring</strong>: Synchronisatie tussen views moet gecontroleerd worden - in gedistribueerde systemen wordt monitoring inherent exponentieel complexer met eigen health checks, latency metrics, en consistency monitoring per view</li>
+<li><strong>Protocol compliance</strong>: Views moeten voldoen aan protocol-specificaties over organisatie-grenzen heen</li>
+<li><strong>View versioning</strong>: Evolutie van views zonder protocol-deelnemers te breken</li>
+</ul>
+<hr />
+<p><em>Dit principe zorgt ervoor dat registers flexibel kunnen evolueren zonder bestaande gebruikers te verstoren, door verschillende perspectieven op dezelfde werkelijkheid aan te bieden.</em></p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>NOTE Oorspronkelijk ontstaan uit en overgenomen vanuit <a href="https://uitbetrouwbarebron.nl">project Uit betrouwbare bron</a> en aangepast naar protocol-denken&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Terug naar boven
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../focus-op-verandering/" class="md-footer__link md-footer__link--prev" aria-label="Vorige: Focus op verandering">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Vorige
+              </span>
+              <div class="md-ellipsis">
+                Focus op verandering
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../open-samenwerking/" class="md-footer__link md-footer__link--next" aria-label="Volgende: Open samenwerking">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Volgende
+              </span>
+              <div class="md-ellipsis">
+                Open samenwerking
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.footer", "navigation.indexes", "navigation.instant", "navigation.top", "navigation.tracking", "toc.follow"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Gekopieerd naar klembord", "clipboard.copy": "Kopi\u00ebren naar klembord", "search.result.more.one": "1 extra overeenkomst op deze pagina", "search.result.more.other": "# extra overeenkomsten op deze pagina", "search.result.none": "Geen overeenkomende documenten", "search.result.one": "1 overeenkomende document", "search.result.other": "# overeenkomende documenten", "search.result.placeholder": "Typ om te beginnen met zoeken", "search.result.term.missing": "Ontbreekt", "select.version": "Selecteer versie"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.60a45f97.min.js"></script>
+      
+    
+  </body>
+</html>
