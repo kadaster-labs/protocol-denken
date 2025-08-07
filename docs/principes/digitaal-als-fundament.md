@@ -6,11 +6,14 @@
 
 De overheid blijft vasthouden aan processen die ontworpen zijn voor papieren uitvoering, terwijl de samenleving fundamentaal digitaal is geworden. Dit leidt tot verschillende problemen:
 
-- **Beperkte mogelijkheden**: Papier kan slechts één view vastleggen en geen meerdere perspectieven bieden
-- **Statische vastlegging**: Focus ligt op eindtoestand in plaats van op veranderingen
-- **Contextverlies**: Alleen wat fysiek op papier past kan worden vastgelegd
+- **Beperkte mogelijkheden**: Papier kan slechts één view vastleggen en geen [meerdere perspectieven](meerdere-views-standaard.md) bieden
+- **Statische vastlegging**: Focus ligt op eindtoestand in plaats van op [veranderingen](focus-op-verandering.md)
+- **Contextverlies**: Alleen wat fysiek op papier past kan worden vastgelegd, [context](context-is-altijd-aanwezig.md) gaat verloren
 - **Moeilijke aanpassingen**: Correcties betekenen doorhalingen, geschiedenis verdwijnt
 - **Maatschappelijke aansluiting**: Burgers en bedrijven werken digitaal, overheid blijft achter
+- **Protocol rigiditeit**: Papieren protocollen zijn statisch en moeilijk aan te passen aan nieuwe situaties
+
+De achtergrond en ontstaan is begrijpelijk als je de historie van [papier naar digitaal](../papier-naar-digitaal.md). Maar daar moeten we dus een verandering in teweegbrengen.
 
 ## Het principe: digitaal als fundament
 
@@ -32,21 +35,22 @@ Traditionele aanpak:
 2. Handmatig invoeren in systeem  
 3. Papier archiveren als 'bron van waarheid'
 
-Digitaal fundament aanpak:
-1. Digitaal proces als primaire interactie
+Digitaal fundament en protocol-denken aanpak:
+1. Digitale proces als primaire interactie
 2. Automatische verwerking en validatie
-3. Papieren afdruk indien nodig (niet als bron, wel als bewijs)
+3. Papier is afdruk indien nodig (niet als bron, wel als bewijs)
 ```
 
 ## Voordelen
 
-- **Enabler voor andere principes**: Maakt meerdere views en focus op verandering mogelijk
+- **Enabler voor andere principes**: Maakt [meerdere views](meerdere-views-standaard.md) en [focus op verandering](focus-op-verandering.md) mogelijk
 - **Schaalsprong mogelijk**: Digitaal maakt analyses, wijzigingen en processen mogelijk op een schaal die met papier ondenkbaar was
 - **Maatschappelijke aansluiting**: Overheid werkt zoals burgers en bedrijven dat gewend zijn of zouden wensen
 - **Transparantie**: Digitale gegevens kunnen beter toegankelijk worden gemaakt
 - **Efficiëntie**: Wegvallen van dubbele vastlegging (met problematiek) en handmatige overdracht
-- **Innovatiemogelijkheden**: Nieuwe services en verbindingen worden mogelijk
-- **Democratische versterking**: Betere toegang tot overheidsinformatie (wordt mogelijk; wel afhankelijk van uitwerking)
+- **Innovatiemogelijkheden**: Nieuwe services en [netwerken van datastromen](../oplossingen.md#netwerken--datastromen) worden mogelijk
+- **Democratische versterking**: Betere toegang tot overheidsinformatie door digitale infrastructuur
+- **Interoperabiliteit**: Protocollen maken uitwisseling tussen systemen mogelijk
 
 ## Mindset shift
 
@@ -93,20 +97,32 @@ Digitaal als fundament vereist een fundamentele shift: **van "digitaal als kopie
 - **Schaalbaarheid**: Nieuwe digitale services zijn eenvoudig toe te voegen
 - **Toekomstbestendigheid**: Groeit mee met technologische ontwikkelingen
 
+## Relatie met protocol-denken
+
+Digitaal als fundament is een **voorwaarde** voor [protocol-denken](../index.md). Zonder digitaal fundament kunnen moderne protocollen niet bestaan omdat:
+
+### Protocollen vereisen digitale infrastructuur
+- **Dikke protocollen**: [Protocol-denken](../index.md) gaat naar protocollen die validatie, governance en business logica bevatten - dit kan alleen digitaal
+- **Netwerk-effecten**: [Netwerken van datastromen](../oplossingen.md#netwerken--datastromen) ontstaan alleen als alle deelnemers digitaal werken
+- **Automatisering**: Protocollen kunnen alleen automatisch afgedwongen worden in digitale omgeving
+
+### Gebeurtenissen maken protocollen mogelijk over organisaties
+- **Asynchrone samenwerking**: [Focus op verandering](focus-op-verandering.md) zorgt dat organisaties kunnen samenwerken zonder real-time afhankelijkheden
+- **Causaliteit behoud**: Gebeurtenissen bewaren tijdsorde en context, cruciaal voor inter-organisatie protocollen
+- **Robuustheid**: Protocollen kunnen werken ondanks netwerkvertragingen en verschillende verwerkingssnelheden
+
+### Digitale context maakt rijke protocollen mogelijk
+- **Contextbehoud**: Digitale systemen kunnen de volledige [context](context-is-altijd-aanwezig.md) van gebeurtenissen vastleggen en doorgeven
+- **Meerdere perspectieven**: [Meerdere views](meerdere-views-standaard.md) voor verschillend gebruik, binnen organisatie en over organisatiegrenzen heen, gecoördineerd via protocollen
+- **Open ontwikkeling**: Alleen in open samenwerking kunnen digitale protocollen ontwikkeld worden
+
 ## Relatie met andere principes
 
 Dit principe is het **fundament** voor alle andere principes:
 
-- **Maakt mogelijk**: [[Principe/meerdere-views-standaard]] - papier kan slechts één view tonen
-- **Maakt mogelijk**: [[Principe/focus-op-verandering]] - papier kan moeilijk wijzigingen traceren  
-- **Maakt mogelijk**: [[Principe/context-is-altijd-aanwezig]] - papier heeft beperkte ruimte voor context
-- **Ondersteunt**: [[Principe/business-value-gedreven]] - digitaal kan publieke waarde en business waarde beter leveren
-
-## Patronen die dit principe toepassen
-
-- [[Patroon/digital-first-ontwerp]] - concreet ontwerpen met digitaal als uitgangspunt
-- [[Patroon/papier-als-view]] - behandelen van documenten als presentatie van digitale data
-- [[Patroon/menselijke-overreden]] - tussenkomst mogelijk houden in digitale processen
+- **Maakt mogelijk**: [Meerdere views standaard](meerdere-views-standaard.md) - papier kan slechts één view tonen
+- **Maakt mogelijk**: [Focus op verandering](focus-op-verandering.md) - papier kan moeilijk wijzigingen traceren  
+- **Maakt mogelijk**: [Context is altijd aanwezig](context-is-altijd-aanwezig.md) - papier heeft beperkte ruimte voor context
 
 ## Voorbeelden
 
@@ -234,6 +250,13 @@ Digitaal fundament ondersteunt democratie:
 - **Transparantie**: Gemakkelijker inzicht in overheidshandelen
 - **Effectiviteit**: Snellere, betere dienstverlening
 - **Gelijkheid**: Zelfde service voor iedereen, onafhankelijk van locatie
+
+### Van dunne naar dikke protocollen
+Digitaal fundament maakt de evolutie mogelijk van:
+- **Dunne protocollen** (traditioneel internet): Minimale afspraken over transport, business logica in applicaties
+- **Dikke protocollen** ([protocol-denken](../index.md)): Protocollen die validatie, governance en afdwingbare afspraken bevatten
+
+Deze transitie is alleen mogelijk met digitaal als fundament omdat dikke protocollen automatisering en geautomatiseerde validatie vereisen.
 
 ---
 
