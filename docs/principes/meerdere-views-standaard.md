@@ -10,6 +10,8 @@ Huidige registers hebben meestal slechts één view, één set gegevens, slechts
 - **Verschillende contexten, verschillende structuren**: Wat handig is voor invoer, is niet handig voor elk gebruik. Sterker nog, elk gebruik kent verschillende behoeften en benodigde structuren
 - **Evolutie wordt belemmerd**: Nieuwe behoeften vereisen wijzigingen aan het ene model, met risico's voor bestaande gebruikers
 - **Optimalisatie onmogelijk**: Eén model kan niet tegelijk geoptimaliseerd zijn voor invoer én voor complexe analyses
+- **Protocol rigiditeit**: Inter-organisatie protocollen kunnen niet flexibel reageren op verschillende organisatie-behoeften
+- **Integratiechaos**: Elke organisatie maakt zijn eigen "view" door data te transformeren, vaak met fouten
 
 ## Het principe: meerdere views standaard
 
@@ -249,17 +251,25 @@ AnalyseView = projectie(PersonenEvents, optimizedFor: "statistische analyse")
 
 ## Relatie met protocol-denken
 
-Meerdere views is **essentieel** voor [protocol-denken](../index.md) omdat:
+Meerdere views is **essentieel** voor [protocol-denken](../index.md) omdat moderne protocollen fundamenteel gaan over het aanbieden van verschillende perspectieven op dezelfde data:
 
-### Protocollen vereisen verschillende perspectieven
-- **Interne verwerking**: Views voor interne systemen en processen
-- **Externe uitwisseling**: Views geoptimaliseerd voor protocollen tussen organisaties
-- **Governance views**: Specifieke views voor controle en compliance
+### Protocollen zijn view-coordinators
+[Dikke protocollen](../index.md) coördineren niet alleen data-uitwisseling, maar ook welke views gebruikt worden:
+- **Protocol-native views**: Specificaties definiëren welke views beschikbaar zijn voor elk protocol
+- **Organisatie-specifieke views**: Elke organisatie kan zijn eigen optimale view definiëren binnen protocol-afspraken
+- **Evolutionary protocols**: Nieuwe organisaties kunnen deelnemen door nieuwe views toe te voegen zonder bestaande te breken
 
-### Views maken protocollen flexibel
-- **Evolutie mogelijk**: Nieuwe protocol-versies door nieuwe views, zonder breaking changes
-- **Context-specifieke uitwisseling**: Protocollen kunnen de juiste view voor elke situatie kiezen
-- **Performance optimalisatie**: Protocollen hoeven alleen relevante data uit te wisselen
+### Views maken schaalbare netwerken mogelijk
+[Netwerken van datastromen](../oplossingen.md#netwerken--datastromen) werken alleen met meerdere views:
+- **Hub-and-spoke breaking**: Eén centraal model schaalt niet naar vele organisaties met verschillende behoeften
+- **Federated views**: Elke organisatie biedt zijn eigen views aan, gecoordineerd via protocollen
+- **View discovery**: Protocollen maken het mogelijk om te ontdekken welke views beschikbaar zijn
+
+### Views ondersteunen dikke protocollen
+Meerdere views maken [dikke protocollen](../index.md) praktisch mogelijk:
+- **Business rule distribution**: Verschillende views kunnen verschillende validatieregels hebben
+- **Context preservation**: Views behouden de juiste context voor elke organisatie
+- **Governance distribution**: Verschillende organisaties kunnen verschillende compliance-views hebben
 
 ## Relatie met andere principes
 
@@ -306,6 +316,8 @@ Eén model kan nooit optimaal zijn voor alles:
 - **View lifecycle**: Duidelijke procedures voor toevoegen, wijzigen, verwijderen van views
 - **Documentation**: Elke view heeft heldere documentatie over doel en gebruik
 - **Monitoring**: Synchronisatie tussen views moet gecontroleerd worden - in gedistribueerde systemen wordt monitoring inherent exponentieel complexer met eigen health checks, latency metrics, en consistency monitoring per view
+- **Protocol compliance**: Views moeten voldoen aan protocol-specificaties over organisatie-grenzen heen
+- **View versioning**: Evolutie van views zonder protocol-deelnemers te breken
 
 ---
 
