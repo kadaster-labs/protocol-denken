@@ -1,7 +1,7 @@
 ---
 title: Meerdere views standaard
 ---
-# Principe: meerdere views standaard
+# Principe: meerdere views standaard[^1]
 
 *Nooit één model of API - altijd meerdere perspectieven*
 
@@ -325,3 +325,5 @@ Eén model kan nooit optimaal zijn voor alles:
 ---
 
 *Dit principe zorgt ervoor dat registers flexibel kunnen evolueren zonder bestaande gebruikers te verstoren, door verschillende perspectieven op dezelfde werkelijkheid aan te bieden.*
+
+[^1]: NOTE Oorspronkelijk ontstaan uit en overgenomen vanuit [project Uit betrouwbare bron](https://uitbetrouwbarebron.nl) en aangepast naar protocol-denken

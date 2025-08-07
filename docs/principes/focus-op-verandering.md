@@ -1,7 +1,7 @@
 ---
 title: Focus op verandering
 ---
-# Principe: focus op verandering
+# Principe: focus op verandering[^1]
 
 *Change over state als fundamenteel uitgangspunt*
 
@@ -236,3 +236,5 @@ In protocollen is ook voor "immutable" gegevens de **gebeurtenis van vastleggen*
 ---
 
 *Dit principe vormt de basis voor verantwoorde overheidsregistratie en robuuste inter-organisatie protocollen waarin organisaties effectief kunnen samenwerken.*
+
+[^1]: NOTE Oorspronkelijk ontstaan uit en overgenomen vanuit [project Uit betrouwbare bron](https://uitbetrouwbarebron.nl) en aangepast naar protocol-denken

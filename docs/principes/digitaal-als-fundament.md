@@ -1,7 +1,7 @@
 ---
 title: Digitaal als fundament
 ---
-# Principe: digitaal als fundament
+# Principe: digitaal als fundament[^1]
 
 *De samenleving digitaliseert - de overheid sluit daar bewust op aan door digitaal als uitgangspunt te nemen*
 
@@ -246,3 +246,5 @@ Deze transitie is alleen mogelijk met digitaal als fundament omdat dikke protoco
 ---
 
 *Dit principe legt het fundament waarop moderne overheidsregistraties kunnen worden gebouwd.*
+
+[^1]: NOTE Oorspronkelijk ontstaan uit en overgenomen vanuit [project Uit betrouwbare bron](https://uitbetrouwbarebron.nl) en aangepast naar protocol-denken

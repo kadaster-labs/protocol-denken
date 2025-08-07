@@ -1,7 +1,7 @@
 ---
 title: Context is altijd aanwezig
 ---
-# Principe: context is altijd aanwezig
+# Principe: context is altijd aanwezig[^1]
 
 *Contextvrije gegevens (data) bestaan niet - elk gegeven heeft betekenis binnen een specifieke context*
 
@@ -244,3 +244,5 @@ Elk proces heeft eigen betekenis voor dezelfde gegevens:
 ---
 
 *Dit principe vormt de basis voor betrouwbare gegevensuitwisseling tussen organisaties met verschillende contexten via robuuste protocollen.*
+
+[^1]: NOTE Oorspronkelijk ontstaan uit en overgenomen vanuit [project Uit betrouwbare bron](https://uitbetrouwbarebron.nl) en aangepast naar protocol-denken
