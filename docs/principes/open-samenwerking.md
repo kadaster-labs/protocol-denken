@@ -1,3 +1,6 @@
+---
+title: Open samenwerking
+---
 # Principe: open samenwerking
 
 *Protocollen ontstaan en evolueren alleen in open samenwerking tussen alle deelnemers*

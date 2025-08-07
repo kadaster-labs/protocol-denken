@@ -1,3 +1,6 @@
+---
+title: Meerdere views standaard
+---
 # Principe: meerdere views standaard
 
 *Nooit één model of API - altijd meerdere perspectieven*

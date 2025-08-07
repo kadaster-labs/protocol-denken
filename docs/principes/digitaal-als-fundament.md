@@ -1,3 +1,6 @@
+---
+title: Digitaal als fundament
+---
 # Principe: digitaal als fundament
 
 *De samenleving digitaliseert - de overheid sluit daar bewust op aan door digitaal als uitgangspunt te nemen*
@@ -180,7 +183,7 @@ Digitaal als fundament is een **voorwaarde** voor [protocol-denken](../index.md)
 ### Digitale context maakt rijke protocollen mogelijk
 - **Contextbehoud**: Digitale systemen kunnen de volledige [context](context-is-altijd-aanwezig.md) van gebeurtenissen vastleggen en doorgeven
 - **Meerdere perspectieven**: [Meerdere views](meerdere-views-standaard.md) voor verschillend gebruik, binnen organisatie en over organisatiegrenzen heen, gecoördineerd via protocollen
-- **Open ontwikkeling**: Alleen in open samenwerking kunnen digitale protocollen ontwikkeld worden
+- **Open ontwikkeling**: Alleen in [open samenwerking](open-samenwerking.md) kunnen digitale protocollen ontwikkeld worden
 
 ## Relatie met andere principes
 

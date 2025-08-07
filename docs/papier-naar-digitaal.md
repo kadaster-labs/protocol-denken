@@ -1,6 +1,5 @@
 ---
 title: Papier naar digitaal
-weight: 15
 ---
 Om te kunnen zien en bedenken welke richting de ontwikkelingen opgaan, is het van belang om naar de
 geschiedenis te kijken. In het digitale tijdperk en zeker vandaag de dag, anno 2024, is _data_ een

@@ -1,30 +1,29 @@
 ---
 title: Principes
 ---
-
-# Principes voor Protocol-denken
+# Principes voor protocol-denken
 
 De volgende principes vormen de fundamenten voor **denken in protocollen** en betrouwbare gegevensuitwisseling in de digitale overheid:
 
-## [Context is altijd aanwezig](context-is-altijd-aanwezig.md)
+- Principe: [Digitaal als fundament](digitaal-als-fundament.md)
 
-*Contextvrije gegevens bestaan niet - elk gegeven heeft betekenis binnen een specifieke context*
+    De samenleving digitaliseert - de overheid sluit daar bewust op aan door digitaal als uitgangspunt te nemen
 
-## [Digitaal als fundament](digitaal-als-fundament.md)
+- Principe: [Context is altijd aanwezig](context-is-altijd-aanwezig.md)
 
-*De samenleving digitaliseert - de overheid sluit daar bewust op aan door digitaal als uitgangspunt te nemen*
+    Contextvrije gegevens bestaan niet - elk gegeven heeft betekenis binnen een specifieke context
 
-## [Focus op verandering](focus-op-verandering.md)
+- Principe: [Focus op verandering](focus-op-verandering.md)
 
-*Change over state als fundamenteel uitgangspunt*
+    *Change over state* als fundamenteel uitgangspunt
 
-## [Meerdere views standaard](meerdere-views-standaard.md)
+- Principe: [Meerdere views standaard](meerdere-views-standaard.md)
 
-*Nooit één model of API - altijd meerdere perspectieven*
+    Nooit één model of API - altijd meerdere perspectieven
 
-## [Open samenwerking](open-samenwerking.md)
+- Principe: [Open samenwerking](open-samenwerking.md)
 
-*Protocollen ontstaan en evolueren alleen in open samenwerking tussen alle deelnemers*
+    Protocollen ontstaan en evolueren alleen in open samenwerking tussen alle deelnemers
 
 ---
 

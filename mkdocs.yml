@@ -14,8 +14,8 @@ nav:
   - oplossingen.md
   - Principes:
     - principes/index.md
-    - principes/context-is-altijd-aanwezig.md
     - principes/digitaal-als-fundament.md
+    - principes/context-is-altijd-aanwezig.md
     - principes/focus-op-verandering.md
     - principes/meerdere-views-standaard.md
     - principes/open-samenwerking.md
@@ -25,9 +25,9 @@ nav:
     - voorbeelden/koers.md
   - Achtergrond:
     - achtergrond/index.md
-    - achtergrond/open-source.md
-    - achtergrond/event-sourcing.md
     - achtergrond/agile.md
+    - achtergrond/event-sourcing.md
+    - achtergrond/open-source.md
 extra_css:
   - css/project.css
 theme:

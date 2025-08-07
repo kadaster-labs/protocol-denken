@@ -1,3 +1,6 @@
+---
+title: Focus op verandering
+---
 # Principe: focus op verandering
 
 *Change over state als fundamenteel uitgangspunt*

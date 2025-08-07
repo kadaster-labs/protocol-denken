@@ -1,6 +1,5 @@
 ---
 title: Ontstaan van data
-weight: 20
 ---
 Een belangrijk onderdeel van het denken in protocollen en ook een relevant onderwerp van vandaag, is de
 herkomst en het ontstaan van data. In de geschiedenis van registers, grootboeken op papier, de

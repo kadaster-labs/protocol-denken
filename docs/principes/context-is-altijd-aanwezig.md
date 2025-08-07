@@ -1,3 +1,6 @@
+---
+title: Context is altijd aanwezig
+---
 # Principe: context is altijd aanwezig
 
 *Contextvrije gegevens (data) bestaan niet - elk gegeven heeft betekenis binnen een specifieke context*
