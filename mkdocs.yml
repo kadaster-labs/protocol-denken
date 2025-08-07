@@ -12,6 +12,12 @@ nav:
   - taal-en-semantiek.md
   - automatisering.md
   - oplossingen.md
+  - Principes:
+    - principes/index.md
+    - principes/context-is-altijd-aanwezig.md
+    - principes/digitaal-als-fundament.md
+    - principes/focus-op-verandering.md
+    - principes/meerdere-views-standaard.md
   - Voorbeelden:
     - voorbeelden/index.md
     - voorbeelden/sensrnet.md
