@@ -2,40 +2,62 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## Important Instructions
+
+- **NO Claude References**: Never add Claude Code references like "Generated with Claude Code" or "Co-Authored-By: Claude" to commit messages or documentation. Follow standard development practices without self-attribution.
+
 ## Overzicht
 
 Dit is een documentatieproject genaamd "Protocol-denken" - een conceptueel raamwerk voor de toekomst van de Digitale Overheid ontwikkeld door het Emerging Technology Center van het Kadaster. Het project is een statische documentatiesite gebouwd met MkDocs Material die concepten verkent rondom digitale transformatie, data-uitwisselingsprotocollen, event sourcing en open source samenwerking in overheidscontexten.
 
 ## Commando's
 
-### Lokale Ontwikkeling
-Start de MkDocs ontwikkelserver:
-```bash
-docker run --rm -it -p 8000:8000 -v ${PWD}:/docs squidfunk/mkdocs-material
-```
-Dit serveert de documentatie op http://localhost:8000 met live reload.
+### Multi-language Development
+Dit project ondersteunt zowel Nederlands als Engels via aparte configuraties:
 
-### Documentatie Bouwen
-De documentatie wordt automatisch gebouwd en gedeployed via GitHub Pages. Voor handmatig bouwen:
+**Lokale ontwikkeling:**
 ```bash
-docker run --rm -v ${PWD}:/docs squidfunk/mkdocs-material build
+# Bouw beide taalversies
+./build-local.sh
+
+# Start lokale server 
+./serve-local.sh
 ```
+
+**Handmatig bouwen:**
+```bash
+# Nederlandse versie
+docker run --rm -v ${PWD}:/docs --entrypoint="" squidfunk/mkdocs-material:latest sh -c "pip install -r requirements.txt && mkdocs build -f mkdocs.nl.yml"
+
+# Engelse versie  
+docker run --rm -v ${PWD}:/docs --entrypoint="" squidfunk/mkdocs-material:latest sh -c "pip install -r requirements.txt && mkdocs build -f mkdocs.en.yml"
+```
+
+**Test URLs:**
+- Language selector: http://localhost:8000
+- Nederlandse site: http://localhost:8000/nl/
+- Engelse site: http://localhost:8000/en/
 
 ## Architectuur
 
-### Projectstructuur
-- `docs/` - Hoofddocumentatie-inhoud in Markdown
-  - `index.md` - Homepage die protocol-denken concepten introduceert
-  - Individuele onderwerppagina's (automatisering.md, context.md, etc.)
-  - `voorbeelden/` - Praktijkvoorbeelden (SensRNet, KOERS)
-  - `achtergrond/` - Achtergrondconcepten (event sourcing, agile, open source)
-  - `images/` - Diagrammen en illustraties
-  - `css/project.css` - Aangepaste styling
-- `overrides/` - MkDocs thema-aanpassingen
+### Projectstructuur (Multi-language)
+- `docs/` - Documentatie-inhoud georganiseerd per taal
+  - `nl/` - Nederlandse content
+    - `index.md` - Nederlandse homepage
+    - Alle Nederlandse pagina's en assets
+  - `en/` - Engelse content (vertalingen + placeholders)
+    - `index.md` - Engelse homepage
+    - Alle Engelse pagina's en assets
+- `overrides/` - MkDocs thema-aanpassingen (gedeeld)
   - `main.html` - Aangepast template met Kadaster branding
   - `assets/` - Aangepaste assets zoals logo's
-- `mkdocs.yml` - MkDocs configuratie
+- `mkdocs.nl.yml` - Nederlandse site configuratie
+- `mkdocs.en.yml` - Engelse site configuratie  
+- `index.html` - Language selector met auto-redirect
 - `requirements.txt` - Python dependencies (mkdocs-material)
+- `build-local.sh` - Script voor lokaal bouwen beide talen
+- `serve-local.sh` - Script voor lokale preview
+- `.github/workflows/deploy.yml` - Multi-language GitHub Pages deployment
 
 ### Inhoudorganisatie
 De documentatie volgt een logische stroom van probleem naar oplossing:
