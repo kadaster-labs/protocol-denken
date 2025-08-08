@@ -1,0 +1,61 @@
+site_name: Denken in protocollen
+docs_dir: docs/nl
+site_dir: site/nl
+site_url: https://kadaster-labs.github.io/protocol-denken/nl/
+repo_url: https://github.com/kadaster-labs/protocol-denken
+edit_uri: edit/main/docs/nl/
+nav:
+  - index.md
+  - papier-naar-digitaal.md
+  - ontstaan-van-data.md
+  - context.md
+  - taal-en-semantiek.md
+  - automatisering.md
+  - oplossingen.md
+  - Principes:
+    - principes/index.md
+    - principes/digitaal-als-fundament.md
+    - principes/context-is-altijd-aanwezig.md
+    - principes/focus-op-verandering.md
+    - principes/meerdere-views-standaard.md
+    - principes/open-samenwerking.md
+  - Voorbeelden:
+    - voorbeelden/index.md
+    - voorbeelden/sensrnet.md
+    - voorbeelden/koers.md
+  - Achtergrond:
+    - achtergrond/index.md
+    - achtergrond/agile.md
+    - achtergrond/event-sourcing.md
+    - achtergrond/open-source.md
+extra_css:
+  - css/project.css
+theme:
+  name: material
+  custom_dir: overrides
+  palette:
+    primary: custom
+  language: nl
+  features:
+    - navigation.footer
+    - navigation.indexes
+    - navigation.instant  
+    - navigation.top
+    - navigation.tracking
+    - toc.follow
+  icon:
+    logo: material/play-network
+extra:
+  alternate:
+    - name: Nederlands
+      link: /nl/
+      lang: nl
+    - name: English
+      link: /en/
+      lang: en
+markdown_extensions:
+  - attr_list
+  - footnotes
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
