@@ -119,3 +119,11 @@ De site is geconfigureerd voor GitHub Pages deployment:
 - Bron repository: https://github.com/kadaster-labs/protocol-denken
 - Gepubliceerde URL: https://kadaster-labs.github.io/protocol-denken/
 - Edit links wijzen naar de main branch voor eenvoudige bijdragen
+
+## Work log
+
+Dit is de work log waar we samen nog aan moeten werken:
+
+- [ ] Pagina's van het Nederlands in het Engels vertalen
+- [ ] Lokale build verbeteren zodat er één build ontstaat of tenminste (weer) een live view
+- [ ] Pull Request maken en verwerken en controleren of de GitHub Actions werken en de gewenste resultaten opleveren
