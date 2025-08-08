@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Protocol Thinking / Denken in protocollen</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            min-height: 100vh; 
+            margin: 0; 
+            background: #f5f5f5; 
+        }
+        .container { 
+            text-align: center; 
+            background: white; 
+            padding: 3rem; 
+            border-radius: 8px; 
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
+        }
+        h1 { 
+            color: #333; 
+            margin-bottom: 2rem; 
+        }
+        .languages { 
+            display: flex; 
+            gap: 1rem; 
+            justify-content: center; 
+        }
+        .lang-button { 
+            display: block; 
+            padding: 1rem 2rem; 
+            text-decoration: none; 
+            background: #1976d2; 
+            color: white; 
+            border-radius: 4px; 
+            transition: background 0.3s; 
+        }
+        .lang-button:hover { 
+            background: #1565c0; 
+        }
+        .redirect-notice {
+            color: #666;
+            font-size: 0.9em;
+            margin-top: 1rem;
+        }
+        .countdown {
+            font-weight: bold;
+            color: #1976d2;
+        }
+    </style>
+    <script>
+        // Auto-redirect based on browser locale
+        function autoRedirect() {
+            // Check if user explicitly wants to see language selector (URL param)
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.get('lang') === 'select') {
+                return; // Don't redirect, show selector
+            }
+            
+            // Detect browser language
+            const browserLang = navigator.language || navigator.userLanguage;
+            const isNL = browserLang.toLowerCase().startsWith('nl');
+            
+            // Redirect based on locale
+            const targetUrl = isNL ? './nl/' : './en/';
+            const langName = isNL ? 'Nederlands' : 'English';
+            
+            // Show redirect notice
+            const notice = document.getElementById('redirect-notice');
+            const countdown = document.getElementById('countdown');
+            notice.style.display = 'block';
+            
+            let count = 3;
+            countdown.textContent = count;
+            
+            const timer = setInterval(() => {
+                count--;
+                if (count > 0) {
+                    countdown.textContent = count;
+                } else {
+                    clearInterval(timer);
+                    window.location.href = targetUrl;
+                }
+            }, 0);
+        }
+        
+        // Run auto-redirect when page loads
+        window.onload = autoRedirect;
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Protocol Thinking<br><small>Denken in protocollen</small></h1>
+        <div id="redirect-notice" class="redirect-notice" style="display: none;">
+            Redirecting in <span id="countdown" class="countdown">3</span> seconds based on your browser language...
+            <br><br>
+        </div>
+        <p>Choose your language / Kies je taal:</p>
+        <div class="languages">
+            <a href="./nl/" class="lang-button">🇳🇱 Nederlands</a>
+            <a href="./en/" class="lang-button">🇺🇸 English</a>
+        </div>
+        <p style="margin-top: 2rem; font-size: 0.8em; color: #888;">
+            <a href="?lang=select" style="color: #1976d2;">Always show language selector</a>
+        </p>
+    </div>
+</body>
+</html>

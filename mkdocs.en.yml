@@ -1,9 +1,9 @@
-site_name: Denken in protocollen
-docs_dir: docs
-site_dir: site
-site_url: https://kadaster-labs.github.io/protocol-denken/
+site_name: Protocol Thinking
+docs_dir: docs/en
+site_dir: site/en
+site_url: https://kadaster-labs.github.io/protocol-denken/en/
 repo_url: https://github.com/kadaster-labs/protocol-denken
-edit_uri: edit/main/docs/
+edit_uri: edit/main/docs/en/
 nav:
   - index.md
   - papier-naar-digitaal.md
@@ -12,18 +12,18 @@ nav:
   - taal-en-semantiek.md
   - automatisering.md
   - oplossingen.md
-  - Principes:
+  - Principles:
     - principes/index.md
     - principes/digitaal-als-fundament.md
     - principes/context-is-altijd-aanwezig.md
     - principes/focus-op-verandering.md
     - principes/meerdere-views-standaard.md
     - principes/open-samenwerking.md
-  - Voorbeelden:
+  - Examples:
     - voorbeelden/index.md
     - voorbeelden/sensrnet.md
     - voorbeelden/koers.md
-  - Achtergrond:
+  - Background:
     - achtergrond/index.md
     - achtergrond/agile.md
     - achtergrond/event-sourcing.md
@@ -35,7 +35,7 @@ theme:
   custom_dir: overrides
   palette:
     primary: custom
-  language: nl
+  language: en
   features:
     - navigation.footer
     - navigation.indexes
@@ -45,6 +45,14 @@ theme:
     - toc.follow
   icon:
     logo: material/play-network
+extra:
+  alternate:
+    - name: Nederlands
+      link: /nl/
+      lang: nl
+    - name: English
+      link: /en/
+      lang: en
 markdown_extensions:
   - attr_list
   - footnotes
