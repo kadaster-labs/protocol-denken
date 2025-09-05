@@ -1,0 +1,25 @@
+{
+  "name": "protocol-denken",
+  "version": "1.0.0",
+  "description": "Een conceptueel raamwerk voor de toekomst van de Digitale Overheid ontwikkeld door het Emerging Technology Center van het Kadaster",
+  "scripts": {
+    "lint:md": "markdownlint docs/**/*.md --config .markdownlint.json",
+    "lint:md:fix": "markdownlint docs/**/*.md --config .markdownlint.json --fix",
+    "lint:md:spacing": "markdownlint docs/**/*.md --config .markdownlint-spacing.json",
+    "lint:md:spacing:fix": "markdownlint docs/**/*.md --config .markdownlint-spacing.json --fix",
+    "lint:md:all": "markdownlint **/*.md --config .markdownlint.json --ignore node_modules",
+    "lint:md:all:fix": "markdownlint **/*.md --config .markdownlint.json --fix --ignore node_modules",
+    "lint:md:all:spacing": "markdownlint **/*.md --config .markdownlint-spacing.json --ignore node_modules",
+    "lint:md:all:spacing:fix": "markdownlint **/*.md --config .markdownlint-spacing.json --fix --ignore node_modules"
+  },
+  "packageManager": "pnpm@8.0.0",
+  "devDependencies": {
+    "markdownlint-cli": "^0.37.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kadaster-labs/protocol-denken.git"
+  },
+  "author": "Kadaster Labs",
+  "license": "MIT"
+}

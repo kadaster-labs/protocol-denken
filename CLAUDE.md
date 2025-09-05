@@ -21,6 +21,26 @@ De documentatie wordt automatisch gebouwd en gedeployed via GitHub Pages. Voor h
 docker run --rm -v ${PWD}:/docs squidfunk/mkdocs-material build
 ```
 
+### Markdown Linting
+Controleer en fix markdown formatting issues:
+```bash
+# Volledige lint check (spacing + stijl)
+pnpm run lint:md
+pnpm run lint:md:fix
+
+# Alleen spacing regels checken
+pnpm run lint:md:spacing  
+pnpm run lint:md:spacing:fix
+
+# Alle markdown files in project
+pnpm run lint:md:all
+pnpm run lint:md:all:fix
+
+# Direct met markdownlint (geen pnpm install nodig):
+markdownlint docs/**/*.md --config .markdownlint.json --fix
+markdownlint docs/**/*.md --config .markdownlint-spacing.json --fix
+```
+
 ## Architectuur
 
 ### Projectstructuur
@@ -68,6 +88,7 @@ Bij het werken met de documentatie:
 - Gebruik Material Design conventies voor opmaak
 - Behoud de academische maar toegankelijke toon uit bestaande inhoud
 - Voorbeelden moeten waar mogelijk betrekking hebben op Nederlandse overheid/Kadaster contexten
+- **Verplicht**: Run `markdownlint docs/**/*.md --config .markdownlint.json --fix` na markdown edits
 
 ## Principe-structuur
 
