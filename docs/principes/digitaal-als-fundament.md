@@ -49,6 +49,7 @@ Digitaal fundament en protocol-denken aanpak:
 ### Voorbeeld 1: Huwelijksregistratie
 
 **Traditioneel (papier fundament):**
+
 ```
 1. Papieren formulier "aangifte huwelijk"
 2. Ambtenaar neemt gegevens over naar computersysteem
@@ -56,9 +57,11 @@ Digitaal fundament en protocol-denken aanpak:
 4. Papieren formulier wordt gearchiveerd
 5. Bij opvragen: Computer print "huwelijksakte" (afschrift) of kopie maken van papieren akte
 ```
+
 **Problemen**: Dubbele vastlegging, papier als bron betekent verlies bij brand/verlies.
 
 **Digitaal fundament:**
+
 ```
 1. Digitaal proces "registreer huwelijk"
 2. Directe validatie (zijn beide personen ongehuwd? juiste leeftijd?)
@@ -67,11 +70,13 @@ Digitaal fundament en protocol-denken aanpak:
 5. Huwelijksakte = digitale view/document
 6. Papieren afdruk indien gewenst (niet als primaire bron)
 ```
+
 **Voordelen**: Eén bron, automatische validatie, directe koppelingen, geen verlies mogelijk.
 
 ### Voorbeeld 2: Bouwvergunning
 
 **Traditioneel (papier fundament):**
+
 ```
 1. Papieren aanvraag met tekeningen
 2. Ambtenaar controleert handmatig tegen bestemmingsplan (ook papier)
@@ -81,6 +86,7 @@ Digitaal fundament en protocol-denken aanpak:
 ```
 
 **Digitaal fundament:**
+
 ```
 1. Digitale aanvraag met 3D model, BIM en CAD bestanden
 2. Automatische toets tegen digitaal bestemmingsplan
@@ -95,6 +101,7 @@ Digitaal fundament en protocol-denken aanpak:
 **Situatie**: Sommige wetten vereisen nog papieren ondertekening.
 
 **Fout (papier leidend maken):**
+
 ```
 1. Heel proces op papier vanwege handtekening-vereiste
 2. Digitaal wordt bijzaak
@@ -102,6 +109,7 @@ Digitaal fundament en protocol-denken aanpak:
 ```
 
 **Goed (digitaal fundament behouden):**
+
 ```
 1. Heel proces digitaal
 2. Op moment van handtekeningen: papieren view genereren
@@ -115,6 +123,7 @@ Digitaal fundament en protocol-denken aanpak:
 Digitaal als fundament vereist een fundamentele shift: **van "digitaal als kopie van papier" naar "papier als afdruk van digitaal"**.
 
 ### Stap 0: papierdenken (traditioneel, nog steeds herkenbaar)
+
 ```
 // Denken: "We maken een digitale versie van ons papieren proces"
 1. Ontwerp papieren formulier
@@ -122,12 +131,15 @@ Digitaal als fundament vereist een fundamentele shift: **van "digitaal als kopie
 3. Print resultaat uit voor archief
 4. Papier blijft leidend
 ```
+
 **Probleem**: 
+
 - Digitaal wordt beperkt door papier mogelijkheden
 - Geen gebruik van digitale voordelen (validatie, berekeningen, links)
 - Dubbele vastlegging en foutgevoeligheid
 
 ### Stap 1: digitale optimalisatie (bekende situatie anno 2025)
+
 ```
 // Denken: "We maken het digitale proces beter dan papier"
 1. Bouw echte digitale workflows
@@ -135,11 +147,13 @@ Digitaal als fundament vereist een fundamentele shift: **van "digitaal als kopie
 3. Papier alleen voor wettelijke vereisten
 4. Digitaal wordt leidend
 ```
+
 **Probleem**: Nog steeds hybride - soms leidend digitaal, soms papier.
 
 **Verbetering**: Digitale voordelen worden benut, maar inconsistent.
 
 ### Stap 2: digitaal fundament denken
+
 ```
 // Denken: "We ontwerpen voor digitaal, papier is een view"
 1. Alle gegevens zijn primair digitaal
@@ -147,9 +161,11 @@ Digitaal als fundament vereist een fundamentele shift: **van "digitaal als kopie
 3. Menselijke tussenkomst op elk digitaal punt mogelijk
 4. Publieke waarden ingebouwd in digitaal ontwerp
 ```
+
 **Doorbraak**: Digitaal wordt het natuurlijke domein, papier een hulpmiddel.
 
 ### Waarom stap 2 de oplossing is
+
 - **Onbeperkte mogelijkheden**: Geen papier-beperkingen op wat mogelijk is
 - **Consistentie**: Eén bron van waarheid (digitaal), meerdere presentaties
 - **Schaalbaarheid**: Nieuwe digitale services zijn eenvoudig toe te voegen
@@ -171,16 +187,19 @@ Digitaal als fundament vereist een fundamentele shift: **van "digitaal als kopie
 Digitaal als fundament is een **voorwaarde** voor [protocol-denken](../index.md). Zonder digitaal fundament kunnen moderne protocollen niet bestaan omdat:
 
 ### Protocollen vereisen digitale infrastructuur
+
 - **Dikke protocollen**: [Protocol-denken](../index.md) gaat naar protocollen die validatie, governance en business logica bevatten - dit kan alleen digitaal
 - **Netwerk-effecten**: [Netwerken van datastromen](../oplossingen.md#netwerken--datastromen) ontstaan alleen als alle deelnemers digitaal werken
 - **Automatisering**: Protocollen kunnen alleen automatisch afgedwongen worden in digitale omgeving
 
 ### Gebeurtenissen maken protocollen mogelijk over organisaties
+
 - **Asynchrone samenwerking**: [Focus op verandering](focus-op-verandering.md) zorgt dat organisaties kunnen samenwerken zonder real-time afhankelijkheden
 - **Causaliteit behoud**: Gebeurtenissen bewaren tijdsorde en context, cruciaal voor inter-organisatie protocollen
 - **Robuustheid**: Protocollen kunnen werken ondanks netwerkvertragingen en verschillende verwerkingssnelheden
 
 ### Digitale context maakt rijke protocollen mogelijk
+
 - **Contextbehoud**: Digitale systemen kunnen de volledige [context](context-is-altijd-aanwezig.md) van gebeurtenissen vastleggen en doorgeven
 - **Meerdere perspectieven**: [Meerdere views](meerdere-views-standaard.md) voor verschillend gebruik, binnen organisatie en over organisatiegrenzen heen, gecoördineerd via protocollen
 - **Open ontwikkeling**: Alleen in [open samenwerking](open-samenwerking.md) kunnen digitale protocollen ontwikkeld worden
@@ -196,28 +215,36 @@ Dit principe is het **fundament** voor alle andere principes:
 ## Waarom dit principe altijd geldt
 
 ### Maatschappelijke realiteit
+
 De samenleving is al digitaal:
+
 - **Burgers**: Bankieren, winkelen, communiceren digitaal
 - **Bedrijven**: Administratie, facturering, logistiek digitaal  
 - **Internationale handel**: Vereist digitale uitwisseling
 - **Jongere generaties**: Kennen papier-eerst niet meer en verwachten directe beantwoording
 
 ### Schaalvoordelen
+
 Digitaal fundament maakt mogelijk:
+
 - **Automatische koppelingen**: Registers kunnen elkaar updaten
 - **Realtime inzicht**: Geen wachten op papieren overdracht
 - **Data-gedreven beleid**: Inzichten uit digitale gegevens
 - **Innovatie**: Nieuwe services op bestaande digitale basis
 
 ### Publieke waarden
+
 Digitaal fundament ondersteunt democratie:
+
 - **Toegankelijkheid**: Digitale diensten altijd bereikbaar
 - **Transparantie**: Gemakkelijker inzicht in overheidshandelen
 - **Effectiviteit**: Snellere, betere dienstverlening
 - **Gelijkheid**: Zelfde service voor iedereen, onafhankelijk van locatie
 
 ### Van dunne naar dikke protocollen
+
 Digitaal fundament maakt de evolutie mogelijk van:
+
 - **Dunne protocollen** (traditioneel internet): Minimale afspraken over transport, business logica in applicaties
 - **Dikke protocollen** ([protocol-denken](../index.md)): Protocollen die validatie, governance en afdwingbare afspraken bevatten
 
@@ -226,18 +253,21 @@ Deze transitie is alleen mogelijk met digitaal als fundament omdat dikke protoco
 ## Implementatie overwegingen
 
 ### Technische aspecten
+
 - **Beveiliging**: Digitale gegevens vereisen robuuste beveiliging
 - **Backup en archivering**: Digitale duurzaamheid langer dan papier
 - **Toegankelijkheid**: Digitale diensten voor iedereen bruikbaar
 - **Standaarden**: Gebruik open, toekomstbestendige formaten
 
 ### Organisatorische aspecten
+
 - **Cultuurverandering**: Medewerkers moeten digitaal denken omarmen
 - **Juridische aanpassingen**: Wetgeving moet digitaal mogelijk maken
 - **Geleidelijke overgang**: Van hybride naar volledig digitaal fundament
 - **Gebruikersondersteuning**: Help mensen bij overgang naar digitaal
 
 ### Maatschappelijke aspecten
+
 - **Digitale inclusie**: Niemand mag worden uitgesloten
 - **Transparantie**: Digitale processen moeten inzichtelijk zijn
 - **Democratische controle**: Digitale systemen moeten controleerbaar blijven

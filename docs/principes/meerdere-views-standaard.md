@@ -46,6 +46,7 @@ API: /personen/{id}/specialistisch -> complete informatie voor experts
 ### Voorbeeld 1: BAG register - verschillende perspectieven op één adres
 
 **Traditioneel BAG - één model:**
+
 ```
 Adres {
   id: "1234AB567",
@@ -65,6 +66,7 @@ Adres {
 ```
 
 **Meerdere views BAG:**
+
 ```
 // Voor postbode (eenvoudig, snel)
 AdresContactView {
@@ -105,6 +107,7 @@ AdresFinancieelView {
 ### Voorbeeld 2: BRP register - verschillende perspectieven op één persoon
 
 **Traditioneel BRP - alles in één:**
+
 ```
 Persoon {
   bsn: "123456789",
@@ -126,6 +129,7 @@ Persoon {
 ```
 
 **Meerdere views BRP:**
+
 ```
 // Voor gemeente (basis contact)  
 PersoonContactView {
@@ -169,6 +173,7 @@ PersoonZorgView {
 **Situatie**: Gemeente krijgt nieuwe taak - energietransitie ondersteuning. Ze hebben nu adresgegevens nodig gecombineerd met eigendomsinformatie.
 
 **Traditionele aanpak**: 
+
 ```
 // Uitbreiding van bestaand model - BREAKING CHANGE
 Adres {
@@ -177,9 +182,11 @@ Adres {
   energieadvies: {...}          // NIEUW - complex object
 }
 ```
+
 **Probleem**: Alle bestaande gebruikers krijgen extra data die ze niet willen.
 
 **Meerdere views aanpak**:
+
 ```
 // Nieuwe view toevoegen - NO BREAKING CHANGE
 AdresEnergietransitieView {
@@ -193,6 +200,7 @@ AdresEnergietransitieView {
   advies: "Dak isoleren, zonnepanelen overwegen"
 }
 ```
+
 **Voordeel**: Gemeente krijgt precies wat ze nodig heeft, bestaande gebruikers merken niets.
 
 ## Mindset shift
@@ -200,6 +208,7 @@ AdresEnergietransitieView {
 Meerdere views vereist een fundamentele shift: **van "één waarheid" naar "meerdere perspectieven op één waarheid"**.
 
 ### Stap 0: één model denken (traditioneel)
+
 ```
 // Denken: "Ik maak één perfect model voor iedereen"
 class Persoon {
@@ -207,40 +216,48 @@ class Persoon {
     burgerlijkeStaat, inkomen, medischeDossier, ...
 }
 ```
+
 **Probleem**:
+
 - Veel gebruikers krijgen irrelevante informatie
 - Privacy concerns - iedereen ziet alles
 - Performance issues - altijd alle data ophalen
 - Inflexibel - wijzigingen raken alle gebruikers
 
 ### Stap 1: filtering denken
+
 ```
 // Denken: "Ik filter het ene model per gebruik"
 API: /personen/{id}?fields=naam,adres
 API: /personen/{id}?view=contact
 ```
+
 **Probleem**: Onderliggende model blijft complex en fragiel.
 
 **Verbetering**: Meer controle over wat wordt getoond, maar geen structurele oplossing.
 
 ### Stap 2: multiple views denken
+
 ```
 // Denken: "Ik maak aparte views per gebruikscontext"
 class ContactView { naam, adres, telefoon }
 class JuridischView { naam, burgerlijkeStaat, gezinssamenstelling }
 class VolledigView { alle informatie }
 ```
+
 **Probleem**: Nog steeds geen expliciete synchronisatie tussen views.
 
 **Verbetering**: Context-specifieke structuren, maar synchronisatie is ad-hoc.
 
 ### Stap 3: views als projecties denken
+
 ```
 // Denken: "Views zijn bewuste projecties van events naar specifieke doelen"
 ContactView = projectie(PersonenEvents, optimizedFor: "dagelijks contact")
 JuridischView = projectie(PersonenEvents, optimizedFor: "juridische procedures") 
 AnalyseView = projectie(PersonenEvents, optimizedFor: "statistische analyse")
 ```
+
 **Doorbraak**: Expliciete relatie tussen bron (events) en views, met heldere doelen.
 
 ## Voordelen
@@ -257,19 +274,25 @@ AnalyseView = projectie(PersonenEvents, optimizedFor: "statistische analyse")
 Meerdere views is **essentieel** voor [protocol-denken](../index.md) omdat moderne protocollen fundamenteel gaan over het aanbieden van verschillende perspectieven op dezelfde data:
 
 ### Protocollen zijn view-coordinators
+
 [Dikke protocollen](../index.md) coördineren niet alleen data-uitwisseling, maar ook welke views gebruikt worden:
+
 - **Protocol-native views**: Specificaties definiëren welke views beschikbaar zijn voor elk protocol
 - **Organisatie-specifieke views**: Elke organisatie kan zijn eigen optimale view definiëren binnen protocol-afspraken
 - **Evolutionary protocols**: Nieuwe organisaties kunnen deelnemen door nieuwe views toe te voegen zonder bestaande te breken
 
 ### Views maken schaalbare netwerken mogelijk
+
 [Netwerken van datastromen](../oplossingen.md#netwerken--datastromen) werken alleen met meerdere views:
+
 - **Hub-and-spoke breaking**: Eén centraal model schaalt niet naar vele organisaties met verschillende behoeften
 - **Federated views**: Elke organisatie biedt zijn eigen views aan, gecoordineerd via protocollen
 - **View discovery**: Protocollen maken het mogelijk om te ontdekken welke views beschikbaar zijn
 
 ### Views ondersteunen dikke protocollen
+
 Meerdere views maken [dikke protocollen](../index.md) praktisch mogelijk:
+
 - **Business rule distribution**: Verschillende views kunnen verschillende validatieregels hebben
 - **Context preservation**: Views behouden de juiste context voor elke organisatie
 - **Governance distribution**: Verschillende organisaties kunnen verschillende compliance-views hebben
@@ -283,21 +306,27 @@ Meerdere views maken [dikke protocollen](../index.md) praktisch mogelijk:
 ## Waarom dit principe altijd geldt
 
 ### Meerdere gebruikers = meerdere behoeften
+
 Elk register heeft altijd verschillende stakeholders:
+
 - **Interne gebruikers**: Verschillende afdelingen, verschillende behoeften
 - **Externe afnemers**: Verschillende organisaties, verschillende use cases
 - **Burgers**: Verschillende informatiebehoefte dan professionals
 - **Applicaties**: API's hebben andere structuren nodig dan gebruikersinterfaces
 
 ### Evolutie is onvermijdelijk
+
 Systemen veranderen altijd:
+
 - **Nieuwe wetgeving**: Vereist nieuwe informatie-elementen
 - **Technische ontwikkelingen**: Maken nieuwe use cases mogelijk
 - **Organisatieveranderingen**: Leiden tot andere informatiebehoeften
 - **Gebruikersfeedback**: Vraagt om andere structuren
 
 ### Performance en privacy vereisen specialisatie
+
 Eén model kan nooit optimaal zijn voor alles:
+
 - **Privacy**: Verschillende autorisatieniveaus vereisen verschillende views
 - **Performance**: Verschillende use cases hebben andere snelheidseisen
 - **Cachingstrategie**: Views kunnen individueel geoptimaliseerd worden
@@ -306,16 +335,19 @@ Eén model kan nooit optimaal zijn voor alles:
 ## Implementatie overwegingen
 
 ### Synchronisatie strategieën:
+
 - **Event-driven updates**: Views worden bijgewerkt door events
 - **Eventual consistency**: Views kunnen tijdelijk inconsistent zijn met de bron (events) - in gedistribueerde cloud infrastructuren is eventual consistency inherent een gegeven, niet een keuze
 - **Transactionele updates**: Alleen mogelijk binnen één database/service boundary - over service grenzen heen is eventual consistency onvermijdelijk  
 
 ### Performance overwegingen:
+
 - **Geoptimaliseerde storage**: Elke view kan zijn eigen optimale datastructuur hebben
 - **Caching strategies**: Views kunnen individueel gecached worden
 - **Index optimization**: Elke view krijgt de juiste indexes voor zijn use case
 
 ### Beheer complexiteit:
+
 - **View lifecycle**: Duidelijke procedures voor toevoegen, wijzigen, verwijderen van views
 - **Documentation**: Elke view heeft heldere documentatie over doel en gebruik
 - **Monitoring**: Synchronisatie tussen views moet gecontroleerd worden - in gedistribueerde systemen wordt monitoring inherent exponentieel complexer met eigen health checks, latency metrics, en consistency monitoring per view

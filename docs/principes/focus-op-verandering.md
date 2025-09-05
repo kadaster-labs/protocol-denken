@@ -43,6 +43,7 @@ EVENT: HuwelijkGeregistreerdMetNaamkeuze(manId: 123, vrouwId: 456, datum: 2024-0
 ### Voorbeeld 1: Traditioneel vs. Verandering-gericht
 
 **Traditioneel BAG register:**
+
 ```
 Adres ID: 12345
 Straat: Hoofdstraat 1
@@ -51,6 +52,7 @@ Status: Bestaand
 ```
 
 **Verandering-gericht BAG register:**
+
 ```
 Events voor Adres 12345:
 - AdresGeregistreerd(straat: "Hoofdstraat 1", woonplaats: "Amsterdam", datum: 2020-01-01)
@@ -62,10 +64,12 @@ Events voor Adres 12345:
 **Probleem scenario:** Jan Jansen en Marie de Wit trouwen. Marie neemt de naam Jansen aan. Later blijkt de huwelijksdatum verkeerd geregistreerd.
 
 **Traditionele aanpak:**
+
 1. UPDATE naam → 'de Wit' wordt 'Jansen', geen geschiedenis
 2. Correctie → UPDATE huwelijksdatum, oorspronkelijke fout verdwenen
 
 **Verandering-gerichte aanpak:**
+
 1. `RegistreerHuwelijk(manId: 123, vrouwId: 456, datum: 2024-01-15, gekozenAchternaam: 'Jansen')` 
 2. Event: `HuwelijkGeregistreerdMetNaamkeuze` → complete business realiteit in één event
 3. `CorrigeerHuwelijksdatum(manId: 123, vrouwId: 456, oorspronkelijkeDatum: 2024-01-15, nieuweDate: 2024-01-20)` 
@@ -93,45 +97,55 @@ Events voor Adres 12345:
 Focus op verandering vereist een fundamentele shift: **van state denken naar event denken**. Hier is de typische denkevolutie:
 
 ### Stap 0: state denken (traditioneel)
+
 ```
 // Denken: "Ik update de huidige toestand"
 UPDATE personen SET achternaam = 'Jansen' WHERE id = 456
 UPDATE huwelijken SET datum = '2024-01-15' WHERE man_id = 123 AND vrouw_id = 456
 ```
+
 **Probleem**: 
+
 - Geen geschiedenis - oude waarden zijn weg
 - Geen context - waarom werd dit gewijzigd?
 - Geen atomiciteit - wat als één UPDATE faalt?
 - Geen causale relatie - huwelijk en naamswijziging lijken onafhankelijk
 
 ### Stap 1: object denken met events
+
 ```
 // Denken: "Ik heb een huwelijk object en dan wijzig ik een naam"
 EVENT: HuwelijkGeregistreerd(manId: 123, vrouwId: 456, datum: 2024-01-15)
 EVENT: AchternaamGewijzigd(persoonId: 456, nieuweAchternaam: 'Jansen', oorzaak: 'Huwelijk')
 ```
+
 **Probleem**: Twee aparte events voor één business actie. Wat als één event faalt?
 
 **Verbetering**: Events bewaren geschiedenis, maar nog steeds object-georiënteerd denken.
 
 ### Stap 2: object denken met referenties
+
 ```
 // Denken: "Ik verwijs naar het huwelijk object"
 EVENT: HuwelijkGeregistreerd(manId: 123, vrouwId: 456, datum: 2024-01-15)
 EVENT: AchternaamGewijzigdDoorHuwelijk(persoonId: 456, nieuweAchternaam: 'Jansen', huwelijkId: 789)
 ```
+
 **Probleem**: Nog steeds afhankelijkheid tussen events. Event heeft referentie naar ander event nodig.
 
 **Verbetering**: Expliciete relaties, maar nog steeds geen atomiciteit.
 
 ### Stap 3: event denken
+
 ```
 // Denken: "Wat gebeurde er werkelijk? Het complete verhaal in één event"
 EVENT: HuwelijkGeregistreerdMetNaamkeuze(manId: 123, vrouwId: 456, datum: 2024-01-15, gekozenAchternaam: 'Jansen')
 ```
+
 **Doorbraak**: Eén event beschrijft de complete business realiteit. Self-contained en atomisch.
 
 ### Waarom stap 3 de beste oplossing is
+
 - **Atomiciteit**: Alles gebeurt samen of helemaal niet
 - **Self-contained**: Event vertelt het hele verhaal
 - **Geen afhankelijkheden**: Event handlers zijn eenvoudiger
@@ -150,19 +164,25 @@ EVENT: HuwelijkGeregistreerdMetNaamkeuze(manId: 123, vrouwId: 456, datum: 2024-0
 Focus op verandering is het **hart** van [protocol-denken](../index.md). Zonder gebeurtenissen kunnen organisaties niet effectief samenwerken omdat:
 
 ### Protocollen zijn fundamenteel event-driven
+
 Moderne inter-organisatie protocollen zijn niet gebaseerd op "data delen" maar op "gebeurtenissen delen":
+
 - **Tijdsvolgorde cruciaal**: Wie deed wat wanneer bepaalt de uitkomst van protocollen
 - **Causaliteit behoud**: Oorzaak-gevolg relaties tussen organisaties blijven bewaard
 - **Asynchrone samenwerking**: Organisaties kunnen reageren op hun eigen tempo zonder real-time synchronisatie
 
 ### State-based protocollen falen bij schaal
+
 Traditionele "snapshot sharing" protocollen breken bij meerdere organisaties:
+
 - **Race conditions**: Verschillende organisaties wijzigen dezelfde data tegelijk
 - **Inconsistente views**: Elk systeem heeft andere "huidige toestand"
 - **Geen conflict resolution**: Hoe bepaal je welke wijziging leidend is?
 
 ### Events maken dikke protocollen mogelijk  
+
 [Protocol-denken](../index.md) gaat naar protocollen die business regels afdwingen:
+
 - **Event validation**: Protocollen kunnen gebeurtenissen valideren voordat ze geaccepteerd worden
 - **Governance via events**: Alle besluiten en wijzigingen zijn traceerbaar
 - **Distributed consensus**: Gebeurtenissen creëren overeenstemming tussen organisaties
@@ -178,35 +198,44 @@ Traditionele "snapshot sharing" protocollen breken bij meerdere organisaties:
 Verandering is de enige constante in overheidsregisters. State denken maskeert deze werkelijkheid:
 
 ### Elk register verandert continu
+
 Registers zijn nooit statisch:
+
 - **BRP**: Mensen verhuizen, trouwen, overlijden, krijgen kinderen
 - **BAG**: Adressen ontstaan, wijzigen, verdwijnen, worden hernummerd  
 - **Handelsregister**: Bedrijven starten, fuseren, wijzigen activiteiten, stoppen
 - **Kadaster**: Eigendom wisselt, percelen worden gesplitst, grenzen wijzigen
 
 ### Elke wijziging heeft context
+
 Iedere verandering gebeurt om een reden:
+
 - **Wie** heeft de wijziging aangevraagd of vastgesteld?
 - **Waarom** is deze wijziging doorgevoerd?
 - **Wanneer** is deze wijziging van kracht geworden?
 - **Op basis waarvan** is deze beslissing genomen?
 
 ### Verantwoording is wettelijke verplichting
+
 Overheidsregisters moeten kunnen verantwoorden:
+
 - **Rechtmatigheid**: Was deze wijziging toegestaan?
 - **Doelmatigheid**: Was deze wijziging noodzakelijk?
 - **Controleerbaarheid**: Kan deze wijziging worden getoetst?
 - **Herstelbaarheid**: Kan een fout worden rechtgezet?
 
 ### Nuance: vastgestelde gegevens in protocollen
+
 Sommige gegevens zijn "immutable by nature" maar ook bij deze speelt verandering een rol in protocollen:
 
 **Immutable content, dynamic protocol context**:
+
 - **Luchtfoto's**: Inhoud wijzigt niet, maar publicatie, validatie, en gebruik via protocollen wel
 - **Meetresultaten**: Waarde is vast, maar certificering, kwaliteit, en geaccepteerdheid evolueren
 - **Juridische documenten**: Tekst is vast, maar status (concept→definitief→ingetrokken) wijzigt via protocollen
 
 In protocollen is ook voor "immutable" gegevens de **gebeurtenis van vastleggen** cruciaal:
+
 - **"Foto gemaakt"**: Wanneer, door wie, met welke apparatuur, voor welk doel?
 - **"Meting uitgevoerd"**: Door welk lab, volgens welke methode, met welke nauwkeurigheid?
 - **"Document ondertekend"**: Door wie, wanneer, onder welke omstandigheden?
@@ -216,18 +245,21 @@ In protocollen is ook voor "immutable" gegevens de **gebeurtenis van vastleggen*
 ## Implementatie overwegingen
 
 ### Voor protocol-denken specifiek
+
 - **Event schemas**: Gebeurtenissen tussen organisaties vereisen gestandaardiseerde formats
 - **Temporal ordering**: Tijdsstempels moeten synchroon zijn tussen organisaties (bijv. NTP)
 - **Event versioning**: Protocollen moeten kunnen evolueren door expliciete versionering en regels voor het oplossen van verschillen
 - **Conflict resolution**: Heldere regels voor wanneer gebeurtenissen conflicteren
 
 ### Technische uitdagingen
+
 - **Storage overhead**: Events nemen meer ruimte in, maar bieden veel meer mogelijkheden
 - **Query complexiteit**: [Meerdere views](meerdere-views-standaard.md) worden gegenereerd uit event streams
 - **Performance**: Event sourcing vereist goede tooling en caching strategieën
 - **Cross-boundary events**: Gebeurtenissen die organisatiegrenzen overschrijden vereisen extra validatie
 
 ### Organisatorische aspecten
+
 - **Event governance**: Wie mag welke gebeurtenissen publiceren?
 - **Schema evolution**: Hoe evolueren event formats zonder systemen te breken?
 - **Migratie**: Bestaande state-based systemen incrementeel naar event-sourcing

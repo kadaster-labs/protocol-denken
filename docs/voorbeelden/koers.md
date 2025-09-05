@@ -61,5 +61,4 @@ het ook mogelijk voor het Kadaster om met een andere partij mee te kijken naar d
 BRK data. Zo ontstaat er een veel beter begrip en validatie dat de BRK data juist wordt gebruikt en
 dat de toepassing in een ander domein juist is. Dát is pas een (rechts)zekerheid! :rocket:
 
-
 ![BRK Remote Store 3rd Party](./koers/brk-remote-store-3rd-party.jpg)

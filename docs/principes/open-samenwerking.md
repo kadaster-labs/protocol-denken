@@ -49,6 +49,7 @@ Open samenwerking aanpak:
 ### Voorbeeld 1: Internet protocollen als inspiratie
 
 **Hoe het internet werkt:**
+
 - **TCP/IP**: Ontwikkeld door ARPANET gemeenschap, niet door één bedrijf
 - **HTTP**: Tim Berners-Lee maakte specificaties publiek beschikbaar
 - **HTML/CSS**: W3C coördineert open standaardisatie met alle partijen
@@ -59,6 +60,7 @@ Open samenwerking aanpak:
 ### Voorbeeld 2: Overheids-scenario - BRP uitwisseling
 
 **Traditioneel (gesloten):**
+
 ```
 1. Ministerie ontwikkelt BRP-interface intern
 2. Gemeenten moeten zich aanpassen aan ministerie-specificaties
@@ -67,6 +69,7 @@ Open samenwerking aanpak:
 ```
 
 **Open samenwerking:**
+
 ```
 1. BRP-protocol commissie met vertegenwoordigers van:
    - Ministerie BZK
@@ -78,12 +81,12 @@ Open samenwerking aanpak:
 4. Wijzigingsproces met impact-analyse en stemming
 ```
 
-
 ## Mindset shift
 
 Open samenwerking vereist een fundamentele shift: **van "wij bepalen" naar "samen ontwikkelen"**:
 
 ### Stap 0: gesloten ontwikkeling (traditioneel)
+
 ```
 // Denken: "Wij weten wat goed is, anderen passen zich aan"
 1. Interne requirements analyse
@@ -91,13 +94,16 @@ Open samenwerking vereist een fundamentele shift: **van "wij bepalen" naar "same
 3. Implementatie door onze leverancier
 4. Anderen moeten aansluiten op onze API
 ```
+
 **Probleem**: 
+
 - Geen begrip van andermans behoeften
 - Resistentie bij andere organisaties
 - Suboptimale oplossingen
 - Langzame adoptie
 
 ### Stap 1: consultatie achteraf
+
 ```
 // Denken: "We vragen feedback op ons ontwerp"
 1. Interne ontwikkeling
@@ -105,11 +111,13 @@ Open samenwerking vereist een fundamentele shift: **van "wij bepalen" naar "same
 3. Feedback verwerken waar mogelijk
 4. Rollout naar anderen
 ```
+
 **Probleem**: Fundamentele ontwerpkeuzes al gemaakt, alleen details aanpasbaar.
 
 **Verbetering**: Anderen krijgen stem, maar beperkt.
 
 ### Stap 2: samenwerking vanaf begin
+
 ```
 // Denken: "We ontwerpen samen wat voor iedereen werkt"
 1. Stakeholder analyse van alle betrokkenen
@@ -117,11 +125,13 @@ Open samenwerking vereist een fundamentele shift: **van "wij bepalen" naar "same
 3. Co-creatie van specificaties
 4. Gedeelde implementatie en governance
 ```
+
 **Probleem**: Traag proces, veel afstemming nodig.
 
 **Verbetering**: Echte samenwerking, betere adoptie.
 
 ### Stap 3: open samenwerking denken
+
 ```
 // Denken: "We creëren een ecosysteem waarin iedereen kan bijdragen"
 1. Open governance structuur
@@ -129,9 +139,11 @@ Open samenwerking vereist een fundamentele shift: **van "wij bepalen" naar "same
 3. Documentatie en tooling voor nieuwe deelnemers
 4. Evolutie door consensus
 ```
+
 **Doorbraak**: Zelfevoluerende protocollen met brede adoptie en vertrouwen.
 
 ### Waarom stap 3 de beste oplossing is
+
 - **Netwerkeffecten**: Meer deelnemers maken protocol waardevoller
 - **Collective intelligence**: Betere oplossingen door diverse input
 - **Snellere adoptie**: Eigenaarschap leidt tot commitment
@@ -151,13 +163,17 @@ Open samenwerking vereist een fundamentele shift: **van "wij bepalen" naar "same
 Open samenwerking is **fundamenteel** voor [protocol-denken](../index.md) omdat dikke protocollen alleen kunnen ontstaan door intensieve samenwerking:
 
 ### Dikke protocollen vereisen consensus
+
 [Dikke protocollen](../index.md) bevatten business logica en governance regels die alleen succesvol zijn bij breed draagvlak:
+
 - **Business rule consensus**: Organisaties moeten overeenstemming bereiken over validatieregels
 - **Governance alignment**: Wie mag wat wijzigen en onder welke voorwaarden
 - **Conflict resolution**: Expliciete procedures voor wanneer organisaties het oneens zijn
 
 ### Netwerken ontstaan door open samenwerking
+
 [Netwerken van datastromen](../oplossingen.md#netwerken--datastromen) kunnen alleen groeien in open ecosystemen:
+
 - **Organic growth**: Nieuwe organisaties kunnen aanhaken zonder permission van bestaande partijen
 - **Federated governance**: Geen centrale autoriteit, maar gedistribueerde besluitvorming
 - **Innovation at edges**: Nieuwe use cases ontstaan bij deelnemers, niet bij centrale partij
@@ -174,19 +190,25 @@ Open samenwerking is **fundamenteel** voor [protocol-denken](../index.md) omdat 
 Open samenwerking is geen "nice-to-have" maar een noodzaak voor werkende inter-organisatie protocollen:
 
 ### Complexiteit vereist samenwerking
+
 Moderne overheidsprocessen zijn te complex voor één organisatie:
+
 - **Domein-overstijgende expertise**: Juridisch, technisch, domeinkennis verspreid over organisaties
 - **Impact analyse**: Wijzigingen hebben gevolgen die één organisatie niet kan overzien
 - **Schaalvereisten**: Protocollen moeten werken voor duizenden implementaties
 
 ### Vertrouwen en legitimatie zijn voorwaarden
+
 Overheidsorganisaties implementeren alleen protocollen die ze vertrouwen en als legitiem ervaren:
+
 - **Transparantie**: Open processen maken controle en verificatie mogelijk
 - **Verantwoordelijkheid**: Duidelijke rollen en besluitvormingslijnen
 - **Voorspelbaarheid**: Betrouwbare procedures voor wijzigingen en evolutie
 
 ### Evolutie vereist flexibiliteit
+
 Protocollen moeten kunnen evolueren met veranderende behoeften:
+
 - **Toekomstbestendigheid**: Onbekende toekomstige use cases moeten mogelijk blijven
 - **Geleidelijke veroudering**: Oude versies moeten blijven werken
 - **Innovatieruimte**: Ruimte voor experimentatie zonder alles te breken
@@ -194,18 +216,21 @@ Protocollen moeten kunnen evolueren met veranderende behoeften:
 ## Implementatie overwegingen
 
 ### Protocol-specifieke aspecten
+
 - **Governance model**: Wie neemt welke beslissingen via welk proces (consensus, stemming, delegatie)?
 - **Conflictoplossing**: Procedures voor meningsverschillen en geschillen
 - **Lidmaatschap**: Criteria voor toetreding en procedures voor vertrek
 - **Evolutie management**: Hoe evolueren specificaties zonder breaking changes?
 
 ### Technische uitdagingen
+
 - **Specificatie tooling**: Tools voor collaboratieve specificatie-ontwikkeling
 - **Versie beheer**: Hoe beheer je evoluerende specificaties?
 - **Test frameworks**: Gedeelde test suites voor protocol compliance
 - **Referentie implementaties**: Wie onderhoudt referentie implementaties?
 
 ### Organisatorische aspecten
+
 - **Resource inzet**: Wie betaalt voor open samenwerking activiteiten?
 - **Tijdsinvestering**: Open processen kosten meer tijd dan unilaterale beslissingen
 - **Cultuurverandering**: Van concurrentie naar samenwerking mindset
