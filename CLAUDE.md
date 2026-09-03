@@ -9,27 +9,38 @@ Dit is een documentatieproject genaamd "Protocol-denken" - een conceptueel raamw
 ## Commando's
 
 ### Lokale Ontwikkeling
+
 Start de MkDocs ontwikkelserver:
+
 ```bash
 docker run --rm -it -p 8000:8000 -v ${PWD}:/docs squidfunk/mkdocs-material
 ```
+
 Dit serveert de documentatie op http://localhost:8000 met live reload.
 
 ### Documentatie Bouwen
+
 De documentatie wordt automatisch gebouwd en gedeployed via GitHub Pages. Voor handmatig bouwen:
+
 ```bash
 docker run --rm -v ${PWD}:/docs squidfunk/mkdocs-material build
 ```
 
-### Markdown Linting
-Controleer en fix markdown formatting issues:
+### Markdown Formatting en Linting
+
+Alinea's worden **niet** handmatig afgebroken met harde line breaks (geen vaste kolombreedte in de brontekst). Een alinea staat op één regel; editors wrappen dit zelf visueel ('soft wrap') naar de beschikbare breedte. Dit wordt afgedwongen met Prettier (`proseWrap: never`, zie `.prettierrc.json`), vóór de markdownlint-stijlcontrole. Emphasis-stijl: _italic_ met underscore (`_italic_`), **bold** met asterisk (`**bold**`) — afgedwongen via MD049/MD050. Voor gecombineerd bold+italic: `**_tekst_**` (nooit `***tekst***`, dat serialiseert Prettier soms corrupt).
+
 ```bash
-# Volledige lint check (spacing + stijl)
+# Stap 1: alinea's uitvouwen naar één regel per alinea (Prettier)
+pnpm run format:md
+pnpm run format:md:check
+
+# Stap 2: stijl fixen (lijst-markers, emphasis, headings, etc.)
 pnpm run lint:md
 pnpm run lint:md:fix
 
 # Alleen spacing regels checken
-pnpm run lint:md:spacing  
+pnpm run lint:md:spacing
 pnpm run lint:md:spacing:fix
 
 # Alle markdown files in project
@@ -41,80 +52,99 @@ markdownlint docs/**/*.md --config .markdownlint.json --fix
 markdownlint docs/**/*.md --config .markdownlint-spacing.json --fix
 ```
 
+**Bekende uitzondering**: mkdocs' `attr_list`-syntax (bijv. `{id="..."}` direct onder een blockquote om er een anker aan te hangen, zoals in `docs/automatisering.md`) kent Prettier niet. Bij het reflowen trekt Prettier zo'n attribuutregel in de voorgaande alinea, waardoor het anker breekt. Controleer na `format:md` handmatig of zulke `{...}`-regels nog op hun eigen regel staan.
+
+**Bekende Prettier-bug**: op een regel met zowel een emoji-shortcode met underscores (bijv. `:white_check_mark:`) als een losse `_emphasis_` kan Prettier's markdown-printer de underscores door elkaar halen en corrumperen tot bijv. `:white*check_mark: ... \_woord*`. Controleer hierop na elke `format:md`-run:
+
+```bash
+grep -rn '[a-zA-Z]\*[a-zA-Z]\|\\_' docs/**/*.md
+```
+
+Een lege uitkomst betekent geen corruptie.
+
 ## Architectuur
 
 ### Projectstructuur
-- `docs/` - Hoofddocumentatie-inhoud in Markdown
-  - `index.md` - Homepage die protocol-denken concepten introduceert
-  - Individuele onderwerppagina's (automatisering.md, context.md, etc.)
-  - `voorbeelden/` - Praktijkvoorbeelden (SensRNet, KOERS)
-  - `achtergrond/` - Achtergrondconcepten (event sourcing, agile, open source)
-  - `images/` - Diagrammen en illustraties
-  - `css/project.css` - Aangepaste styling
-- `overrides/` - MkDocs thema-aanpassingen
-  - `main.html` - Aangepast template met Kadaster branding
-  - `assets/` - Aangepaste assets zoals logo's
-- `mkdocs.yml` - MkDocs configuratie
-- `requirements.txt` - Python dependencies (mkdocs-material)
+
+-   `docs/` - Hoofddocumentatie-inhoud in Markdown
+    -   `index.md` - Homepage die protocol-denken concepten introduceert
+    -   Individuele onderwerppagina's (automatisering.md, context.md, etc.)
+    -   `voorbeelden/` - Praktijkvoorbeelden (SensRNet, KOERS)
+    -   `achtergrond/` - Achtergrondconcepten (event sourcing, agile, open source)
+    -   `images/` - Diagrammen en illustraties
+    -   `css/project.css` - Aangepaste styling
+-   `overrides/` - MkDocs thema-aanpassingen
+    -   `main.html` - Aangepast template met Kadaster branding
+    -   `assets/` - Aangepaste assets zoals logo's
+-   `mkdocs.yml` - MkDocs configuratie
+-   `requirements.txt` - Python dependencies (mkdocs-material)
 
 ### Inhoudorganisatie
+
 De documentatie volgt een logische stroom van probleem naar oplossing:
-1. Historische context van digitalisering (papier-naar-digitaal.md)
-2. Data-oorsprong en semantiek (ontstaan-van-data.md, taal-en-semantiek.md)
-3. Context en automatiseringsconcepten (context.md, automatisering.md)
-4. Voorgestelde oplossingen en visie (oplossingen.md)
-5. Praktijkvoorbeelden en achtergrondtheorie
+
+1.  Historische context van digitalisering (papier-naar-digitaal.md)
+2.  Data-oorsprong en semantiek (ontstaan-van-data.md, taal-en-semantiek.md)
+3.  Context en automatiseringsconcepten (context.md, automatisering.md)
+4.  Voorgestelde oplossingen en visie (oplossingen.md)
+5.  Praktijkvoorbeelden en achtergrondtheorie
 
 ### Thema en Styling
-- Gebruikt MkDocs Material thema met Nederlandse taal
-- Aangepaste Kadaster branding via overrides
-- Navigatiefeatures ingeschakeld (instant loading, tracking, inhoudsopgave)
-- Aangepaste CSS voor organisatie-specifieke styling
-- Material iconen en emoji ondersteuning
+
+-   Gebruikt MkDocs Material thema met Nederlandse taal
+-   Aangepaste Kadaster branding via overrides
+-   Navigatiefeatures ingeschakeld (instant loading, tracking, inhoudsopgave)
+-   Aangepaste CSS voor organisatie-specifieke styling
+-   Material iconen en emoji ondersteuning
 
 ### Kernconcepten
-- **Protocol-denken**: Het kernconceptt van het ontwerpen van "dikke protocollen" voor overheidsdata-uitwisseling
-- **Event Sourcing**: Patroon voor data-integriteit en audit trails
-- **Linked Data APIs**: Moderne benadering van data-interoperabiliteit
-- **Open Source Samenwerking**: Methodologie voor protocolontwikkeling
-- **Digitale Transformatie**: Evolutie van papier-gebaseerde naar digitale processen
+
+-   **Protocol-denken**: Het kernconceptt van het ontwerpen van "dikke protocollen" voor overheidsdata-uitwisseling
+-   **Event Sourcing**: Patroon voor data-integriteit en audit trails
+-   **Linked Data APIs**: Moderne benadering van data-interoperabiliteit
+-   **Open Source Samenwerking**: Methodologie voor protocolontwikkeling
+-   **Digitale Transformatie**: Evolutie van papier-gebaseerde naar digitale processen
 
 ## Contentrichtlijnen
 
 Bij het werken met de documentatie:
-- Inhoud is in het Nederlands (language: nl in config)
-- Handhaaf de conceptuele stroom van historische context naar toekomstvisie
-- Afbeeldingen moeten in `docs/images/` geplaatst worden en relatief gerefereerd
-- Gebruik Material Design conventies voor opmaak
-- Behoud de academische maar toegankelijke toon uit bestaande inhoud
-- Voorbeelden moeten waar mogelijk betrekking hebben op Nederlandse overheid/Kadaster contexten
-- **Verplicht**: Run `markdownlint docs/**/*.md --config .markdownlint.json --fix` na markdown edits
+
+-   Inhoud is in het Nederlands (language: nl in config)
+-   Handhaaf de conceptuele stroom van historische context naar toekomstvisie
+-   Afbeeldingen moeten in `docs/images/` geplaatst worden en relatief gerefereerd
+-   Gebruik Material Design conventies voor opmaak
+-   Behoud de academische maar toegankelijke toon uit bestaande inhoud
+-   Voorbeelden moeten waar mogelijk betrekking hebben op Nederlandse overheid/Kadaster contexten
+-   **Verplicht**: alinea's op één regel houden (geen handmatige line breaks); run `pnpm run format:md` gevolgd door `markdownlint docs/**/*.md --config .markdownlint.json --fix` na markdown edits
 
 ## Principe-structuur
 
 Alle principe-documenten volgen deze gestandaardiseerde structuur:
 
-### Verplichte sectievolgorde:
-1. **Het probleem** - Waarom is dit principe nodig?
-2. **Het principe: [naam]** - Wat is het principe? (met Kernprincipes en Praktische implementatie)
-3. **Voorbeelden** - Concrete uitleg helpt begrip van principe
-4. **Mindset shift** - Denkwijze-evolutie (Stap 0→1→2→3 met problemen/verbeteringen)
-5. **Voordelen** - Nu begrijp je waarom deze voordelen kloppen
-6. **Relatie met protocol-denken** - Specifieke connectie met protocol-denken concepten
-7. **Relatie met andere principes** - Cross-referenties naar andere principes
-8. **Waarom dit principe altijd geldt** - Fundamentele argumenten
-9. **Implementatie overwegingen** - Praktische aspecten en uitdagingen
+### Verplichte sectievolgorde
 
-### Stijlrichtlijnen:
-- Gebruik markdown links: `[tekst](bestand.md)` niet `[[wiki-links]]`
-- Voorbeelden eerst, theorie daarna - helpt begrip
-- "Relatie met protocol-denken" moet specifiek zijn voor dat principe
-- Mindset shift altijd met Stap 0→1→2→3 evolutie
-- Implementatie overwegingen onderverdeeld in: protocol-specifiek, technisch, organisatorisch
+1.  **Het probleem** - Waarom is dit principe nodig?
+2.  **Het principe: [naam]** - Wat is het principe? (met Kernprincipes en Praktische implementatie)
+3.  **Voorbeelden** - Concrete uitleg helpt begrip van principe
+4.  **Mindset shift** - Denkwijze-evolutie (Stap 0→1→2→3 met problemen/verbeteringen)
+5.  **Voordelen** - Nu begrijp je waarom deze voordelen kloppen
+6.  **Relatie met protocol-denken** - Specifieke connectie met protocol-denken concepten
+7.  **Relatie met andere principes** - Cross-referenties naar andere principes
+8.  **Waarom dit principe altijd geldt** - Fundamentele argumenten
+9.  **Implementatie overwegingen** - Praktische aspecten en uitdagingen
+
+### Stijlrichtlijnen
+
+-   Gebruik markdown links: `[tekst](bestand.md)` niet `[[wiki-links]]`
+-   Voorbeelden eerst, theorie daarna - helpt begrip
+-   "Relatie met protocol-denken" moet specifiek zijn voor dat principe
+-   Mindset shift altijd met Stap 0→1→2→3 evolutie
+-   Implementatie overwegingen onderverdeeld in: protocol-specifiek, technisch, organisatorisch
 
 ## Deployment
 
 De site is geconfigureerd voor GitHub Pages deployment:
-- Bron repository: https://github.com/kadaster-labs/protocol-denken
-- Gepubliceerde URL: https://kadaster-labs.github.io/protocol-denken/
-- Edit links wijzen naar de main branch voor eenvoudige bijdragen
+
+-   Bron repository: https://github.com/kadaster-labs/protocol-denken
+-   Gepubliceerde URL: https://kadaster-labs.github.io/protocol-denken/
+-   Edit links wijzen naar de main branch voor eenvoudige bijdragen

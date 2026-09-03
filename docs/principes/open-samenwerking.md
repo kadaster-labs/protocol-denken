@@ -1,20 +1,21 @@
 ---
 title: Open samenwerking
 ---
+
 # Principe: open samenwerking
 
-*Protocollen ontstaan en evolueren alleen in open samenwerking tussen alle deelnemers*
+_Protocollen ontstaan en evolueren alleen in open samenwerking tussen alle deelnemers_
 
 ## Het probleem
 
 Traditionele overheidsystemen worden vaak in isolatie ontwikkeld, wat tot verschillende problemen leidt:
 
-- **Silo-ontwikkeling**: Organisaties ontwikkelen eigen oplossingen zonder afstemming
-- **Vendor lock-in**: Commerciële leveranciers bepalen protocol-specificaties in gesloten systemen
-- **Incompatibiliteit**: Systemen kunnen niet met elkaar communiceren door gebrek aan gemeenschappelijke afspraken
-- **Geen vertrouwen**: Gesloten protocollen maken controle en verificatie onmogelijk
-- **Evolutie stagneert**: Protocollen kunnen niet evolueren omdat wijzigingen ondoorzichtig zijn
-- **Asymmetrische macht**: Grote organisaties domineren protocol-ontwikkeling ten koste van kleinere partijen
+-   **Silo-ontwikkeling**: Organisaties ontwikkelen eigen oplossingen zonder afstemming
+-   **Vendor lock-in**: Commerciële leveranciers bepalen protocol-specificaties in gesloten systemen
+-   **Incompatibiliteit**: Systemen kunnen niet met elkaar communiceren door gebrek aan gemeenschappelijke afspraken
+-   **Geen vertrouwen**: Gesloten protocollen maken controle en verificatie onmogelijk
+-   **Evolutie stagneert**: Protocollen kunnen niet evolueren omdat wijzigingen ondoorzichtig zijn
+-   **Asymmetrische macht**: Grote organisaties domineren protocol-ontwikkeling ten koste van kleinere partijen
 
 ## Het principe: open samenwerking
 
@@ -22,11 +23,11 @@ Protocollen voor gegevensuitwisseling moeten ontwikkeld worden in open samenwerk
 
 ### Kernprincipes
 
-1. **Transparante ontwikkeling** - Alle beslissingen over protocollen zijn inzichtelijk en traceerbaar
-2. **Inclusieve participatie** - Alle belanghebbenden kunnen bijdragen aan protocol-ontwikkeling
-3. **Open specificaties** - Protocol-beschrijvingen zijn publiek toegankelijk en begrijpelijk
-4. **Gedistribueerde besluitvorming** - Geen enkele organisatie domineert protocol-ontwikkeling
-5. **Evolutionaire governance** - Protocollen kunnen evolueren door consensus tussen deelnemers
+1.  **Transparante ontwikkeling** - Alle beslissingen over protocollen zijn inzichtelijk en traceerbaar
+2.  **Inclusieve participatie** - Alle belanghebbenden kunnen bijdragen aan protocol-ontwikkeling
+3.  **Open specificaties** - Protocol-beschrijvingen zijn publiek toegankelijk en begrijpelijk
+4.  **Gedistribueerde besluitvorming** - Geen enkele organisatie domineert protocol-ontwikkeling
+5.  **Evolutionaire governance** - Protocollen kunnen evolueren door consensus tussen deelnemers
 
 ### Praktische implementatie
 
@@ -50,10 +51,10 @@ Open samenwerking aanpak:
 
 **Hoe het internet werkt:**
 
-- **TCP/IP**: Ontwikkeld door ARPANET gemeenschap, niet door één bedrijf
-- **HTTP**: Tim Berners-Lee maakte specificaties publiek beschikbaar
-- **HTML/CSS**: W3C coördineert open standaardisatie met alle partijen
-- **DNS**: Gedistribueerd systeem zonder centrale controle
+-   **TCP/IP**: Ontwikkeld door ARPANET gemeenschap, niet door één bedrijf
+-   **HTTP**: Tim Berners-Lee maakte specificaties publiek beschikbaar
+-   **HTML/CSS**: W3C coördineert open standaardisatie met alle partijen
+-   **DNS**: Gedistribueerd systeem zonder centrale controle
 
 **Resultaat**: Wereldwijde interoperabiliteit door open samenwerking
 
@@ -95,12 +96,12 @@ Open samenwerking vereist een fundamentele shift: **van "wij bepalen" naar "same
 4. Anderen moeten aansluiten op onze API
 ```
 
-**Probleem**: 
+**Probleem**:
 
-- Geen begrip van andermans behoeften
-- Resistentie bij andere organisaties
-- Suboptimale oplossingen
-- Langzame adoptie
+-   Geen begrip van andermans behoeften
+-   Resistentie bij andere organisaties
+-   Suboptimale oplossingen
+-   Langzame adoptie
 
 ### Stap 1: consultatie achteraf
 
@@ -144,19 +145,19 @@ Open samenwerking vereist een fundamentele shift: **van "wij bepalen" naar "same
 
 ### Waarom stap 3 de beste oplossing is
 
-- **Netwerkeffecten**: Meer deelnemers maken protocol waardevoller
-- **Collective intelligence**: Betere oplossingen door diverse input
-- **Snellere adoptie**: Eigenaarschap leidt tot commitment
-- **Langetermijn stabiliteit**: Geen afhankelijkheid van één organisatie
+-   **Netwerkeffecten**: Meer deelnemers maken protocol waardevoller
+-   **Collective intelligence**: Betere oplossingen door diverse input
+-   **Snellere adoptie**: Eigenaarschap leidt tot commitment
+-   **Langetermijn stabiliteit**: Geen afhankelijkheid van één organisatie
 
 ## Voordelen
 
-- **Betere kwaliteit**: Diverse perspectieven leiden tot robuustere protocollen
-- **Snellere adoptie**: Deelnemers implementeren eerder wat ze mee hebben ontworpen
-- **Lagere kosten**: Gedeelde ontwikkeling en onderhoud
-- **Vertrouwen en legitimatie**: Transparantie creëert vertrouwen, overheidsprotocollen krijgen democratische legitimatie
-- **Evolutionaire veerkracht**: Protocollen overleven organisatieveranderingen
-- **Innovatie acceleratie**: Open specificaties stimuleren innovatie
+-   **Betere kwaliteit**: Diverse perspectieven leiden tot robuustere protocollen
+-   **Snellere adoptie**: Deelnemers implementeren eerder wat ze mee hebben ontworpen
+-   **Lagere kosten**: Gedeelde ontwikkeling en onderhoud
+-   **Vertrouwen en legitimatie**: Transparantie creëert vertrouwen, overheidsprotocollen krijgen democratische legitimatie
+-   **Evolutionaire veerkracht**: Protocollen overleven organisatieveranderingen
+-   **Innovatie acceleratie**: Open specificaties stimuleren innovatie
 
 ## Relatie met protocol-denken
 
@@ -166,24 +167,24 @@ Open samenwerking is **fundamenteel** voor [protocol-denken](../index.md) omdat 
 
 [Dikke protocollen](../index.md) bevatten business logica en governance regels die alleen succesvol zijn bij breed draagvlak:
 
-- **Business rule consensus**: Organisaties moeten overeenstemming bereiken over validatieregels
-- **Governance alignment**: Wie mag wat wijzigen en onder welke voorwaarden
-- **Conflict resolution**: Expliciete procedures voor wanneer organisaties het oneens zijn
+-   **Business rule consensus**: Organisaties moeten overeenstemming bereiken over validatieregels
+-   **Governance alignment**: Wie mag wat wijzigen en onder welke voorwaarden
+-   **Conflict resolution**: Expliciete procedures voor wanneer organisaties het oneens zijn
 
 ### Netwerken ontstaan door open samenwerking
 
 [Netwerken van datastromen](../oplossingen.md#netwerken--datastromen) kunnen alleen groeien in open ecosystemen:
 
-- **Organic growth**: Nieuwe organisaties kunnen aanhaken zonder permission van bestaande partijen
-- **Federated governance**: Geen centrale autoriteit, maar gedistribueerde besluitvorming
-- **Innovation at edges**: Nieuwe use cases ontstaan bij deelnemers, niet bij centrale partij
+-   **Organic growth**: Nieuwe organisaties kunnen aanhaken zonder permission van bestaande partijen
+-   **Federated governance**: Geen centrale autoriteit, maar gedistribueerde besluitvorming
+-   **Innovation at edges**: Nieuwe use cases ontstaan bij deelnemers, niet bij centrale partij
 
 ## Relatie met andere principes
 
-- **Enabler voor**: [Context is altijd aanwezig](context-is-altijd-aanwezig.md) - context-mappings ontstaan door samenwerking tussen bounded contexts
-- **Enabler voor**: [Meerdere views standaard](meerdere-views-standaard.md) - verschillende organisaties definiëren verschillende views samen
-- **Versterkt**: [Focus op verandering](focus-op-verandering.md) - event schemas vereisen consensus over betekenis van gebeurtenissen
-- **Vereist**: [Digitaal als fundament](digitaal-als-fundament.md) - open samenwerking gebeurt via digitale platforms
+-   **Enabler voor**: [Context is altijd aanwezig](context-is-altijd-aanwezig.md) - context-mappings ontstaan door samenwerking tussen bounded contexts
+-   **Enabler voor**: [Meerdere views standaard](meerdere-views-standaard.md) - verschillende organisaties definiëren verschillende views samen
+-   **Versterkt**: [Focus op verandering](focus-op-verandering.md) - event schemas vereisen consensus over betekenis van gebeurtenissen
+-   **Vereist**: [Digitaal als fundament](digitaal-als-fundament.md) - open samenwerking gebeurt via digitale platforms
 
 ## Waarom dit principe altijd geldt
 
@@ -193,50 +194,50 @@ Open samenwerking is geen "nice-to-have" maar een noodzaak voor werkende inter-o
 
 Moderne overheidsprocessen zijn te complex voor één organisatie:
 
-- **Domein-overstijgende expertise**: Juridisch, technisch, domeinkennis verspreid over organisaties
-- **Impact analyse**: Wijzigingen hebben gevolgen die één organisatie niet kan overzien
-- **Schaalvereisten**: Protocollen moeten werken voor duizenden implementaties
+-   **Domein-overstijgende expertise**: Juridisch, technisch, domeinkennis verspreid over organisaties
+-   **Impact analyse**: Wijzigingen hebben gevolgen die één organisatie niet kan overzien
+-   **Schaalvereisten**: Protocollen moeten werken voor duizenden implementaties
 
 ### Vertrouwen en legitimatie zijn voorwaarden
 
 Overheidsorganisaties implementeren alleen protocollen die ze vertrouwen en als legitiem ervaren:
 
-- **Transparantie**: Open processen maken controle en verificatie mogelijk
-- **Verantwoordelijkheid**: Duidelijke rollen en besluitvormingslijnen
-- **Voorspelbaarheid**: Betrouwbare procedures voor wijzigingen en evolutie
+-   **Transparantie**: Open processen maken controle en verificatie mogelijk
+-   **Verantwoordelijkheid**: Duidelijke rollen en besluitvormingslijnen
+-   **Voorspelbaarheid**: Betrouwbare procedures voor wijzigingen en evolutie
 
 ### Evolutie vereist flexibiliteit
 
 Protocollen moeten kunnen evolueren met veranderende behoeften:
 
-- **Toekomstbestendigheid**: Onbekende toekomstige use cases moeten mogelijk blijven
-- **Geleidelijke veroudering**: Oude versies moeten blijven werken
-- **Innovatieruimte**: Ruimte voor experimentatie zonder alles te breken
+-   **Toekomstbestendigheid**: Onbekende toekomstige use cases moeten mogelijk blijven
+-   **Geleidelijke veroudering**: Oude versies moeten blijven werken
+-   **Innovatieruimte**: Ruimte voor experimentatie zonder alles te breken
 
 ## Implementatie overwegingen
 
 ### Protocol-specifieke aspecten
 
-- **Governance model**: Wie neemt welke beslissingen via welk proces (consensus, stemming, delegatie)?
-- **Conflictoplossing**: Procedures voor meningsverschillen en geschillen
-- **Lidmaatschap**: Criteria voor toetreding en procedures voor vertrek
-- **Evolutie management**: Hoe evolueren specificaties zonder breaking changes?
+-   **Governance model**: Wie neemt welke beslissingen via welk proces (consensus, stemming, delegatie)?
+-   **Conflictoplossing**: Procedures voor meningsverschillen en geschillen
+-   **Lidmaatschap**: Criteria voor toetreding en procedures voor vertrek
+-   **Evolutie management**: Hoe evolueren specificaties zonder breaking changes?
 
 ### Technische uitdagingen
 
-- **Specificatie tooling**: Tools voor collaboratieve specificatie-ontwikkeling
-- **Versie beheer**: Hoe beheer je evoluerende specificaties?
-- **Test frameworks**: Gedeelde test suites voor protocol compliance
-- **Referentie implementaties**: Wie onderhoudt referentie implementaties?
+-   **Specificatie tooling**: Tools voor collaboratieve specificatie-ontwikkeling
+-   **Versie beheer**: Hoe beheer je evoluerende specificaties?
+-   **Test frameworks**: Gedeelde test suites voor protocol compliance
+-   **Referentie implementaties**: Wie onderhoudt referentie implementaties?
 
 ### Organisatorische aspecten
 
-- **Resource inzet**: Wie betaalt voor open samenwerking activiteiten?
-- **Tijdsinvestering**: Open processen kosten meer tijd dan unilaterale beslissingen
-- **Cultuurverandering**: Van concurrentie naar samenwerking mindset
-- **Juridische kaders**: Contractuele afspraken voor open samenwerking
-- **Intellectueel eigendom**: Wie bezit de gezamenlijk ontwikkelde specificaties?
+-   **Resource inzet**: Wie betaalt voor open samenwerking activiteiten?
+-   **Tijdsinvestering**: Open processen kosten meer tijd dan unilaterale beslissingen
+-   **Cultuurverandering**: Van concurrentie naar samenwerking mindset
+-   **Juridische kaders**: Contractuele afspraken voor open samenwerking
+-   **Intellectueel eigendom**: Wie bezit de gezamenlijk ontwikkelde specificaties?
 
 ---
 
-*Dit principe maakt alle andere principes mogelijk door een fundament van vertrouwen en samenwerking tussen organisaties te creëren.*
+_Dit principe maakt alle andere principes mogelijk door een fundament van vertrouwen en samenwerking tussen organisaties te creëren._

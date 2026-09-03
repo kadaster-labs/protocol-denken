@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "description": "Een conceptueel raamwerk voor de toekomst van de Digitale Overheid ontwikkeld door het Emerging Technology Center van het Kadaster",
   "scripts": {
+    "format:md": "prettier --write \"**/*.md\"",
+    "format:md:check": "prettier --check \"**/*.md\"",
     "lint:md": "markdownlint docs/**/*.md --config .markdownlint.json",
     "lint:md:fix": "markdownlint docs/**/*.md --config .markdownlint.json --fix",
     "lint:md:spacing": "markdownlint docs/**/*.md --config .markdownlint-spacing.json",
@@ -14,7 +16,8 @@
   },
   "packageManager": "pnpm@8.0.0",
   "devDependencies": {
-    "markdownlint-cli": "^0.37.0"
+    "markdownlint-cli": "^0.37.0",
+    "prettier": "^3.3.3"
   },
   "repository": {
     "type": "git",

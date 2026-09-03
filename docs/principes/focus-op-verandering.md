@@ -1,20 +1,21 @@
 ---
 title: Focus op verandering
 ---
+
 # Principe: focus op verandering[^1]
 
-*Change over state als fundamenteel uitgangspunt*
+_Change over state als fundamenteel uitgangspunt_
 
 ## Het probleem
 
 Huidige registers zijn 'slechts' gericht op de resulterende _view_ en deze view _ís_ het eigenlijke register. Dit leidt tot verschillende problemen:
 
-- **Verlies van context**: Waarom is een gegeven zo geworden?
-- **Geen spoor van wijzigingen**: Welke stappen hebben geleid tot de huidige toestand?
-- **Moeilijke correcties**: Hoe corrigeer je iets zonder de historie te verliezen?
-- **Beperkte compliance**: Hoe toon je aan dat processen correct zijn gevolgd?
-- **Protocol fragiliteit**: Systemen kunnen niet reageren op wijzigingen van andere partijen
-- **Synchronisatie problemen**: Geen gedeelde tijdslijn tussen organisaties
+-   **Verlies van context**: Waarom is een gegeven zo geworden?
+-   **Geen spoor van wijzigingen**: Welke stappen hebben geleid tot de huidige toestand?
+-   **Moeilijke correcties**: Hoe corrigeer je iets zonder de historie te verliezen?
+-   **Beperkte compliance**: Hoe toon je aan dat processen correct zijn gevolgd?
+-   **Protocol fragiliteit**: Systemen kunnen niet reageren op wijzigingen van andere partijen
+-   **Synchronisatie problemen**: Geen gedeelde tijdslijn tussen organisaties
 
 ## Het principe: focus op verandering
 
@@ -22,10 +23,10 @@ Registers zouden moeten focussen op _change_ (veranderingen) in plaats van allee
 
 ### Kernprincipes
 
-1. **Veranderingen zijn eerste klas burgers** - Events en wijzigingen worden expliciet gemodelleerd
-2. **Zorgvuldig omgaan met veranderingen** - Elke wijziging wordt gevalideerd en gedocumenteerd  
-3. **Precisie in acceptatie** - Nieuwe wijzigingen worden zorgvuldig gecontroleerd voordat ze worden geaccepteerd
-4. **Bewaren van intentie** - Niet alleen wat er verandert, maar ook waarom
+1.  **Veranderingen zijn eerste klas burgers** - Events en wijzigingen worden expliciet gemodelleerd
+2.  **Zorgvuldig omgaan met veranderingen** - Elke wijziging wordt gevalideerd en gedocumenteerd
+3.  **Precisie in acceptatie** - Nieuwe wijzigingen worden zorgvuldig gecontroleerd voordat ze worden geaccepteerd
+4.  **Bewaren van intentie** - Niet alleen wat er verandert, maar ook waarom
 
 ### Praktische implementatie
 
@@ -65,30 +66,30 @@ Events voor Adres 12345:
 
 **Traditionele aanpak:**
 
-1. UPDATE naam → 'de Wit' wordt 'Jansen', geen geschiedenis
-2. Correctie → UPDATE huwelijksdatum, oorspronkelijke fout verdwenen
+1.  UPDATE naam → 'de Wit' wordt 'Jansen', geen geschiedenis
+2.  Correctie → UPDATE huwelijksdatum, oorspronkelijke fout verdwenen
 
 **Verandering-gerichte aanpak:**
 
-1. `RegistreerHuwelijk(manId: 123, vrouwId: 456, datum: 2024-01-15, gekozenAchternaam: 'Jansen')` 
-2. Event: `HuwelijkGeregistreerdMetNaamkeuze` → complete business realiteit in één event
-3. `CorrigeerHuwelijksdatum(manId: 123, vrouwId: 456, oorspronkelijkeDatum: 2024-01-15, nieuweDate: 2024-01-20)` 
-4. Event: `HuwelijksdatumGecorrigeerd` → fout blijft zichtbaar, correctie traceerbaar
-5. Huidige view toont: Marie Jansen, huwelijk 20 jan 2024, inclusief correctiehistorie
+1.  `RegistreerHuwelijk(manId: 123, vrouwId: 456, datum: 2024-01-15, gekozenAchternaam: 'Jansen')`
+2.  Event: `HuwelijkGeregistreerdMetNaamkeuze` → complete business realiteit in één event
+3.  `CorrigeerHuwelijksdatum(manId: 123, vrouwId: 456, oorspronkelijkeDatum: 2024-01-15, nieuweDate: 2024-01-20)`
+4.  Event: `HuwelijksdatumGecorrigeerd` → fout blijft zichtbaar, correctie traceerbaar
+5.  Huidige view toont: Marie Jansen, huwelijk 20 jan 2024, inclusief correctiehistorie
 
 ### Voorbeeld 3: personen register
 
 **Traditioneel personen register**:
 
-- Persoon object
+-   Persoon object
 
 **Verandering-gericht personen register**:
 
-- Geboren
-- Verhuisd
-- Getrouwd
-- Gescheiden
-- Overleden
+-   Geboren
+-   Verhuisd
+-   Getrouwd
+-   Gescheiden
+-   Overleden
 
 > **Let op**: Dit voorbeeld illustreert ook [context is altijd aanwezig](context-is-altijd-aanwezig.md) - dat is geen toeval. Goede principes versterken elkaar en leiden tot dezelfde ontwerpkeuzes.
 
@@ -104,12 +105,12 @@ UPDATE personen SET achternaam = 'Jansen' WHERE id = 456
 UPDATE huwelijken SET datum = '2024-01-15' WHERE man_id = 123 AND vrouw_id = 456
 ```
 
-**Probleem**: 
+**Probleem**:
 
-- Geen geschiedenis - oude waarden zijn weg
-- Geen context - waarom werd dit gewijzigd?
-- Geen atomiciteit - wat als één UPDATE faalt?
-- Geen causale relatie - huwelijk en naamswijziging lijken onafhankelijk
+-   Geen geschiedenis - oude waarden zijn weg
+-   Geen context - waarom werd dit gewijzigd?
+-   Geen atomiciteit - wat als één UPDATE faalt?
+-   Geen causale relatie - huwelijk en naamswijziging lijken onafhankelijk
 
 ### Stap 1: object denken met events
 
@@ -146,18 +147,18 @@ EVENT: HuwelijkGeregistreerdMetNaamkeuze(manId: 123, vrouwId: 456, datum: 2024-0
 
 ### Waarom stap 3 de beste oplossing is
 
-- **Atomiciteit**: Alles gebeurt samen of helemaal niet
-- **Self-contained**: Event vertelt het hele verhaal
-- **Geen afhankelijkheden**: Event handlers zijn eenvoudiger
-- **Business getrouw**: Modelleert werkelijkheid (naamkeuze hoort bij huwelijk)
+-   **Atomiciteit**: Alles gebeurt samen of helemaal niet
+-   **Self-contained**: Event vertelt het hele verhaal
+-   **Geen afhankelijkheden**: Event handlers zijn eenvoudiger
+-   **Business getrouw**: Modelleert werkelijkheid (naamkeuze hoort bij huwelijk)
 
 ## Voordelen
 
-- **Volledige traceability**: Elke wijziging is terug te vinden
-- **Betere compliance**: Audit trail is ingebouwd
-- **Flexibelere correcties**: Fouten kunnen worden rechtgezet zonder dataverlies  
-- **Rijkere informatie**: Context en intentie worden bewaard
-- **Betere synchronisatie**: Andere systemen kunnen reageren op wijzigingen
+-   **Volledige traceability**: Elke wijziging is terug te vinden
+-   **Betere compliance**: Audit trail is ingebouwd
+-   **Flexibelere correcties**: Fouten kunnen worden rechtgezet zonder dataverlies
+-   **Rijkere informatie**: Context en intentie worden bewaard
+-   **Betere synchronisatie**: Andere systemen kunnen reageren op wijzigingen
 
 ## Relatie met protocol-denken
 
@@ -167,31 +168,31 @@ Focus op verandering is het **hart** van [protocol-denken](../index.md). Zonder 
 
 Moderne inter-organisatie protocollen zijn niet gebaseerd op "data delen" maar op "gebeurtenissen delen":
 
-- **Tijdsvolgorde cruciaal**: Wie deed wat wanneer bepaalt de uitkomst van protocollen
-- **Causaliteit behoud**: Oorzaak-gevolg relaties tussen organisaties blijven bewaard
-- **Asynchrone samenwerking**: Organisaties kunnen reageren op hun eigen tempo zonder real-time synchronisatie
+-   **Tijdsvolgorde cruciaal**: Wie deed wat wanneer bepaalt de uitkomst van protocollen
+-   **Causaliteit behoud**: Oorzaak-gevolg relaties tussen organisaties blijven bewaard
+-   **Asynchrone samenwerking**: Organisaties kunnen reageren op hun eigen tempo zonder real-time synchronisatie
 
 ### State-based protocollen falen bij schaal
 
 Traditionele "snapshot sharing" protocollen breken bij meerdere organisaties:
 
-- **Race conditions**: Verschillende organisaties wijzigen dezelfde data tegelijk
-- **Inconsistente views**: Elk systeem heeft andere "huidige toestand"
-- **Geen conflict resolution**: Hoe bepaal je welke wijziging leidend is?
+-   **Race conditions**: Verschillende organisaties wijzigen dezelfde data tegelijk
+-   **Inconsistente views**: Elk systeem heeft andere "huidige toestand"
+-   **Geen conflict resolution**: Hoe bepaal je welke wijziging leidend is?
 
-### Events maken dikke protocollen mogelijk  
+### Events maken dikke protocollen mogelijk
 
 [Protocol-denken](../index.md) gaat naar protocollen die business regels afdwingen:
 
-- **Event validation**: Protocollen kunnen gebeurtenissen valideren voordat ze geaccepteerd worden
-- **Governance via events**: Alle besluiten en wijzigingen zijn traceerbaar
-- **Distributed consensus**: Gebeurtenissen creëren overeenstemming tussen organisaties
+-   **Event validation**: Protocollen kunnen gebeurtenissen valideren voordat ze geaccepteerd worden
+-   **Governance via events**: Alle besluiten en wijzigingen zijn traceerbaar
+-   **Distributed consensus**: Gebeurtenissen creëren overeenstemming tussen organisaties
 
 ## Relatie met andere principes
 
-- **Versterkt**: [Context is altijd aanwezig](context-is-altijd-aanwezig.md) - veranderingen behouden context
-- **Ondersteunt**: [Meerdere views standaard](meerdere-views-standaard.md) - wijzigingen kunnen naar verschillende views worden geprojecteerd
-- **Vereist**: [Digitaal als fundament](digitaal-als-fundament.md) - gebeurtenissen kunnen alleen digitaal goed vastgelegd worden
+-   **Versterkt**: [Context is altijd aanwezig](context-is-altijd-aanwezig.md) - veranderingen behouden context
+-   **Ondersteunt**: [Meerdere views standaard](meerdere-views-standaard.md) - wijzigingen kunnen naar verschillende views worden geprojecteerd
+-   **Vereist**: [Digitaal als fundament](digitaal-als-fundament.md) - gebeurtenissen kunnen alleen digitaal goed vastgelegd worden
 
 ## Waarom dit principe altijd geldt
 
@@ -201,28 +202,28 @@ Verandering is de enige constante in overheidsregisters. State denken maskeert d
 
 Registers zijn nooit statisch:
 
-- **BRP**: Mensen verhuizen, trouwen, overlijden, krijgen kinderen
-- **BAG**: Adressen ontstaan, wijzigen, verdwijnen, worden hernummerd  
-- **Handelsregister**: Bedrijven starten, fuseren, wijzigen activiteiten, stoppen
-- **Kadaster**: Eigendom wisselt, percelen worden gesplitst, grenzen wijzigen
+-   **BRP**: Mensen verhuizen, trouwen, overlijden, krijgen kinderen
+-   **BAG**: Adressen ontstaan, wijzigen, verdwijnen, worden hernummerd
+-   **Handelsregister**: Bedrijven starten, fuseren, wijzigen activiteiten, stoppen
+-   **Kadaster**: Eigendom wisselt, percelen worden gesplitst, grenzen wijzigen
 
 ### Elke wijziging heeft context
 
 Iedere verandering gebeurt om een reden:
 
-- **Wie** heeft de wijziging aangevraagd of vastgesteld?
-- **Waarom** is deze wijziging doorgevoerd?
-- **Wanneer** is deze wijziging van kracht geworden?
-- **Op basis waarvan** is deze beslissing genomen?
+-   **Wie** heeft de wijziging aangevraagd of vastgesteld?
+-   **Waarom** is deze wijziging doorgevoerd?
+-   **Wanneer** is deze wijziging van kracht geworden?
+-   **Op basis waarvan** is deze beslissing genomen?
 
 ### Verantwoording is wettelijke verplichting
 
 Overheidsregisters moeten kunnen verantwoorden:
 
-- **Rechtmatigheid**: Was deze wijziging toegestaan?
-- **Doelmatigheid**: Was deze wijziging noodzakelijk?
-- **Controleerbaarheid**: Kan deze wijziging worden getoetst?
-- **Herstelbaarheid**: Kan een fout worden rechtgezet?
+-   **Rechtmatigheid**: Was deze wijziging toegestaan?
+-   **Doelmatigheid**: Was deze wijziging noodzakelijk?
+-   **Controleerbaarheid**: Kan deze wijziging worden getoetst?
+-   **Herstelbaarheid**: Kan een fout worden rechtgezet?
 
 ### Nuance: vastgestelde gegevens in protocollen
 
@@ -230,15 +231,15 @@ Sommige gegevens zijn "immutable by nature" maar ook bij deze speelt verandering
 
 **Immutable content, dynamic protocol context**:
 
-- **Luchtfoto's**: Inhoud wijzigt niet, maar publicatie, validatie, en gebruik via protocollen wel
-- **Meetresultaten**: Waarde is vast, maar certificering, kwaliteit, en geaccepteerdheid evolueren
-- **Juridische documenten**: Tekst is vast, maar status (concept→definitief→ingetrokken) wijzigt via protocollen
+-   **Luchtfoto's**: Inhoud wijzigt niet, maar publicatie, validatie, en gebruik via protocollen wel
+-   **Meetresultaten**: Waarde is vast, maar certificering, kwaliteit, en geaccepteerdheid evolueren
+-   **Juridische documenten**: Tekst is vast, maar status (concept→definitief→ingetrokken) wijzigt via protocollen
 
 In protocollen is ook voor "immutable" gegevens de **gebeurtenis van vastleggen** cruciaal:
 
-- **"Foto gemaakt"**: Wanneer, door wie, met welke apparatuur, voor welk doel?
-- **"Meting uitgevoerd"**: Door welk lab, volgens welke methode, met welke nauwkeurigheid?
-- **"Document ondertekend"**: Door wie, wanneer, onder welke omstandigheden?
+-   **"Foto gemaakt"**: Wanneer, door wie, met welke apparatuur, voor welk doel?
+-   **"Meting uitgevoerd"**: Door welk lab, volgens welke methode, met welke nauwkeurigheid?
+-   **"Document ondertekend"**: Door wie, wanneer, onder welke omstandigheden?
 
 **Protocol-perspectief**: Ook immutable content heeft een **lifecycle** die via gebeurtenissen wordt gestuurd.
 
@@ -246,27 +247,27 @@ In protocollen is ook voor "immutable" gegevens de **gebeurtenis van vastleggen*
 
 ### Voor protocol-denken specifiek
 
-- **Event schemas**: Gebeurtenissen tussen organisaties vereisen gestandaardiseerde formats
-- **Temporal ordering**: Tijdsstempels moeten synchroon zijn tussen organisaties (bijv. NTP)
-- **Event versioning**: Protocollen moeten kunnen evolueren door expliciete versionering en regels voor het oplossen van verschillen
-- **Conflict resolution**: Heldere regels voor wanneer gebeurtenissen conflicteren
+-   **Event schemas**: Gebeurtenissen tussen organisaties vereisen gestandaardiseerde formats
+-   **Temporal ordering**: Tijdsstempels moeten synchroon zijn tussen organisaties (bijv. NTP)
+-   **Event versioning**: Protocollen moeten kunnen evolueren door expliciete versionering en regels voor het oplossen van verschillen
+-   **Conflict resolution**: Heldere regels voor wanneer gebeurtenissen conflicteren
 
 ### Technische uitdagingen
 
-- **Storage overhead**: Events nemen meer ruimte in, maar bieden veel meer mogelijkheden
-- **Query complexiteit**: [Meerdere views](meerdere-views-standaard.md) worden gegenereerd uit event streams
-- **Performance**: Event sourcing vereist goede tooling en caching strategieën
-- **Cross-boundary events**: Gebeurtenissen die organisatiegrenzen overschrijden vereisen extra validatie
+-   **Storage overhead**: Events nemen meer ruimte in, maar bieden veel meer mogelijkheden
+-   **Query complexiteit**: [Meerdere views](meerdere-views-standaard.md) worden gegenereerd uit event streams
+-   **Performance**: Event sourcing vereist goede tooling en caching strategieën
+-   **Cross-boundary events**: Gebeurtenissen die organisatiegrenzen overschrijden vereisen extra validatie
 
 ### Organisatorische aspecten
 
-- **Event governance**: Wie mag welke gebeurtenissen publiceren?
-- **Schema evolution**: Hoe evolueren event formats zonder systemen te breken?
-- **Migratie**: Bestaande state-based systemen incrementeel naar event-sourcing
-- **Training**: Teams moeten leren denken in gebeurtenissen ipv toestanden
+-   **Event governance**: Wie mag welke gebeurtenissen publiceren?
+-   **Schema evolution**: Hoe evolueren event formats zonder systemen te breken?
+-   **Migratie**: Bestaande state-based systemen incrementeel naar event-sourcing
+-   **Training**: Teams moeten leren denken in gebeurtenissen ipv toestanden
 
 ---
 
-*Dit principe vormt de basis voor verantwoorde overheidsregistratie en robuuste inter-organisatie protocollen waarin organisaties effectief kunnen samenwerken.*
+_Dit principe vormt de basis voor verantwoorde overheidsregistratie en robuuste inter-organisatie protocollen waarin organisaties effectief kunnen samenwerken._
 
 [^1]: NOTE Oorspronkelijk ontstaan uit en overgenomen vanuit [project Uit betrouwbare bron](https://uitbetrouwbarebron.nl) en aangepast naar protocol-denken

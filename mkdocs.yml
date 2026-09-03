@@ -28,6 +28,8 @@ nav:
     - achtergrond/agile.md
     - achtergrond/event-sourcing.md
     - achtergrond/open-source.md
+    - achtergrond/nieuwland.md
+    - achtergrond/externe-bronnen.md
 extra_css:
   - css/project.css
 theme:

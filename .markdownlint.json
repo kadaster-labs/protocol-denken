@@ -51,7 +51,7 @@
   "MD041": false,
   "MD047": true,
   "MD049": {
-    "style": "asterisk"
+    "style": "underscore"
   },
   "MD050": {
     "style": "asterisk"
